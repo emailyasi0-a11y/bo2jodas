@@ -8,8 +8,7 @@
 ## Instalar
 
 1. Ve a [Releases](../../releases) y descarga el zip de la última versión.
-2. Descomprímelo y ejecuta `instalar_mod.bat`. Copia el mod a `%localappdata%\Plutonium\storage\t6\mods\zm_bo2jodas`.
-   - A mano: copia la carpeta `zm_bo2jodas` dentro de `%localappdata%\Plutonium\storage\t6\mods\` (crea `mods` si no existe).
+2. Descomprímelo y copia la carpeta `zm_bo2jodas` dentro de `%localappdata%\Plutonium\storage\t6\mods\` (crea `mods` si no existe). Si ya tenías una versión anterior, sustitúyela entera.
 3. En el juego: **Zombies → Mods → bo2jodas**. El juego se reinicia con el mod cargado.
 
 Todos los jugadores de la partida necesitan **la misma versión** instalada. Cuando salga una nueva, repetid la instalación.
