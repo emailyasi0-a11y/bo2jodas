@@ -1,6 +1,6 @@
 # bo2jodas
 
-**Versión actual: 1.8.0** · Black Ops II Zombies · Plutonium T6 · Pueblo (funciona en el resto de mapas)
+**Versión actual: 1.8.1** · Black Ops II Zombies · Plutonium T6 · Pueblo (funciona en el resto de mapas)
 
 ---
 
@@ -15,19 +15,20 @@ Todos los jugadores de la partida necesitan **la misma versión**.
 
 ---
 
-## Novedades de la 1.8.0
+## Novedades de la 1.8.1
 
 La versión de las **builds**: hasta ahora cogías cartas sueltas; ahora eliges un **arquetipo** y montas algo con sentido. Además, tres jefes distintos, bebidas que no se pueden comprar, menús nuevos y zombies más duros.
 
 | | Qué hay de nuevo |
 |---|---|
-| 🃏 **Arquetipos** | En el nivel 8 eliges 1 de 3 entre **10 arquetipos**; cada uno tiene **6 cartas propias** (una es la **firma**, una sinergia que solo aparece con dos cartas concretas). 43 cartas nuevas. |
-| 👹 **Tres jefes** | Brutus, la **Bruja** (aparece detrás de ti, no la dejes tocarte) y **Leroy** (te roba cartas y te las devuelve mejoradas). Nacen en el charco de lava del centro. |
-| 🥤 **Bebidas nuevas** | La Bruja regala **Mule Kick, Deadshot, PhD Flopper, Electric Cherry y Tombstone**, con icono en la barra. |
-| 🌙 **Mítica Hora bruja** | Cada 3 minutos, 10 s de zombies a cámara lenta para todo el equipo. Sustituye al Leaper, que ahora es del Domador. |
-| 🖼️ **Menús nuevos** | Marco del color de la rareza, fondo del color del arquetipo, la carta marcada crece, fundidos y título descifrándose. |
-| 🛡️ **Tanque y Pistolas** | Tanque: vida ×2 con Juggernog y escudo en la espalda cada ronda. Pistolas: **15 huecos** de carta. |
-| 🧟 **Zombies más duros** | Vida base +25 % y escalado mayor por ronda, para que la build se note y no vayáis sobrados. |
+| **Arquetipos** | En el nivel 8 eliges 1 de 3 entre **10 arquetipos**; cada uno tiene **6 cartas propias** (una es la **firma**, una sinergia que solo aparece con dos cartas concretas). 43 cartas nuevas. |
+| **Tres jefes** | Brutus, la **Bruja** (aparece detrás de ti, no la dejes tocarte) y **Leroy** (te roba cartas y te las devuelve mejoradas). Nacen en el charco de lava del centro. |
+| **Bebidas nuevas** | La Bruja regala **Mule Kick, Deadshot, PhD Flopper, Electric Cherry y Tombstone**, con icono en la barra. |
+| **Mítica Hora bruja** | Cada 3 minutos, 10 s de zombies a cámara lenta para todo el equipo. Sustituye al Leaper, que ahora es del Domador. |
+| **Menús nuevos** | Marco del color de la rareza, fondo del color del arquetipo, la carta marcada crece, fundidos y título descifrándose. |
+| **Tanque y Pistolas** | Tanque: vida ×2 con Juggernog y escudo en la espalda cada ronda. Pistolas: **15 huecos** de carta. |
+| **Zombies más duros** | Vida base +25 % y escalado mayor por ronda, para que la build se note y no vayáis sobrados. |
+| **4 cartas generales nuevas** | Armadura, Sangre fría, Médico y Madrugador: ocupan hueco y valen para cualquier build. |
 
 ### Arquetipos
 
@@ -37,18 +38,18 @@ Cada arquetipo tiene **6 cartas**: 5 normales y una **firma** (en negrita), siem
 
 | Arquetipo | Idea | Cartas (6) |
 |---|---|---|
-| 🔥 **Pirómano** | Fuego que se contagia y explosivos | Pólvora · Fósforo · Napalm · Rescoldos · Mecha corta · **Pirotécnico** |
-| ⚡ **Electricista** | Rayos que saltan de zombie en zombie | Reacción en cadena · Pararrayos · Sobrecarga · Condensador · Tormenta · **Tesla** |
-| 🩸 **Berserker** | Cuanto más herido, más peligroso | Adrenalina · Vampiro · Furia · Sangre caliente · Último aliento · **Imparable** |
-| 🎯 **Francotirador** | Tiros a la cabeza lentos y letales | Ojo de halcón · Puntería · Cazatanques · Pulso firme · Una bala basta · **Cazador de élites** |
-| 🛡️ **Tanque** | Aguanta golpes y los devuelve. **Pasiva**: con Juggernog el doble de vida y el escudo de zombies en la espalda (se puede romper; cada ronda uno nuevo o reparado) | Espinas · Nudillos de hierro · Piel de piedra · Coraza · Masa · **Coloso** |
-| 💰 **Banquero** | Los puntos son poder | Codicia · Cabezas de oro · Interés compuesto · Mercenario · Caja económica · **Plutócrata** |
-| 🔫 **Gatillo** | Disparar sin parar y sin recargar | Gatillo loco · Últimas balas · Tambor caliente · Plomo · Cinta de balas · **Fuego continuo** |
-| 💨 **Velocista** | Correr, esquivar y no parar | Sed de sangre · Escurridizo · Resbaladizo · Zancada · Estela · **Ciclón** |
-| 🐕 **Domador** | Leapers que luchan por ti | Silbato · Correa larga · Collar de púas · Carne fresca · Manada · **Alfa** |
-| 🍀 **Suertudo** | Rerolls, dados y cartas mejores | Buscador de botín · Pata de conejo · Dados · Amuleto · Herradura · **Jackpot** |
+| **Pirómano** | Fuego que se contagia y explosivos | Pólvora · Fósforo · Napalm · Rescoldos · Mecha corta · **Pirotécnico** |
+| **Electricista** | Rayos que saltan de zombie en zombie | Reacción en cadena · Pararrayos · Sobrecarga · Condensador · Tormenta · **Tesla** |
+| **Berserker** | Cuanto más herido, más peligroso | Adrenalina · Vampiro · Furia · Sangre caliente · Último aliento · **Imparable** |
+| **Francotirador** | Tiros a la cabeza lentos y letales | Ojo de halcón · Puntería · Cazatanques · Pulso firme · Una bala basta · **Cazador de élites** |
+| **Tanque** | Aguanta golpes y los devuelve. **Pasiva**: con Juggernog el doble de vida y el escudo de zombies en la espalda (se puede romper; cada ronda uno nuevo o reparado) | Espinas · Nudillos de hierro · Piel de piedra · Coraza · Masa · **Coloso** |
+| **Banquero** | Los puntos son poder | Codicia · Cabezas de oro · Interés compuesto · Mercenario · Caja económica · **Plutócrata** |
+| **Gatillo** | Disparar sin parar y sin recargar | Gatillo loco · Últimas balas · Tambor caliente · Plomo · Cinta de balas · **Fuego continuo** |
+| **Velocista** | Correr, esquivar y no parar | Sed de sangre · Escurridizo · Resbaladizo · Zancada · Estela · **Ciclón** |
+| **Domador** | Leapers que luchan por ti | Silbato · Correa larga · Collar de púas · Carne fresca · Manada · **Alfa** |
+| **Suertudo** | Rerolls, dados y cartas mejores | Buscador de botín · Pata de conejo · Dados · Amuleto · Herradura · **Jackpot** |
 
-- **17 cartas que ya existían pasan a su arquetipo** (en la tabla, las primeras de cada fila). Trébol sigue siendo general.
+- **16 cartas que ya existían pasan a su arquetipo** (en la tabla, las primeras de cada fila). Trébol sigue siendo general.
 - **5 cartas de relleno** nuevas en el pozo general, que valen poco a propósito: Cordones nuevos, Cantimplora, Calderilla, Pulsera de la suerte y Medalla. Elegir bien y rerollear importa.
 - En la lista (H) arriba pone tu arquetipo y sus cartas van en su color.
 
@@ -125,6 +126,17 @@ Ver [Jefes: Brutus, la Bruja y Leroy](#jefes-brutus-la-bruja-y-leroy). Resumen: 
 - Cada carta lleva un **marco del color de su rareza** (gris, verde, azul, morado, dorado; rojo las míticas) con el nombre de la rareza en la banda de arriba, y el fondo lleva el **color de tu arquetipo** (o de la clase en el menú de clase).
 - La carta marcada **crece y se ilumina**; las cartas aparecen en fundido escalonado y el título se descifra letra a letra.
 - La barra de vida del jefe lleva su nombre.
+
+### Cartas generales nuevas
+
+| Carta | Efecto | Valores | Tope |
+|---|---|---|---|
+| **Armadura** | Absorbe por completo este número de golpes de zombie cada ronda (se recarga al empezar la ronda y al coger la carta) | 1 / 1 / 2 / 2 / 3 golpes | 6 |
+| **Sangre fría** | +% de daño cuando no hay ningún zombie a menos de 4 metros de ti | 6 / 10 / 14 / 20 / 30 % | 100 % |
+| **Médico** | Al reanimar a alguien, los dos recuperáis esta vida y los zombies os ignoran 2 s | 20 / 30 / 45 / 65 / 100 | 250 |
+| **Madrugador** | +% de daño durante los primeros 30 s de cada ronda | 8 / 12 / 18 / 25 / 36 % | 100 % |
+
+Con ellas el pozo general tiene 22 cartas normales (15 de ellas de estadísticas que ocupan hueco), 5 de relleno, 4 de equipo, 5 de power-up y Pack-a-Punch. También: 16 cartas (no 17) fueron las que pasaron a su arquetipo en la 1.8.0.
 
 <details>
 <summary><b>Novedades de la 1.7.0</b></summary>
@@ -284,6 +296,10 @@ Valores por rareza: común / poco común / rara / épica / legendaria. Las marca
 | Experiencia | Cada baja cuenta +% para subir de nivel | 10 / 15 / 22 / 30 / 45 % | 150 % |
 | Combo | +% daño por cada baja seguida (2 s entre bajas, máx. 10) | 1 / 2 / 2 / 3 / 5 % | 20 % |
 | Cabezas de oro (A: Banquero) | +puntos por baja a la cabeza | 8 / 12 / 20 / 32 / 48 | 400 |
+| Armadura | Absorbe del todo este número de golpes de zombie por ronda | 1 / 1 / 2 / 2 / 3 | 6 |
+| Sangre fría | +% daño sin ningún zombie a menos de 4 m | 6 / 10 / 14 / 20 / 30 % | 100 % |
+| Médico | Al reanimar, vida para los dos y 2 s de que os ignoren | 20 / 30 / 45 / 65 / 100 | 250 |
+| Madrugador | +% daño los primeros 30 s de cada ronda | 8 / 12 / 18 / 25 / 36 % | 100 % |
 | Cordones nuevos | +% velocidad (relleno) | 1 / 1 / 2 / 2 / 3 % | 10 % |
 | Cantimplora | +vida máxima (relleno) | 2 / 3 / 4 / 6 / 8 | 30 |
 | Calderilla | +puntos por baja (relleno) | 5 / 8 / 10 / 15 / 20 | 100 |
