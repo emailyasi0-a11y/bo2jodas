@@ -1,7 +1,7 @@
 # bo2jodas
 
 
-**Versión actual: 1.6.0**
+**Versión actual: 1.6.1**
 
 ---
 
@@ -16,6 +16,9 @@ Todos los jugadores de la partida necesitan **la misma versión** instalada. Cua
 ---
 
 ## Notas de versión
+
+### 1.6.1
+- Los menús de clase y de cartas ya no tienen tiempo límite: sigues invulnerable e ignorado por los zombies hasta que eliges.
 
 ### 1.6.0
 - **La caja ya no da armas: da cartas.** Gira igual, pero sale una carta al azar (misma tabla de rarezas, 5 % de mítica) que se aplica directamente. Precio **por jugador**: 2500 la primera tirada y ×1.17 cada tirada tuya (2500, 2925, 3422, 4004...). Cada uno ve su precio en el texto de la caja. Sin osito: la caja no se mueve.
@@ -78,7 +81,7 @@ Al empezar eliges clase (los zombies no salen hasta que todos eligen). Al **empe
 
 ## Cartas
 
-Subes de nivel matando: el primer nivel a las **15 bajas** y cada nivel cuesta 5 más (15, 35, 60, 90, 125...). Al subir eliges **1 de 3 cartas**. Desde que subes de nivel hasta que eliges, los zombies te ignoran; con el menú abierto eres invulnerable (15 s para elegir).
+Subes de nivel matando: el primer nivel a las **15 bajas** y cada nivel cuesta 5 más (15, 35, 60, 90, 125...). Al subir eliges **1 de 3 cartas**. Desde que subes de nivel hasta que eliges, los zombies te ignoran; con el menú abierto eres invulnerable, sin límite de tiempo.
 
 **Rarezas**: cada carta del menú tira su rareza por separado.
 
