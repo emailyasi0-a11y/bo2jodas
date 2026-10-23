@@ -1,8 +1,5 @@
 # bo2jodas
 
-Mod de Zombies para **Black Ops II en Plutonium (T6)**, pensado para partidas privadas de 1 a 4 jugadores en **Pueblo** (funciona en el resto de mapas de Zombies).
-
-Es una partida normal de supervivencia, hasta que el equipo muere, con tres capas encima al estilo *Vampire Survivors*: eliges una **clase** y cada ronda te cambia el arma por otra de tu clase, subes de nivel matando y eliges **cartas** de mejoras que se acumulan, y cada 10 minutos aparece un **jefe**.
 
 **Versión actual: 1.5.0**
 
