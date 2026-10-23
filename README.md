@@ -1,7 +1,7 @@
 # bo2jodas
 
 
-**Versión actual: 1.5.0**
+**Versión actual: 1.6.0**
 
 ---
 
@@ -16,6 +16,12 @@ Todos los jugadores de la partida necesitan **la misma versión** instalada. Cua
 ---
 
 ## Notas de versión
+
+### 1.6.0
+- **La caja ya no da armas: da cartas.** Gira igual, pero sale una carta al azar (misma tabla de rarezas, 5 % de mítica) que se aplica directamente. Precio **por jugador**: 2500 la primera tirada y ×1.17 cada tirada tuya (2500, 2925, 3422, 4004...). Cada uno ve su precio en el texto de la caja. Sin osito: la caja no se mueve.
+- **Super sprinters**: desde la ronda 3, un 20 % de los zombies rápidos salen en super sprint acelerado, más veloces que un jugador corriendo, con un tope de 6 vivos a la vez.
+- **Nivel en el marcador**: al pulsar Tab (Select en mando), la columna Headshots muestra el nivel de cartas de cada jugador.
+- El texto de la caja dice "random CARD".
 
 ### 1.5.0
 - **Bastón de fuego** (Origins): cada jefe suelta una pieza; con 3 se construye en la mesa que hay junto al Juggernog.
@@ -65,7 +71,7 @@ Al empezar eliges clase (los zombies no salen hasta que todos eligen). Al **empe
 | **Rifles** | M14, FAL, SMR, M16, Type 25, M8A1, Chicom CQB | Paralizador | **Ejecutor**: +30 % a zombies con menos de media vida | −10 % a zombies con la vida entera |
 | **Pistolas** | M1911, Five-seven (y dual), B23R (y cargador ampliado), KAP-45, Python, Executioner, Remington New Model Army, Mauser C96, Cuchillo balístico | Ray Gun o Ray Gun Mark II | ×1.3 de velocidad y −50 % de daño explosivo recibido | Ninguna |
 
-- Caja y paredes funcionan normal. **El Pack-a-Punch no se puede usar pagando**: las armas solo se mejoran con cartas.
+- Las paredes funcionan normal. **La caja da cartas, no armas** (ver abajo). **El Pack-a-Punch no se puede usar pagando**: las armas solo se mejoran con cartas.
 - El Bastón de fuego nunca se cambia por el arma de ronda.
 
 ---
@@ -133,6 +139,10 @@ Valores por rareza: común / poco común / rara / épica / legendaria.
 | Munición máxima, Instakill, Doble puntos, Carpintero, Nuke | Común | Power-up inmediato para todo el equipo. |
 | Pack-a-Punch | Épica | Mejora el arma de la mano (si ya lo está, la otra; si las dos, munición máxima). Única forma de mejorar un arma de caja o de pared. |
 
+### Caja misteriosa
+
+La caja gira como siempre, pero da **una carta** al azar (misma tabla de rarezas y 5 % de mítica, con las mismas reglas de dueño), aplicada directamente. Cada jugador tiene **su precio**: 2500 la primera vez y ×1.17 por cada tirada suya. Si no te llega, se cierra sin cobrar. No se mueve.
+
 ### Míticas
 
 **5 %** de que una de las 3 cartas sea mítica. Llevas **una sola**: si coges otra, sustituye a la tuya. La primera persona que coge una mítica es su dueña y a los demás ya no les sale.
@@ -182,6 +192,7 @@ Cada **10 minutos** (el primero en el minuto 10) el siguiente zombie que sale es
 
 ## Otras reglas
 
+- **Super sprinters**: desde la ronda 3, un 20 % de los zombies rápidos van en super sprint acelerado (más rápidos que tú corriendo), máximo 6 a la vez.
 - **Tanques**: desde la ronda 3, los zombies que salen andando tienen ×4 de vida y golpe ×2 (120). Un 10 % de los rápidos se convierte en tanque.
 - **Caos**: hasta 31 zombies vivos a la vez (24 de serie), salen cada 0.5 s como mucho, rondas ×1.5.
 - **Vida de zombies**: +115 por ronda hasta la 9 y ×1.11 desde la 10 (algo más que de serie).
@@ -207,6 +218,8 @@ Se escriben en la consola antes de entrar o antes de `map_restart`.
 | `set jodas_jefe_minutos 1` | Jefe cada minuto. |
 | `set jodas_baston_piezas 1` | Bastón con una sola pieza. |
 | `set jodas_sprint 1` | Todos los zombies corren (2 = super sprint). |
+| `set jodas_caja_cartas 0` | Caja original (armas). |
+| `set jodas_super_pct 0` | Sin super sprinters. |
 | `set jodas_off 1` | Desactiva el mod. |
 
 ---
