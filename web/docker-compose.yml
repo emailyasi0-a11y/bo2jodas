@@ -1,5 +1,5 @@
 # bo2jodas web: servidor Node + Caddy con HTTPS automatico.
-#   cp .env.example .env   (y rellena DOMINIO y UPLOAD_TOKEN)
+#   cp .env.example .env   (y rellena DOMINIO)
 #   docker compose up -d --build
 services:
   app:
@@ -8,7 +8,7 @@ services:
     environment:
       - UPLOAD_TOKENS=${UPLOAD_TOKENS:-}
     volumes:
-      - ./data:/data        # partidas (data/runs) y tokens (data/tokens.json)
+      - ./data:/data        # partidas (data/runs), cuentas (usuarios.json) y secreto de sesion
     expose:
       - "3000"
 

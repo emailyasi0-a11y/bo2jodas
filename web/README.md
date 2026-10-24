@@ -8,9 +8,11 @@ Al acabar cada partida, el mod escribe un JSON con todo lo que ha pasado (jugado
 
 Esta web lo recibe, lo guarda y lo enseña: lista de partidas, detalle de cada una (build, daño por carta, armas, cartas por orden, cartas perdidas), leaderboards (mejor ronda de cada uno, por clase, por arquetipo, récords, y la historia de quién le quitó el récord a quién) y totales por jugador.
 
+**Para los jugadores no hay que instalar nada**: la web vive en un servidor y se les pasa la URL. Cada uno se registra (solo usuario y contraseña), entra, y en **Subir JSON** arrastra la partida que quiera subir desde la carpeta de arriba (del PC de quien hizo de anfitrión). Las repetidas no se duplican y cada partida queda marcada con quién la subió.
+
 - `server/`: Node + Express. API en `/api`, guarda cada partida como un JSON en `data/runs/`.
 - `client/`: React + Vite.
-- `subidor/`: script para el PC del anfitrión que sube los JSON solos.
+- `subidor/`: opcional, script para el PC del anfitrión que sube los JSON solos (usa el token de la cuenta).
 - `Dockerfile`, `docker-compose.yml`, `Caddyfile`: despliegue con HTTPS automático.
 
 ## Desplegar en un servidor (VPS con IP pública)
@@ -20,23 +22,23 @@ Hace falta Docker. Sin comprar dominio: **sslip.io** convierte la IP en nombre (
 ```bash
 git clone https://github.com/emailyasi0-a11y/bo2jodas
 cd bo2jodas/web
-cp .env.example .env        # DOMINIO=<tu ip>.sslip.io  UPLOAD_TOKEN=<lo que quieras>
+cp .env.example .env        # DOMINIO=<tu ip>.sslip.io
 docker compose up -d --build
 ```
 
-Abre `https://<tu ip>.sslip.io`. Los puertos 80 y 443 tienen que estar abiertos en el firewall del servidor. Las partidas quedan en `web/data/runs/` (haz copia de esa carpeta y no pierdes nada).
+En un Ubuntu recién creado (por ejemplo una VM Always Free de Oracle) lo hace todo `instalar_servidor.sh`. Abre `https://<tu ip>.sslip.io`. Los puertos 80 y 443 tienen que estar abiertos en el firewall del servidor. Todo lo persistente está en `web/data/` (`runs/` partidas, `usuarios.json` cuentas, `secreto.txt` firma de sesión): haz copia de esa carpeta y no pierdes nada.
 
-**Tokens**: sólo se acepta una partida si llega con uno de los tokens de `web/data/tokens.json` (`{"token": "nombre de quien lo usa"}`; el nombre sirve para saber quién subió cada partida). Ese archivo no va al repositorio: cada amigo recibe su token en mano y lo pone en `subir_partidas.cfg`. Sin tokens configurados no se puede subir nada (`UPLOAD_OPEN=1` abre la subida sólo para desarrollo).
+**Cuentas y tokens**: registro y login piden solo usuario y contraseña (contraseñas con scrypt, sesión en cookie firmada, freno de 15 intentos por IP cada 10 minutos). Al registrarse, cada cuenta recibe un token de subida de 32 caracteres que se ve en **Perfil**. Para subir vale cualquiera de las dos cosas: la sesión de la web (arrastrar el JSON en Subir JSON) o ese token en la cabecera `x-token` (lo usa el script opcional). Sin cuenta no se puede subir. Si un token se filtra, en Perfil se genera otro y el viejo deja de valer. `UPLOAD_TOKENS` en `.env` o `data/tokens.json` admiten tokens sueltos de administrador, pero no hacen falta.
 
-Sin Docker: `cd client && npm install && npm run build`, luego `cd ../server && npm install && UPLOAD_TOKEN=... node src/index.js` (puerto 3000) y pon Caddy delante con el `Caddyfile`.
+Sin Docker: `cd client && npm install && npm run build`, luego `cd ../server && npm install && node src/index.js` (puerto 3000) y pon Caddy delante con el `Caddyfile`.
 
-## Subir las partidas solas (PC del anfitrión)
+## Opcional: subida automática (PC del anfitrión)
+
+Quien haga de anfitrión a menudo puede dejar un script que suba cada partida sola al acabar:
 
 1. Copia la carpeta `subidor/` a cualquier sitio del PC del anfitrión.
-2. Copia `subir_partidas.cfg.ejemplo` como `subir_partidas.cfg` y pon la `url` de la web, el `token` de `.env` y tu nombre.
-3. Doble clic en `subir_partidas.bat`: se queda abierto vigilando la carpeta y sube cada partida nueva al acabar (y las que hubiera pendientes). Déjalo abierto mientras juegas o ejecútalo después.
-
-Si no quieres el script, en la web hay una pestaña **Subir JSON** para arrastrar los archivos a mano.
+2. En la web, Perfil, descarga `subir_partidas.cfg` ya relleno (url + token de tu cuenta + nombre) y déjalo al lado del `.bat`.
+3. Doble clic en `subir_partidas.bat`: se queda abierto vigilando la carpeta y sube cada partida nueva (y las que hubiera pendientes). Déjalo abierto mientras juegas o ejecútalo después.
 
 ## Probar en local
 
@@ -47,16 +49,21 @@ cd ../server && npm install && node src/index.js
 
 Abre `http://localhost:3000`. Para desarrollo del cliente con recarga: `npm run dev` en `client/` (proxy a `localhost:3000`).
 
-Hay una partida de ejemplo en `ejemplos/`: `curl -X POST localhost:3000/api/runs -H "content-type: application/json" -H "x-token: <un token>" --data @ejemplos/partida_ejemplo.json`. En local, `UPLOAD_OPEN=1 node src/index.js` acepta subidas sin token.
+Hay una partida de ejemplo en `ejemplos/`: `curl -X POST localhost:3000/api/runs -H "content-type: application/json" -H "x-token: <token de tu perfil>" --data @ejemplos/partida_ejemplo.json`. En local, `UPLOAD_OPEN=1 node src/index.js` acepta subidas sin token.
 
 ## API
 
 | Método y ruta | Qué hace |
 |---|---|
-| `POST /api/runs` | Sube una partida (JSON del mod). Cabecera `x-token` con uno de los tokens. Devuelve `{ok, id, repetida}`. |
+| `POST /api/runs` | Sube una partida (JSON del mod). Con sesión o con cabecera `x-token` (token de la cuenta). Devuelve `{ok, id, repetida}`. |
 | `GET /api/runs?limit=100` | Resúmenes, las más recientes primero. |
 | `GET /api/runs/:id` | La partida completa. |
 | `GET /api/leaderboards` | Mejor ronda por jugador, por clase y por arquetipo; récords; historia del récord. |
 | `GET /api/stats` | Totales por jugador y cartas más usadas. |
+| `POST /api/auth/registro`, `POST /api/auth/login` | `{usuario, contrasena}`. Devuelven el perfil y ponen la cookie de sesión. |
+| `GET /api/auth/yo` | Perfil: usuario, token de subida, fecha de alta, partidas subidas. |
+| `POST /api/auth/token` | Genera un token nuevo (el anterior deja de valer). |
+| `POST /api/auth/contrasena` | `{actual, nueva}`. |
+| `POST /api/auth/logout` | Cierra la sesión. |
 
 El formato del JSON lo escribe `mod/scripts/zm/bo2jodas_stats.gsc`; los nombres de las cartas para la web salen de `tools/generar_cartas_json.py` (hay que ejecutarlo cuando cambien las cartas del mod).

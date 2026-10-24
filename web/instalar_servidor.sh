@@ -7,7 +7,7 @@
 # Hace: instala Docker, abre los puertos 80 y 443 (Oracle los bloquea con
 # iptables ademas de en su consola), clona el repo, prepara .env con la IP
 # publica (sslip.io) y arranca todo con docker compose. Luego hay que copiar
-# los tokens a /opt/bo2jodas/web/data/tokens.json.
+# cada amigo se registra en la web y copia su token desde Perfil.
 set -euo pipefail
 
 if [ "$(id -u)" -ne 0 ]; then
@@ -47,13 +47,9 @@ if [ ! -f .env ]; then
   printf 'DOMINIO=%s\nUPLOAD_TOKENS=\n' "$DOMINIO" > .env
 fi
 mkdir -p data
-if [ ! -f data/tokens.json ]; then
-  echo '{}' > data/tokens.json
-  echo "AVISO: data/tokens.json esta vacio: copia ahi los tokens (nadie podra subir hasta entonces)."
-fi
 
 echo "== Arrancando"
 docker compose up -d --build
 echo
 echo "Listo: https://${DOMINIO}  (el certificado tarda un minuto la primera vez)"
-echo "Tokens: /opt/bo2jodas/web/data/tokens.json y luego: cd /opt/bo2jodas/web && docker compose restart app"
+echo "Cada amigo: Registrarse en la web -> Perfil -> copiar el token a subir_partidas.cfg"

@@ -1,16 +1,34 @@
 export async function api(ruta) {
-  const r = await fetch(`/api${ruta}`);
+  const r = await fetch(`/api${ruta}`, { credentials: "same-origin" });
   if (!r.ok) throw new Error(`${r.status} ${r.statusText}`);
   return r.json();
 }
 
-export async function subirPartida(json, token) {
-  const r = await fetch("/api/runs", {
+async function post(ruta, cuerpo, cabeceras = {}) {
+  const r = await fetch(`/api${ruta}`, {
     method: "POST",
-    headers: { "content-type": "application/json", ...(token ? { "x-token": token } : {}) },
-    body: JSON.stringify(json),
+    credentials: "same-origin",
+    headers: { "content-type": "application/json", ...cabeceras },
+    body: JSON.stringify(cuerpo ?? {}),
   });
-  const cuerpo = await r.json().catch(() => ({}));
-  if (!r.ok) throw new Error(cuerpo.error || `${r.status}`);
-  return cuerpo;
+  const datos = await r.json().catch(() => ({}));
+  if (!r.ok) throw new Error(datos.error || `${r.status}`);
+  return datos;
 }
+
+export function subirPartida(json, token) {
+  return post("/runs", json, token ? { "x-token": token } : {});
+}
+
+// Cuentas. La sesion va en una cookie HttpOnly; /auth/yo devuelve null si no hay.
+export async function quienSoy() {
+  const r = await fetch("/api/auth/yo", { credentials: "same-origin" });
+  if (r.status === 401) return null;
+  if (!r.ok) throw new Error(`${r.status}`);
+  return r.json();
+}
+export const registrar = (usuario, contrasena) => post("/auth/registro", { usuario, contrasena });
+export const entrar = (usuario, contrasena) => post("/auth/login", { usuario, contrasena });
+export const salir = () => post("/auth/logout");
+export const tokenNuevo = () => post("/auth/token");
+export const cambiarContrasena = (actual, nueva) => post("/auth/contrasena", { actual, nueva });

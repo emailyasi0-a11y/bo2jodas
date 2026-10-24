@@ -20,6 +20,7 @@ export function resumen(p) {
     ronda: p.ronda,
     duracion_s: p.duracion_s,
     version: p.version,
+    subido_por: p.subido_por,
     jugadores: p.jugadores.map((j) => ({
       nombre: j.nombre,
       clase: j.clase,

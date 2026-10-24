@@ -126,3 +126,30 @@ h3 { font-size: 20px; color: var(--texto2); }
 .vacio { color: var(--texto2); }
 .error { color: var(--rojo); }
 code { background: var(--panel2); padding: 1px 5px; border-radius: 4px; font-size: 12px; }
+
+/* cuentas */
+.nav-usuario { border: 1px solid var(--borde); }
+.acceso { max-width: 440px; margin: 20px auto; }
+.pestanas { display: flex; gap: 6px; margin-bottom: 10px; }
+.pestanas button { flex: 1; padding: 10px; border-radius: 10px; border: 1px solid var(--borde); background: var(--panel); color: var(--texto); font-weight: 600; cursor: pointer; }
+.pestanas button.activa { background: var(--panel2); color: var(--acento); border-color: var(--acento); }
+.formulario { display: grid; gap: 10px; }
+.formulario h1 { margin: 0 0 6px; }
+.campo { display: grid; gap: 6px; color: var(--texto2); font-size: 14px; }
+.campo input { padding: 9px 10px; border-radius: 8px; border: 1px solid var(--borde); background: var(--panel2); color: var(--texto); font-size: 15px; }
+.campo input:focus { outline: none; border-color: var(--acento); }
+.boton { display: inline-block; padding: 9px 14px; border-radius: 8px; border: 1px solid var(--acento); background: var(--acento); color: #111; font-weight: 700; cursor: pointer; text-decoration: none; }
+.boton:hover { text-decoration: none; filter: brightness(1.08); }
+.boton:disabled { opacity: 0.6; cursor: default; }
+.boton.secundario { background: transparent; color: var(--texto); border-color: var(--borde); }
+.perfil .detalle-cabecera { flex-wrap: wrap; }
+.perfil .detalle-cabecera .boton { margin-left: auto; }
+.token-fila { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 8px 0; }
+.token { font-size: 16px; padding: 8px 12px; letter-spacing: 1px; user-select: all; word-break: break-all; }
+.pasos { padding-left: 22px; display: grid; gap: 10px; line-height: 1.5; }
+details.tarjeta summary { cursor: pointer; font-family: "Barlow Condensed", sans-serif; font-size: 22px; font-weight: 700; }
+details.tarjeta .formulario { margin-top: 12px; max-width: 420px; }
+.token.ruta { letter-spacing: 0; font-size: 13px; }
+.aviso-entrar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.estados { list-style: none; padding: 0; margin: 10px 0; display: grid; gap: 4px; }
+.subir .pasos { margin-bottom: 14px; }

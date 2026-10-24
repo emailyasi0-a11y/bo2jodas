@@ -27,6 +27,7 @@ export default function Partidas() {
                   <div className="partida-mapa">{nombreMapa(p.mapa, p.sitio)}</div>
                   <div className="partida-fecha">
                     {fecha(p.fecha)} · {duracion(p.duracion_s)} · {p.jugadores.length} {p.jugadores.length === 1 ? "jugador" : "jugadores"}
+                    {p.subido_por ? ` · subida por ${p.subido_por}` : ""}
                   </div>
                 </div>
               </header>
