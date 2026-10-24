@@ -1,6 +1,6 @@
 # bo2jodas
 
-**Versión actual: 1.9.1** · Black Ops II Zombies · Plutonium T6 · Pueblo (funciona en el resto de mapas)
+**Versión actual: 1.9.2** · Black Ops II Zombies · Plutonium T6 · Pueblo (funciona en el resto de mapas)
 
 ---
 
@@ -17,7 +17,15 @@ Diagramas de los arquetipos, sus cartas, la vida de los zombies por ronda y el d
 
 ---
 
-## Novedades de la 1.9.1
+## Novedades de la 1.9.2: estadísticas y web
+
+Al acabar cada partida, el mod escribe un **JSON con todo lo que ha pasado** en el PC del anfitrión (`%localappdata%\Plutonium\storage\t6\mods\zm_bo2jodas\scriptdata\bo2jodas_partidas\`): por jugador, clase, arquetipo, mítica, nivel, build completa, cartas por orden, **daño de cada carta** (cada disparo se reparte entre el arma y las cartas según lo que cada una puso en el multiplicador; el fuego, los rayos y los leapers cuentan por su carta), daño y bajas por arma, bajas, cabezas, caídas, reanimaciones, combo máximo, puntos, rerolls, bloqueos, saltos, cartas perdidas, jefes rematados y bebidas de la Bruja; y de la partida: ronda, duración, jefes aparecidos y muertos, bastones construidos y forjados.
+
+La carpeta [`web/`](web/) tiene la **página** que los recibe (Node + React): lista de partidas, detalle de cada una, leaderboards (mejor ronda de cada uno, por clase, por arquetipo, récords y la historia de quién le quitó el récord a quién) y totales por jugador. Se despliega con Docker y Caddy (HTTPS con sslip.io, sin comprar dominio) y `web/subidor/` sube las partidas solas desde el PC del anfitrión. Instrucciones en [web/README.md](web/README.md).
+
+<details>
+<summary><b>Novedades de la 1.9.1</b></summary>
+
 
 | | |
 |---|---|
@@ -149,6 +157,8 @@ Ver [Jefes: Brutus, la Bruja y Leroy](#jefes-brutus-la-bruja-y-leroy). Resumen: 
 - Cada carta lleva un **marco del color de su rareza** (gris, verde, azul, morado, dorado; rojo las míticas) con el nombre de la rareza en la banda de arriba, y el fondo lleva el **color de tu arquetipo** (o de la clase en el menú de clase).
 - La carta marcada **crece y se ilumina**; las cartas aparecen en fundido escalonado y el título se descifra letra a letra.
 - La barra de vida del jefe lleva su nombre.
+
+</details>
 
 </details>
 

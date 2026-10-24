@@ -1,0 +1,492 @@
+{
+ "version": "1.9.2",
+ "id": "ejemplo2",
+ "mapa": "zm_transit",
+ "sitio": "town",
+ "ronda": 31,
+ "duracion_s": 4120,
+ "baston_construidos": 1,
+ "baston_forjados": 0,
+ "jefes_aparecidos": {
+  "brutus": 2,
+  "bruja": 1
+ },
+ "jefes_muertos": {
+  "brutus": 2,
+  "bruja": 1
+ },
+ "jugadores_n": 3,
+ "jugadores": [
+  {
+   "nombre": "Ene",
+   "clase": "automaticas",
+   "arquetipo": "francotirador",
+   "mitica": "zeus",
+   "nivel": 16,
+   "puntos_total": 108838,
+   "puntos_final": 16223,
+   "bajas": 1196,
+   "cabezas": 225,
+   "caidas": 3,
+   "reanimaciones": 2,
+   "max_combo": 10,
+   "danio_total": 652088,
+   "rerolls_usados": 0,
+   "bloqueos_usados": 0,
+   "saltos": 2,
+   "bebidas_bruja": 1,
+   "recuperadas": 0,
+   "danio_cartas": {
+    "arma": 284890,
+    "clase": 39886,
+    "danio": 33140,
+    "cadencia": 36544,
+    "ultimas": 21226,
+    "tambor": 56993,
+    "plomo": 42959,
+    "combo": 61045,
+    "critico": 15728,
+    "zeus": 59677
+   },
+   "danio_armas": {
+    "galil_zm": 143243,
+    "m14_zm": 69619,
+    "staff_fire_zm": 22416
+   },
+   "bajas_armas": {
+    "galil_zm": 177,
+    "m14_zm": 145,
+    "none": 63
+   },
+   "jefes_matados": {
+    "brutus": 0
+   },
+   "bebidas": [
+    "specialty_armorvest",
+    "specialty_fastreload",
+    "specialty_rof",
+    "specialty_additionalprimaryweapon"
+   ],
+   "cartas": [
+    {
+     "id": "danio",
+     "nombre": "Calibre",
+     "arquetipo": "",
+     "tipo": "normal",
+     "valor": 10,
+     "veces": 2
+    },
+    {
+     "id": "cadencia",
+     "nombre": "Gatillo loco",
+     "arquetipo": "gatillo",
+     "tipo": "normal",
+     "valor": 2,
+     "veces": 1
+    },
+    {
+     "id": "ultimas",
+     "nombre": "Ultimas balas",
+     "arquetipo": "gatillo",
+     "tipo": "normal",
+     "valor": 36,
+     "veces": 1
+    },
+    {
+     "id": "tambor",
+     "nombre": "Tambor caliente",
+     "arquetipo": "gatillo",
+     "tipo": "normal",
+     "valor": 36,
+     "veces": 1
+    },
+    {
+     "id": "plomo",
+     "nombre": "Plomo",
+     "arquetipo": "gatillo",
+     "tipo": "normal",
+     "valor": 15,
+     "veces": 1
+    },
+    {
+     "id": "cinta",
+     "nombre": "Cinta de balas",
+     "arquetipo": "gatillo",
+     "tipo": "normal",
+     "valor": 11,
+     "veces": 2
+    },
+    {
+     "id": "continuo",
+     "nombre": "Fuego continuo",
+     "arquetipo": "gatillo",
+     "tipo": "normal",
+     "valor": 1,
+     "veces": 1
+    },
+    {
+     "id": "armadura",
+     "nombre": "Armadura",
+     "arquetipo": "",
+     "tipo": "normal",
+     "valor": 3,
+     "veces": 1
+    },
+    {
+     "id": "combo",
+     "nombre": "Combo",
+     "arquetipo": "",
+     "tipo": "normal",
+     "valor": 5,
+     "veces": 1
+    },
+    {
+     "id": "critico",
+     "nombre": "Golpe critico",
+     "arquetipo": "",
+     "tipo": "normal",
+     "valor": 24,
+     "veces": 2
+    }
+   ],
+   "historial": [
+    {
+     "ronda": 3,
+     "id": "danio",
+     "rareza": "COMUN",
+     "valor": 10
+    },
+    {
+     "ronda": 5,
+     "id": "danio",
+     "rareza": "COMUN",
+     "valor": 22
+    },
+    {
+     "ronda": 6,
+     "id": "cadencia",
+     "rareza": "EPICA",
+     "valor": 2
+    },
+    {
+     "ronda": 7,
+     "id": "ultimas",
+     "rareza": "COMUN",
+     "valor": 36
+    },
+    {
+     "ronda": 7,
+     "id": "tambor",
+     "rareza": "LEGENDARIA",
+     "valor": 36
+    },
+    {
+     "ronda": 7,
+     "id": "plomo",
+     "rareza": "LEGENDARIA",
+     "valor": 15
+    },
+    {
+     "ronda": 7,
+     "id": "cinta",
+     "rareza": "LEGENDARIA",
+     "valor": 4
+    },
+    {
+     "ronda": 9,
+     "id": "cinta",
+     "rareza": "POCO COMUN",
+     "valor": 2
+    },
+    {
+     "ronda": 11,
+     "id": "continuo",
+     "rareza": "POCO COMUN",
+     "valor": 1
+    },
+    {
+     "ronda": 13,
+     "id": "armadura",
+     "rareza": "COMUN",
+     "valor": 3
+    },
+    {
+     "ronda": 13,
+     "id": "combo",
+     "rareza": "EPICA",
+     "valor": 5
+    },
+    {
+     "ronda": 14,
+     "id": "critico",
+     "rareza": "RARA",
+     "valor": 6
+    },
+    {
+     "ronda": 14,
+     "id": "critico",
+     "rareza": "POCO COMUN",
+     "valor": 4
+    },
+    {
+     "ronda": 23,
+     "id": "zeus",
+     "rareza": "MITICA",
+     "valor": 0
+    }
+   ],
+   "cartas_perdidas": []
+  },
+  {
+   "nombre": "Yasi",
+   "clase": "escopetas",
+   "arquetipo": "piromano",
+   "mitica": "",
+   "nivel": 14,
+   "puntos_total": 84571,
+   "puntos_final": 19684,
+   "bajas": 353,
+   "cabezas": 102,
+   "caidas": 0,
+   "reanimaciones": 4,
+   "max_combo": 10,
+   "danio_total": 492857,
+   "rerolls_usados": 1,
+   "bloqueos_usados": 0,
+   "saltos": 1,
+   "bebidas_bruja": 2,
+   "recuperadas": 0,
+   "danio_cartas": {
+    "arma": 220347,
+    "clase": 80106,
+    "danio": 67141,
+    "explosivo": 27026,
+    "fosforo": 26805,
+    "napalm": 52024,
+    "sangrefria": 19408
+   },
+   "danio_armas": {
+    "galil_zm": 106684,
+    "m14_zm": 24608,
+    "staff_fire_zm": 57300
+   },
+   "bajas_armas": {
+    "galil_zm": 206,
+    "m14_zm": 177,
+    "none": 58
+   },
+   "jefes_matados": {
+    "brutus": 0
+   },
+   "bebidas": [
+    "specialty_armorvest",
+    "specialty_fastreload",
+    "specialty_rof",
+    "specialty_additionalprimaryweapon"
+   ],
+   "cartas": [
+    {
+     "id": "danio",
+     "nombre": "Calibre",
+     "arquetipo": "",
+     "tipo": "normal",
+     "valor": 42,
+     "veces": 3
+    },
+    {
+     "id": "explosivo",
+     "nombre": "Polvora",
+     "arquetipo": "piromano",
+     "tipo": "normal",
+     "valor": 36,
+     "veces": 3
+    },
+    {
+     "id": "fosforo",
+     "nombre": "Fosforo",
+     "arquetipo": "piromano",
+     "tipo": "normal",
+     "valor": 30,
+     "veces": 3
+    },
+    {
+     "id": "napalm",
+     "nombre": "Napalm",
+     "arquetipo": "piromano",
+     "tipo": "normal",
+     "valor": 100,
+     "veces": 2
+    },
+    {
+     "id": "rescoldos",
+     "nombre": "Rescoldos",
+     "arquetipo": "piromano",
+     "tipo": "normal",
+     "valor": 25,
+     "veces": 3
+    },
+    {
+     "id": "pirotecnico",
+     "nombre": "Pirotecnico",
+     "arquetipo": "piromano",
+     "tipo": "normal",
+     "valor": 1,
+     "veces": 1
+    },
+    {
+     "id": "vida",
+     "nombre": "Corazon de hierro",
+     "arquetipo": "",
+     "tipo": "normal",
+     "valor": 68,
+     "veces": 2
+    },
+    {
+     "id": "regen",
+     "nombre": "Regeneracion",
+     "arquetipo": "",
+     "tipo": "normal",
+     "valor": 9,
+     "veces": 3
+    },
+    {
+     "id": "sangrefria",
+     "nombre": "Sangre fria",
+     "arquetipo": "",
+     "tipo": "normal",
+     "valor": 6,
+     "veces": 1
+    }
+   ],
+   "historial": [
+    {
+     "ronda": 3,
+     "id": "danio",
+     "rareza": "RARA",
+     "valor": 22
+    },
+    {
+     "ronda": 4,
+     "id": "danio",
+     "rareza": "LEGENDARIA",
+     "valor": 14
+    },
+    {
+     "ronda": 4,
+     "id": "danio",
+     "rareza": "COMUN",
+     "valor": 10
+    },
+    {
+     "ronda": 6,
+     "id": "explosivo",
+     "rareza": "LEGENDARIA",
+     "valor": 32
+    },
+    {
+     "ronda": 7,
+     "id": "explosivo",
+     "rareza": "EPICA",
+     "valor": 20
+    },
+    {
+     "ronda": 7,
+     "id": "explosivo",
+     "rareza": "EPICA",
+     "valor": 20
+    },
+    {
+     "ronda": 7,
+     "id": "fosforo",
+     "rareza": "RARA",
+     "valor": 9
+    },
+    {
+     "ronda": 9,
+     "id": "fosforo",
+     "rareza": "POCO COMUN",
+     "valor": 18
+    },
+    {
+     "ronda": 10,
+     "id": "fosforo",
+     "rareza": "EPICA",
+     "valor": 6
+    },
+    {
+     "ronda": 11,
+     "id": "napalm",
+     "rareza": "POCO COMUN",
+     "valor": 42
+    },
+    {
+     "ronda": 13,
+     "id": "napalm",
+     "rareza": "RARA",
+     "valor": 42
+    },
+    {
+     "ronda": 13,
+     "id": "rescoldos",
+     "rareza": "POCO COMUN",
+     "valor": 6
+    },
+    {
+     "ronda": 13,
+     "id": "rescoldos",
+     "rareza": "POCO COMUN",
+     "valor": 4
+    },
+    {
+     "ronda": 14,
+     "id": "rescoldos",
+     "rareza": "LEGENDARIA",
+     "valor": 6
+    },
+    {
+     "ronda": 15,
+     "id": "pirotecnico",
+     "rareza": "COMUN",
+     "valor": 1
+    },
+    {
+     "ronda": 17,
+     "id": "vida",
+     "rareza": "LEGENDARIA",
+     "valor": 20
+    },
+    {
+     "ronda": 17,
+     "id": "vida",
+     "rareza": "LEGENDARIA",
+     "valor": 48
+    },
+    {
+     "ronda": 18,
+     "id": "regen",
+     "rareza": "EPICA",
+     "valor": 3
+    },
+    {
+     "ronda": 19,
+     "id": "regen",
+     "rareza": "COMUN",
+     "valor": 3
+    },
+    {
+     "ronda": 21,
+     "id": "regen",
+     "rareza": "EPICA",
+     "valor": 1
+    },
+    {
+     "ronda": 21,
+     "id": "sangrefria",
+     "rareza": "EPICA",
+     "valor": 10
+    }
+   ],
+   "cartas_perdidas": []
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+# bo2jodas web: servidor Node + Caddy con HTTPS automatico.
+#   cp .env.example .env   (y rellena DOMINIO y UPLOAD_TOKEN)
+#   docker compose up -d --build
+services:
+  app:
+    build: .
+    restart: unless-stopped
+    environment:
+      - UPLOAD_TOKEN=${UPLOAD_TOKEN:-}
+    volumes:
+      - ./data:/data
+    expose:
+      - "3000"
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    depends_on:
+      - app
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      - DOMINIO=${DOMINIO:?pon DOMINIO en .env, por ejemplo 1.2.3.4.sslip.io}
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+
+volumes:
+  caddy_data:
+  caddy_config:

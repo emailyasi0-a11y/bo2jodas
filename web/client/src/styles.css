@@ -1,0 +1,128 @@
+:root {
+  color-scheme: dark;
+  --fondo: #0f1014;
+  --panel: #181a21;
+  --panel2: #20232c;
+  --borde: #2b2f3a;
+  --texto: #e8e8ee;
+  --texto2: #a7a9b5;
+  --acento: #ffd91a;
+  --rojo: #ff2626;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: radial-gradient(1200px 500px at 50% -200px, #2a1d12 0%, var(--fondo) 60%);
+  color: var(--texto);
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-size: 15px;
+}
+
+a { color: var(--acento); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+.app { min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; width: min(1180px, 100% - 32px); margin: 0 auto; padding: 16px 0 40px; }
+footer { padding: 16px; text-align: center; color: var(--texto2); font-size: 12px; border-top: 1px solid var(--borde); }
+
+.cabecera {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  padding: 14px 16px; border-bottom: 1px solid var(--borde); background: rgba(15, 16, 20, 0.85); position: sticky; top: 0; backdrop-filter: blur(6px); z-index: 2;
+}
+.marca-titulo { font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 28px; letter-spacing: 1px; color: var(--acento); }
+.marca-sub { margin-left: 10px; color: var(--texto2); font-size: 13px; }
+nav { display: flex; gap: 6px; flex-wrap: wrap; }
+nav a { padding: 8px 12px; border-radius: 8px; color: var(--texto); font-weight: 600; }
+nav a.active { background: var(--panel2); color: var(--acento); }
+
+h1, h2, h3 { font-family: "Barlow Condensed", sans-serif; letter-spacing: 0.5px; margin: 18px 0 10px; }
+h1 { font-size: 34px; }
+h2 { font-size: 26px; margin-top: 30px; }
+h3 { font-size: 20px; color: var(--texto2); }
+
+.tarjeta { background: var(--panel); border: 1px solid var(--borde); border-radius: 12px; padding: 14px 16px; margin-bottom: 14px; }
+.tarjetas { display: grid; gap: 14px; }
+
+.partida header { display: flex; align-items: center; gap: 14px; }
+.partida-mapa { font-family: "Barlow Condensed", sans-serif; font-size: 22px; font-weight: 700; }
+.partida-fecha, .partida-extra { color: var(--texto2); font-size: 13px; margin: 2px 0; }
+
+.ronda {
+  display: inline-block; font-family: "Barlow Condensed", sans-serif; font-weight: 700; font-size: 18px;
+  padding: 2px 8px; border-radius: 8px; background: var(--rojo); color: #fff; min-width: 44px; text-align: center;
+}
+.ronda-grande { font-size: 34px; padding: 6px 12px; min-width: 76px; }
+
+.jugadores-mini { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 6px; }
+.jugadores-mini li { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 13px; }
+.jugadores-mini .nombre { font-weight: 600; min-width: 120px; }
+.mini-dato { color: var(--texto2); }
+
+.etiqueta {
+  display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 600;
+  color: var(--c); border: 1px solid color-mix(in srgb, var(--c) 60%, transparent); background: color-mix(in srgb, var(--c) 12%, transparent);
+}
+
+.detalle-cabecera { display: flex; align-items: center; gap: 18px; margin-bottom: 10px; }
+.detalle-cabecera h1 { margin: 0; }
+
+.jugador-cabecera { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.jugador-cabecera h2 { margin: 0; font-size: 28px; }
+.nivel { color: var(--texto2); }
+
+.datos { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 8px; margin: 12px 0; }
+.dato { background: var(--panel2); border-radius: 10px; padding: 8px 10px; }
+.dato-n { font-family: "Barlow Condensed", sans-serif; font-size: 24px; font-weight: 700; }
+.dato-t { color: var(--texto2); font-size: 12px; }
+
+.cartas { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 8px; }
+.carta { border: 1px solid color-mix(in srgb, var(--c) 55%, transparent); border-left: 4px solid var(--c); background: color-mix(in srgb, var(--c) 8%, var(--panel2)); border-radius: 8px; padding: 8px 10px; display: grid; }
+.carta-nombre { font-weight: 600; }
+.carta-valor { color: var(--texto); font-size: 13px; }
+.carta-arq { color: var(--c); font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+.barras { display: grid; gap: 6px; }
+.fila-barra { display: grid; grid-template-columns: 200px 1fr; gap: 10px; align-items: center; }
+.fila-nombre { color: var(--c); font-size: 13px; text-align: right; }
+.barra { position: relative; height: 22px; background: var(--panel2); border-radius: 6px; overflow: hidden; }
+.barra-relleno { height: 100%; border-radius: 6px; opacity: 0.85; }
+.barra-texto { position: absolute; left: 8px; top: 2px; font-size: 13px; font-weight: 600; text-shadow: 0 1px 2px #000; }
+
+.dos-columnas { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 800px) { .dos-columnas { grid-template-columns: 1fr; } .fila-barra { grid-template-columns: 120px 1fr; } }
+
+.tabla { width: 100%; border-collapse: collapse; font-size: 14px; }
+.tabla th, .tabla td { padding: 6px 8px; border-bottom: 1px solid var(--borde); text-align: left; vertical-align: middle; }
+.tabla th { color: var(--texto2); font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+.tabla .nombre { font-weight: 600; }
+.ranking tr.primero td { background: color-mix(in srgb, var(--acento) 10%, transparent); }
+.num { font-variant-numeric: tabular-nums; }
+
+.historial, .historia { padding-left: 0; list-style: none; margin: 0; display: grid; gap: 4px; }
+.historial li { display: flex; gap: 8px; align-items: baseline; font-size: 13px; }
+.hist-ronda { color: var(--texto2); min-width: 34px; }
+.hist-rareza { min-width: 90px; font-size: 12px; }
+.hist-nombre { color: var(--c); }
+.hist-valor { color: var(--texto2); }
+.historia li { display: flex; gap: 12px; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--borde); }
+.hist-texto { flex: 1; }
+
+.perdidas { padding-left: 18px; font-size: 13px; }
+.motivo { color: var(--texto2); }
+
+.records { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+.record { background: var(--panel); border: 1px solid var(--borde); border-radius: 12px; padding: 10px 14px; }
+.record h3 { margin-top: 0; }
+.record ol { padding-left: 20px; margin: 0; }
+.record li { margin: 4px 0; }
+
+.subir .campo { display: grid; gap: 6px; max-width: 420px; margin: 10px 0; color: var(--texto2); }
+.subir input[type="password"] { padding: 8px; border-radius: 8px; border: 1px solid var(--borde); background: var(--panel2); color: var(--texto); }
+.zona-soltar { border: 2px dashed var(--borde); border-radius: 14px; padding: 40px; text-align: center; color: var(--texto2); display: grid; gap: 14px; }
+.estado { color: var(--acento); }
+.nota { color: var(--texto2); font-size: 13px; }
+.vacio { color: var(--texto2); }
+.error { color: var(--rojo); }
+code { background: var(--panel2); padding: 1px 5px; border-radius: 4px; font-size: 12px; }

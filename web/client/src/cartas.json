@@ -1,0 +1,1874 @@
+[
+ {
+  "id": "velocidad",
+  "nombre": "Piernas ligeras",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 80,
+  "valores": [
+   3,
+   5,
+   7,
+   10,
+   16
+  ]
+ },
+ {
+  "id": "salto",
+  "nombre": "Muelles",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 700,
+  "valores": [
+   50,
+   70,
+   105,
+   145,
+   210
+  ]
+ },
+ {
+  "id": "danio",
+  "nombre": "Calibre",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 300,
+  "valores": [
+   5,
+   7,
+   10,
+   14,
+   22
+  ]
+ },
+ {
+  "id": "cadencia",
+  "nombre": "Gatillo loco",
+  "arquetipo": "gatillo",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 150,
+  "valores": [
+   2,
+   4,
+   6,
+   10,
+   14
+  ]
+ },
+ {
+  "id": "municion",
+  "nombre": "Cargador magico",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 60,
+  "valores": [
+   4,
+   6,
+   10,
+   14,
+   20
+  ]
+ },
+ {
+  "id": "recarga",
+  "nombre": "Manos rapidas",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 2,
+  "tope": 450,
+  "valores": [
+   5,
+   30,
+   100,
+   250,
+   450
+  ]
+ },
+ {
+  "id": "reserva",
+  "nombre": "Mochila",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": " b/min",
+  "decimal": 0,
+  "tope": 60,
+  "valores": [
+   5,
+   8,
+   12,
+   18,
+   30
+  ]
+ },
+ {
+  "id": "vida",
+  "nombre": "Corazon de hierro",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 400,
+  "valores": [
+   8,
+   12,
+   20,
+   32,
+   48
+  ]
+ },
+ {
+  "id": "regen",
+  "nombre": "Regeneracion",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 25,
+  "valores": [
+   1,
+   1,
+   2,
+   3,
+   5
+  ]
+ },
+ {
+  "id": "vampiro",
+  "nombre": "Vampiro",
+  "arquetipo": "berserker",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 60,
+  "valores": [
+   2,
+   3,
+   4,
+   6,
+   10
+  ]
+ },
+ {
+  "id": "blindaje",
+  "nombre": "Blindaje",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "-",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 60,
+  "valores": [
+   3,
+   5,
+   7,
+   10,
+   14
+  ]
+ },
+ {
+  "id": "explosivo",
+  "nombre": "Polvora",
+  "arquetipo": "piromano",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 400,
+  "valores": [
+   8,
+   12,
+   20,
+   32,
+   48
+  ]
+ },
+ {
+  "id": "cabeza",
+  "nombre": "Ojo de halcon",
+  "arquetipo": "francotirador",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 400,
+  "valores": [
+   8,
+   12,
+   20,
+   32,
+   48
+  ]
+ },
+ {
+  "id": "critico",
+  "nombre": "Golpe critico",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 60,
+  "valores": [
+   2,
+   4,
+   6,
+   10,
+   14
+  ]
+ },
+ {
+  "id": "melee",
+  "nombre": "Nudillos de hierro",
+  "arquetipo": "tanque",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 3000,
+  "valores": [
+   40,
+   65,
+   95,
+   145,
+   240
+  ]
+ },
+ {
+  "id": "puntos",
+  "nombre": "Codicia",
+  "arquetipo": "banquero",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 300,
+  "valores": [
+   4,
+   8,
+   12,
+   20,
+   32
+  ]
+ },
+ {
+  "id": "cadena",
+  "nombre": "Reaccion en cadena",
+  "arquetipo": "electricista",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 60,
+  "valores": [
+   3,
+   5,
+   7,
+   10,
+   16
+  ]
+ },
+ {
+  "id": "iman",
+  "nombre": "Iman",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 5000,
+  "valores": [
+   250,
+   360,
+   520,
+   720,
+   1040
+  ]
+ },
+ {
+  "id": "botin",
+  "nombre": "Buscador de botin",
+  "arquetipo": "suertudo",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 1,
+  "tope": 150,
+  "valores": [
+   4,
+   8,
+   12,
+   20,
+   32
+  ]
+ },
+ {
+  "id": "aliento",
+  "nombre": "Segundo aliento",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 90,
+  "valores": [
+   8,
+   12,
+   18,
+   24,
+   36
+  ]
+ },
+ {
+  "id": "escurridizo",
+  "nombre": "Escurridizo",
+  "arquetipo": "velocista",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": " s",
+  "decimal": 1,
+  "tope": 60,
+  "valores": [
+   4,
+   6,
+   10,
+   13,
+   18
+  ]
+ },
+ {
+  "id": "pap",
+  "nombre": "Suerte del Pack",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 100,
+  "valores": [
+   4,
+   6,
+   10,
+   14,
+   20
+  ]
+ },
+ {
+  "id": "granada",
+  "nombre": "Granadero",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 60,
+  "valores": [
+   2,
+   4,
+   6,
+   10,
+   14
+  ]
+ },
+ {
+  "id": "espinas",
+  "nombre": "Espinas",
+  "arquetipo": "tanque",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 500,
+  "valores": [
+   12,
+   20,
+   32,
+   48,
+   72
+  ]
+ },
+ {
+  "id": "especial",
+  "nombre": "Afortunado",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 70,
+  "valores": [
+   2,
+   4,
+   6,
+   10,
+   14
+  ]
+ },
+ {
+  "id": "suerte",
+  "nombre": "Trebol",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 60,
+  "valores": [
+   2,
+   4,
+   6,
+   10,
+   14
+  ]
+ },
+ {
+  "id": "sed",
+  "nombre": "Sed de sangre",
+  "arquetipo": "velocista",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 60,
+  "valores": [
+   4,
+   6,
+   10,
+   13,
+   18
+  ]
+ },
+ {
+  "id": "adrenalina",
+  "nombre": "Adrenalina",
+  "arquetipo": "berserker",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 200,
+  "valores": [
+   6,
+   10,
+   14,
+   20,
+   32
+  ]
+ },
+ {
+  "id": "punteria",
+  "nombre": "Punteria",
+  "arquetipo": "francotirador",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 100,
+  "valores": [
+   4,
+   6,
+   10,
+   14,
+   20
+  ]
+ },
+ {
+  "id": "ultimas",
+  "nombre": "Ultimas balas",
+  "arquetipo": "gatillo",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 200,
+  "valores": [
+   8,
+   12,
+   18,
+   24,
+   36
+  ]
+ },
+ {
+  "id": "cazatanques",
+  "nombre": "Cazatanques",
+  "arquetipo": "francotirador",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 400,
+  "valores": [
+   12,
+   20,
+   32,
+   48,
+   72
+  ]
+ },
+ {
+  "id": "experiencia",
+  "nombre": "Experiencia",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 150,
+  "valores": [
+   10,
+   15,
+   22,
+   30,
+   45
+  ]
+ },
+ {
+  "id": "combo",
+  "nombre": "Combo",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 20,
+  "valores": [
+   1,
+   2,
+   2,
+   3,
+   5
+  ]
+ },
+ {
+  "id": "oro",
+  "nombre": "Cabezas de oro",
+  "arquetipo": "banquero",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 400,
+  "valores": [
+   8,
+   12,
+   20,
+   32,
+   48
+  ]
+ },
+ {
+  "id": "monos",
+  "nombre": "Monos",
+  "arquetipo": "",
+  "tipo": "equipo",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "/ronda",
+  "decimal": 0,
+  "tope": 3,
+  "valores": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "claymores",
+  "nombre": "Claymores",
+  "arquetipo": "",
+  "tipo": "equipo",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "/ronda",
+  "decimal": 0,
+  "tope": 3,
+  "valores": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "semtex",
+  "nombre": "Semtex",
+  "arquetipo": "",
+  "tipo": "equipo",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "/ronda",
+  "decimal": 0,
+  "tope": 3,
+  "valores": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "emp",
+  "nombre": "Granadas EMP",
+  "arquetipo": "",
+  "tipo": "equipo",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "/ronda",
+  "decimal": 0,
+  "tope": 3,
+  "valores": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "mejora",
+  "nombre": "Pack-a-Punch",
+  "arquetipo": "",
+  "tipo": "instantanea",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ {
+  "id": "pu_ammo",
+  "nombre": "Municion maxima",
+  "arquetipo": "",
+  "tipo": "powerup",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ {
+  "id": "pu_insta",
+  "nombre": "Instakill",
+  "arquetipo": "",
+  "tipo": "powerup",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ {
+  "id": "pu_doble",
+  "nombre": "Doble puntos",
+  "arquetipo": "",
+  "tipo": "powerup",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ {
+  "id": "pu_carpintero",
+  "nombre": "Carpintero",
+  "arquetipo": "",
+  "tipo": "powerup",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ {
+  "id": "pu_nuke",
+  "nombre": "Nuke",
+  "arquetipo": "",
+  "tipo": "powerup",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ {
+  "id": "fosforo",
+  "nombre": "Fosforo",
+  "arquetipo": "piromano",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 80,
+  "valores": [
+   6,
+   9,
+   13,
+   18,
+   26
+  ]
+ },
+ {
+  "id": "napalm",
+  "nombre": "Napalm",
+  "arquetipo": "piromano",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 100,
+  "valores": [
+   15,
+   22,
+   30,
+   42,
+   60
+  ]
+ },
+ {
+  "id": "rescoldos",
+  "nombre": "Rescoldos",
+  "arquetipo": "piromano",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 60,
+  "valores": [
+   4,
+   6,
+   9,
+   13,
+   18
+  ]
+ },
+ {
+  "id": "mecha",
+  "nombre": "Mecha corta",
+  "arquetipo": "piromano",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 300,
+  "valores": [
+   20,
+   30,
+   45,
+   65,
+   90
+  ]
+ },
+ {
+  "id": "pirotecnico",
+  "nombre": "Pirotecnico",
+  "arquetipo": "piromano",
+  "tipo": "normal",
+  "firma": true,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "pararrayos",
+  "nombre": "Pararrayos",
+  "arquetipo": "electricista",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 80,
+  "valores": [
+   8,
+   12,
+   17,
+   24,
+   34
+  ]
+ },
+ {
+  "id": "sobrecarga",
+  "nombre": "Sobrecarga",
+  "arquetipo": "electricista",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 200,
+  "valores": [
+   25,
+   35,
+   50,
+   70,
+   100
+  ]
+ },
+ {
+  "id": "condensador",
+  "nombre": "Condensador",
+  "arquetipo": "electricista",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 300,
+  "valores": [
+   50,
+   70,
+   100,
+   140,
+   200
+  ]
+ },
+ {
+  "id": "tormenta",
+  "nombre": "Tormenta",
+  "arquetipo": "electricista",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 90,
+  "valores": [
+   12,
+   16,
+   22,
+   30,
+   42
+  ]
+ },
+ {
+  "id": "tesla",
+  "nombre": "Tesla",
+  "arquetipo": "electricista",
+  "tipo": "normal",
+  "firma": true,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "furia",
+  "nombre": "Furia",
+  "arquetipo": "berserker",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 60,
+  "valores": [
+   5,
+   8,
+   11,
+   15,
+   22
+  ]
+ },
+ {
+  "id": "sangre",
+  "nombre": "Sangre caliente",
+  "arquetipo": "berserker",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 40,
+  "valores": [
+   2,
+   3,
+   4,
+   6,
+   9
+  ]
+ },
+ {
+  "id": "ultimo",
+  "nombre": "Ultimo aliento",
+  "arquetipo": "berserker",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": " s",
+  "decimal": 0,
+  "tope": 12,
+  "valores": [
+   3,
+   4,
+   5,
+   6,
+   8
+  ]
+ },
+ {
+  "id": "imparable",
+  "nombre": "Imparable",
+  "arquetipo": "berserker",
+  "tipo": "normal",
+  "firma": true,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "pulso",
+  "nombre": "Pulso firme",
+  "arquetipo": "francotirador",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 200,
+  "valores": [
+   15,
+   22,
+   32,
+   45,
+   65
+  ]
+ },
+ {
+  "id": "unabala",
+  "nombre": "Una bala basta",
+  "arquetipo": "francotirador",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 100,
+  "valores": [
+   25,
+   35,
+   45,
+   60,
+   80
+  ]
+ },
+ {
+  "id": "elites",
+  "nombre": "Cazador de elites",
+  "arquetipo": "francotirador",
+  "tipo": "normal",
+  "firma": true,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "piedra",
+  "nombre": "Piel de piedra",
+  "arquetipo": "tanque",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "-",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 60,
+  "valores": [
+   10,
+   15,
+   20,
+   28,
+   40
+  ]
+ },
+ {
+  "id": "coraza",
+  "nombre": "Coraza",
+  "arquetipo": "tanque",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "-",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 60,
+  "valores": [
+   5,
+   8,
+   12,
+   18,
+   25
+  ]
+ },
+ {
+  "id": "masa",
+  "nombre": "Masa",
+  "arquetipo": "tanque",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 60,
+  "valores": [
+   5,
+   8,
+   12,
+   16,
+   24
+  ]
+ },
+ {
+  "id": "coloso",
+  "nombre": "Coloso",
+  "arquetipo": "tanque",
+  "tipo": "normal",
+  "firma": true,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "interes",
+  "nombre": "Interes compuesto",
+  "arquetipo": "banquero",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 50,
+  "valores": [
+   10,
+   15,
+   20,
+   25,
+   35
+  ]
+ },
+ {
+  "id": "mercenario",
+  "nombre": "Mercenario",
+  "arquetipo": "banquero",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 2000,
+  "valores": [
+   200,
+   300,
+   400,
+   600,
+   800
+  ]
+ },
+ {
+  "id": "cajaeco",
+  "nombre": "Caja economica",
+  "arquetipo": "banquero",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "-",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 60,
+  "valores": [
+   10,
+   15,
+   20,
+   30,
+   40
+  ]
+ },
+ {
+  "id": "plutocrata",
+  "nombre": "Plutocrata",
+  "arquetipo": "banquero",
+  "tipo": "normal",
+  "firma": true,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "tambor",
+  "nombre": "Tambor caliente",
+  "arquetipo": "gatillo",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 150,
+  "valores": [
+   8,
+   12,
+   18,
+   25,
+   36
+  ]
+ },
+ {
+  "id": "plomo",
+  "nombre": "Plomo",
+  "arquetipo": "gatillo",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 100,
+  "valores": [
+   10,
+   15,
+   20,
+   30,
+   40
+  ]
+ },
+ {
+  "id": "cinta",
+  "nombre": "Cinta de balas",
+  "arquetipo": "gatillo",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 20,
+  "valores": [
+   2,
+   3,
+   4,
+   6,
+   8
+  ]
+ },
+ {
+  "id": "continuo",
+  "nombre": "Fuego continuo",
+  "arquetipo": "gatillo",
+  "tipo": "normal",
+  "firma": true,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "resbaladizo",
+  "nombre": "Resbaladizo",
+  "arquetipo": "velocista",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 40,
+  "valores": [
+   5,
+   8,
+   12,
+   16,
+   24
+  ]
+ },
+ {
+  "id": "zancada",
+  "nombre": "Zancada",
+  "arquetipo": "velocista",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 30,
+  "valores": [
+   4,
+   6,
+   9,
+   12,
+   18
+  ]
+ },
+ {
+  "id": "estela",
+  "nombre": "Estela",
+  "arquetipo": "velocista",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 75,
+  "valores": [
+   30,
+   40,
+   50,
+   60,
+   75
+  ]
+ },
+ {
+  "id": "ciclon",
+  "nombre": "Ciclon",
+  "arquetipo": "velocista",
+  "tipo": "normal",
+  "firma": true,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "silbato",
+  "nombre": "Silbato",
+  "arquetipo": "domador",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "correa",
+  "nombre": "Correa larga",
+  "arquetipo": "domador",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 100,
+  "valores": [
+   10,
+   15,
+   20,
+   30,
+   40
+  ]
+ },
+ {
+  "id": "collar",
+  "nombre": "Collar de puas",
+  "arquetipo": "domador",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 200,
+  "valores": [
+   15,
+   25,
+   35,
+   50,
+   70
+  ]
+ },
+ {
+  "id": "carne",
+  "nombre": "Carne fresca",
+  "arquetipo": "domador",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 50,
+  "valores": [
+   3,
+   5,
+   7,
+   10,
+   15
+  ]
+ },
+ {
+  "id": "manada",
+  "nombre": "Manada",
+  "arquetipo": "domador",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 2,
+  "valores": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "alfa",
+  "nombre": "Alfa",
+  "arquetipo": "domador",
+  "tipo": "normal",
+  "firma": true,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "conejo",
+  "nombre": "Pata de conejo",
+  "arquetipo": "suertudo",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 20,
+  "valores": [
+   1,
+   2,
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "id": "dados",
+  "nombre": "Dados",
+  "arquetipo": "suertudo",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 80,
+  "valores": [
+   15,
+   22,
+   30,
+   42,
+   60
+  ]
+ },
+ {
+  "id": "amuleto",
+  "nombre": "Amuleto",
+  "arquetipo": "suertudo",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 100,
+  "valores": [
+   20,
+   30,
+   45,
+   60,
+   80
+  ]
+ },
+ {
+  "id": "herradura",
+  "nombre": "Herradura",
+  "arquetipo": "suertudo",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 100,
+  "valores": [
+   20,
+   30,
+   45,
+   60,
+   80
+  ]
+ },
+ {
+  "id": "jackpot",
+  "nombre": "Jackpot",
+  "arquetipo": "suertudo",
+  "tipo": "normal",
+  "firma": true,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "armadura",
+  "nombre": "Armadura",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 6,
+  "valores": [
+   1,
+   1,
+   2,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "sangrefria",
+  "nombre": "Sangre fria",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 100,
+  "valores": [
+   6,
+   10,
+   14,
+   20,
+   30
+  ]
+ },
+ {
+  "id": "medico",
+  "nombre": "Medico",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 250,
+  "valores": [
+   20,
+   30,
+   45,
+   65,
+   100
+  ]
+ },
+ {
+  "id": "madrugador",
+  "nombre": "Madrugador",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 100,
+  "valores": [
+   8,
+   12,
+   18,
+   25,
+   36
+  ]
+ },
+ {
+  "id": "cordones",
+  "nombre": "Cordones nuevos",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 10,
+  "valores": [
+   1,
+   1,
+   2,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "cantimplora",
+  "nombre": "Cantimplora",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 30,
+  "valores": [
+   2,
+   3,
+   4,
+   6,
+   8
+  ]
+ },
+ {
+  "id": "calderilla",
+  "nombre": "Calderilla",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 100,
+  "valores": [
+   5,
+   8,
+   10,
+   15,
+   20
+  ]
+ },
+ {
+  "id": "pulsera",
+  "nombre": "Pulsera de la suerte",
+  "arquetipo": "",
+  "tipo": "normal",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "%",
+  "decimal": 0,
+  "tope": 10,
+  "valores": [
+   1,
+   1,
+   2,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "medalla",
+  "nombre": "Medalla",
+  "arquetipo": "",
+  "tipo": "instantanea",
+  "firma": false,
+  "prefijo": "+",
+  "sufijo": " niveles",
+  "decimal": 0,
+  "tope": 99,
+  "valores": [
+   1,
+   1,
+   1,
+   2,
+   3
+  ]
+ },
+ {
+  "id": "bomberman",
+  "nombre": "Bomberman",
+  "arquetipo": "",
+  "tipo": "mitica",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "fenix",
+  "nombre": "Fenix",
+  "arquetipo": "",
+  "tipo": "mitica",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "cristal",
+  "nombre": "Cuerpo de cristal",
+  "arquetipo": "",
+  "tipo": "mitica",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "zeus",
+  "nombre": "Ira de Zeus",
+  "arquetipo": "",
+  "tipo": "mitica",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "midas",
+  "nombre": "Rey Midas",
+  "arquetipo": "",
+  "tipo": "mitica",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "infinito",
+  "nombre": "Gatillo infinito",
+  "arquetipo": "",
+  "tipo": "mitica",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ },
+ {
+  "id": "bruja",
+  "nombre": "Hora bruja",
+  "arquetipo": "",
+  "tipo": "mitica",
+  "firma": false,
+  "prefijo": "",
+  "sufijo": "",
+  "decimal": 0,
+  "tope": 1,
+  "valores": [
+   1,
+   1,
+   1,
+   1,
+   1
+  ]
+ }
+]
