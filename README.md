@@ -1,6 +1,6 @@
 # bo2jodas
 
-**Versión actual: 1.8.1** · Black Ops II Zombies · Plutonium T6 · Pueblo (funciona en el resto de mapas)
+**Versión actual: 1.9.0** · Black Ops II Zombies · Plutonium T6 · Pueblo (funciona en el resto de mapas)
 
 ---
 
@@ -15,7 +15,7 @@ Todos los jugadores de la partida necesitan **la misma versión**.
 
 ---
 
-## Novedades de la 1.8.1
+## Novedades de la 1.9.0
 
 La versión de las **builds**: hasta ahora cogías cartas sueltas; ahora eliges un **arquetipo** y montas algo con sentido. Además, tres jefes distintos, bebidas que no se pueden comprar, menús nuevos y zombies más duros.
 
@@ -29,6 +29,12 @@ La versión de las **builds**: hasta ahora cogías cartas sueltas; ahora eliges 
 | **Tanque y Pistolas** | Tanque: vida ×2 con Juggernog y escudo en la espalda cada ronda. Pistolas: **15 huecos** de carta. |
 | **Zombies más duros** | Vida base +25 % y escalado mayor por ronda, para que la build se note y no vayáis sobrados. |
 | **4 cartas generales nuevas** | Armadura, Sangre fría, Médico y Madrugador: ocupan hueco y valen para cualquier build. |
+| **La forja de Pueblo** | Ritual de tres pasos para mejorar el Bastón de fuego al de Origins (Kagutsuchi, con disparo cargado). Ver [La forja de Pueblo](#la-forja-de-pueblo-mejorar-el-bastón). |
+| **15 huecos de carta** | 15 para todos (Pistolas 20). Las cartas de equipo (Monos, Claymores, Semtex, EMP) ya no ocupan hueco. Si pierdes una al caer o te la roba Leroy, pierdes también el equipo. |
+| **Saltar carta** | En el menú de cartas, **Saltar** (Espacio / A) gasta la subida sin coger nada. |
+| **Medalla** | Ahora sube de nivel de verdad: 1 a 3 niveles al momento, con sus cartas. No ocupa hueco. |
+| **Partidas de 5 o más** | Cada jugador por encima de 4 suma un 20 % de zombies por ronda (el tope de 31 vivos a la vez es del motor). |
+| **Balance** | Mochila 5 / 8 / 12 / 18 / 30 balas por minuto (tope 60). Cinta de balas 2 / 3 / 4 / 6 / 8 (tope 20). |
 
 ### Arquetipos
 
@@ -85,7 +91,7 @@ Cada arquetipo tiene **6 cartas**: 5 normales y una **firma** (en negrita), siem
 | Banquero | **Plutócrata** (firma) | Requiere Codicia + Interés compuesto. +6 % de daño por cada perk que llevas y +50 puntos por baja | — | — |
 | Gatillo | Tambor caliente | +% de daño tras 1 s disparando seguido (se pierde al parar) | 8 / 12 / 18 / 25 / 36 % | 150 % |
 | Gatillo | Plomo | +1 % de daño por cada bala seguida sin recargar ni cambiar de arma, hasta este tope | 10 / 15 / 20 / 30 / 40 % | 100 % |
-| Gatillo | Cinta de balas | +balas al cargador por cada baja | 1 / 2 / 3 / 4 / 6 | 15 |
+| Gatillo | Cinta de balas | +balas al cargador por cada baja | 2 / 3 / 4 / 6 / 8 | 20 |
 | Gatillo | **Fuego continuo** (firma) | Requiere Tambor caliente + Plomo. Con combo 10 (bajas seguidas) el cargador se rellena solo | — | — |
 | Velocista | Resbaladizo | +% de velocidad con 3 o más zombies encima (menos de 4 m) | 5 / 8 / 12 / 16 / 24 % | 40 % |
 | Velocista | Zancada | Stamin-Up gratis (se puede comprar igual) y +% de velocidad esprintando | 4 / 6 / 9 / 12 / 18 % | 30 % |
@@ -114,7 +120,7 @@ Ver [Jefes: Brutus, la Bruja y Leroy](#jefes-brutus-la-bruja-y-leroy). Resumen: 
 | | Antes | Ahora |
 |---|---|---|
 | **Vida de zombies** | 150 al empezar, +115 por ronda, ×1.11 desde la 10 (ronda 20: ~3400) | **188** al empezar, **+130** por ronda, **×1.13** desde la 10 (ronda 10: 1530; ronda 20: **~5200**) |
-| **Pistolas** | 10 huecos de carta | **15 huecos** |
+| **Pistolas** | 10 huecos de carta | **20 huecos** (15 el resto) |
 | **Tanque** | — | Vida ×2 con Juggernog y escudo de zombies cada ronda |
 | **Pararrayos** | — | Rayo del 15 % de la vida |
 | **Tormenta** | — | 12 a 42 % de vida por descarga, y cada 4.5 s menos 0.03 s por punto (mínimo 1.5 s) |
@@ -236,7 +242,7 @@ Al empezar eliges clase (los zombies no salen hasta que todos eligen). Al **empe
 | **Escopetas** | Remington 870, Olympia, S12, M1216, KSG, DSR 50, Barrett M82A1, SVU-AS, Ballista | Blundergat | 15 % de que un perdigón mate de golpe; 35 % por bala con francotirador | −10 % de velocidad |
 | **Automáticas** | Galil, AK74u (y cargador ampliado), MP5K, PDW-57, MTAR, AN-94, SCAR-H, M27, AK-47, STG-44, Thompson, MP40 (y Stalker), Uzi, Skorpion EVO, HAMR, RPD, LSAT, MG08/15 | Sliquifier | +0.5 % de daño por tiro seguido acertado, hasta +20 % (se pierde al fallar) | 15 % de que un tiro gaste 2 balas |
 | **Rifles** | M14, FAL, SMR, M16, Type 25, M8A1, Chicom CQB | Paralizador | **Ejecutor**: +30 % a zombies con menos de media vida | −10 % a zombies con la vida entera |
-| **Pistolas** | M1911, Five-seven (y dual), B23R (y cargador ampliado), KAP-45, Python, Executioner, Remington New Model Army, Mauser C96, Cuchillo balístico | Ray Gun o Ray Gun Mark II | +40 % de daño, ×1.3 de velocidad, −50 % de daño explosivo recibido, **15 huecos de carta** en vez de 10 | Ninguna |
+| **Pistolas** | M1911, Five-seven (y dual), B23R (y cargador ampliado), KAP-45, Python, Executioner, Remington New Model Army, Mauser C96, Cuchillo balístico | Ray Gun o Ray Gun Mark II | +40 % de daño, ×1.3 de velocidad, −50 % de daño explosivo recibido, **20 huecos de carta** en vez de 15 | Ninguna |
 
 - Las paredes funcionan normal. **La caja da cartas, no armas**. **El Pack-a-Punch no se puede usar pagando**: las armas solo se mejoran con cartas.
 - El Bastón de fuego nunca se cambia por el arma de ronda.
@@ -253,8 +259,8 @@ Subes de nivel matando: el primer nivel a las **15 bajas** y cada nivel cuesta 5
 
 - Cada carta del menú tira su rareza por separado. Las cartas se **acumulan** hasta su tope.
 - Cada vez que coges una carta, su probabilidad de volver a salir sube un 8 %. **Trébol** sube la rareza de las que te salen.
-- **10 huecos**: puedes tener 10 cartas distintas (Calibre ×3 ocupa uno). Con los 10 llenos solo salen las que ya tienes y las de efecto inmediato.
-- **3 rerolls** por partida (**Granada** en el menú) y **bloqueo** ilimitado (**Táctica**: la carta no vuelve a salirte, pero gastas esa subida).
+- **15 huecos** (20 con Pistolas): cartas distintas que puedes tener (Calibre ×3 ocupa uno). Las de equipo, los power-ups, Pack-a-Punch y Medalla no ocupan hueco. Con los huecos llenos solo salen las que ya tienes y las que no ocupan hueco.
+- **3 rerolls** por partida (**Granada** en el menú), **bloqueo** ilimitado (**Táctica**: la carta no vuelve a salirte, pero gastas esa subida) y **Saltar** (**Espacio / A**: gastas la subida sin coger nada).
 
 ### Cartas generales
 
@@ -268,7 +274,7 @@ Valores por rareza: común / poco común / rara / épica / legendaria. Las marca
 | Gatillo loco (A: Gatillo) | Double Tap gratis + % daño (×2 si además compras Double Tap) | 2 / 4 / 6 / 10 / 14 % | 150 % |
 | Cargador mágico | % de no gastar bala | 4 / 6 / 10 / 14 / 20 % | 60 % |
 | Manos rápidas | Speed Cola gratis + % de rellenar el cargador al matar (×2 con Speed Cola) | 0.05 / 0.3 / 1 / 2.5 / 4.5 % | 4.5 % |
-| Mochila | Balas de reserva por minuto para el arma de la mano | 3 / 5 / 8 / 12 / 20 | 40 |
+| Mochila | Balas de reserva por minuto para el arma de la mano | 5 / 8 / 12 / 18 / 30 | 60 |
 | Corazón de hierro | +vida máxima | 8 / 12 / 20 / 32 / 48 | 400 |
 | Regeneración | +vida por segundo | 1 / 1 / 2 / 3 / 5 | 25 |
 | Vampiro (A: Berserker) | +vida por baja | 2 / 3 / 4 / 6 / 10 | 60 |
@@ -304,13 +310,13 @@ Valores por rareza: común / poco común / rara / épica / legendaria. Las marca
 | Cantimplora | +vida máxima (relleno) | 2 / 3 / 4 / 6 / 8 | 30 |
 | Calderilla | +puntos por baja (relleno) | 5 / 8 / 10 / 15 / 20 | 100 |
 | Pulsera de la suerte | Como Trébol, pero casi nada (relleno) | 1 / 1 / 2 / 2 / 3 % | 10 % |
-| Medalla | Sube tu nivel en el marcador. Nada más (relleno) | 1 / 1 / 1 / 2 / 3 | 20 |
+| Medalla | Subes esos niveles ahora mismo, con sus cartas. No ocupa hueco | 1 / 1 / 1 / 2 / 3 niveles | — |
 
 ### Cartas especiales
 
 | Carta | Rareza | Efecto |
 |---|---|---|
-| Monos, Claymores, Semtex, Granadas EMP | Rara | Te da el equipo lleno y cada ronda recuperas 1 por nivel de la carta (máx. 3). Ocupan hueco. |
+| Monos, Claymores, Semtex, Granadas EMP | Rara | Te da el equipo lleno y cada ronda recuperas 1 por nivel de la carta (máx. 3). No ocupan hueco. Si pierdes la carta, pierdes el equipo. |
 | Munición máxima, Instakill, Doble puntos, Carpintero, Nuke | Común | Power-up inmediato para todo el equipo. No ocupan hueco. |
 | Pack-a-Punch | Épica | Mejora el arma de la mano (si ya lo está, la otra; si las dos, munición máxima). Única forma de mejorar un arma de caja o de pared. No ocupa hueco. |
 
@@ -389,6 +395,25 @@ Cada **10 minutos** (el primero en el minuto 10) el siguiente zombie que sale es
 
 ---
 
+## La forja de Pueblo: mejorar el Bastón
+
+Al construir el primer Bastón de fuego empieza un ritual de tres pasos. El progreso es de todo el equipo y se ve en la mesa (al acercarte) y en la lista (H).
+
+| Paso | Qué hay que hacer | Si falla |
+|---|---|---|
+| **1. Encender la calle** | Tres charcos de lava se encienden uno a uno en un orden. Dispara con el bastón a los charcos en ese orden. Al acertar, esos charcos arden el resto de la partida | Se apagan, se repite el orden con un charco más |
+| **2. Almas** | Mata **40 zombies con el bastón** (fuego incluido) a menos de **10 m de la mesa**. Cada baja manda un alma de fuego a la mesa. Rematar a un jefe con el bastón vale 20 | — |
+| **3. La forja** | Con las 40 almas, **USAR en la mesa con el bastón en la mano**: lo dejas allí y esa ronda los zombies van a por la mesa. Defiéndela hasta que acabe la ronda | Si un zombie se queda pegado a la mesa 5 s seguidos, la forja se enfría: pierdes el 25 % de las almas y recuperas el bastón sin mejorar |
+
+**La recompensa: el Bastón de fuego mejorado** (el de Origins, Kagutsuchi). Dispara igual que el básico pero más fuerte (3300 de impacto y 150 por segundo ardiendo), y **manteniendo el disparo se carga**: suelta una bola grande que al caer deja un **charco de fuego** 5 s (media carga, radio 80 y 11 500 de impacto; carga completa, radio 100 y 20 000) y dispara 1 o 2 bolas extra. Un impacto que mataría de golpe remata al momento la mitad de las veces. 120 balas.
+
+- Si quien dejó el bastón está caído o se ha ido cuando termina la forja, el bastón queda en la mesa: USAR para cogerlo.
+- Un segundo bastón (otro Brutus) repite el ritual desde las almas; los charcos ya arden.
+- El bastón mejorado no suma almas y el jefe sigue con su tope del 15 % por golpe.
+- Consola: `jodas_forja_almas 40`, `jodas_forja_secuencia 3`, `jodas_forja_contacto 5`, `jodas_forja_radio 600`, `jodas_forja 0` lo desactiva.
+
+---
+
 ## Bastón de fuego
 
 - Cada jefe suelta una pieza (punta, caña o base) donde muere. Se recoge pasando por encima; las piezas son del equipo. Si nadie la coge en 60 s, aparece sobre la mesa.
@@ -432,7 +457,9 @@ Se escriben en la consola antes de entrar o antes de `map_restart`.
 | `set jodas_cartas_base 5` | Primera carta a las 5 bajas (`jodas_cartas_paso 0`: todas a la misma distancia). |
 | `set jodas_mitica_pct 100` | Siempre sale una mítica. |
 | `set jodas_mitica_forzar bruja` | La mítica que sale es esa (`bomberman`, `fenix`, `cristal`, `zeus`, `midas`, `infinito`, `bruja`). |
-| `set jodas_max_cartas 3` | Número de huecos de carta (10 por defecto; Pistolas suma `jodas_pistolas_huecos`, 5). |
+| `set jodas_dar_arma slipgun_zm` | En partida: da esa arma con munición a todos los jugadores (`slipgun_zm` Sliquifier, `slowgun_zm` Paralizador, `ray_gun_zm`, `staff_fire_zm`, `staff_fire_upgraded_zm`...). |
+| `set jodas_max_cartas 3` | Número de huecos de carta (15 por defecto; Pistolas suma `jodas_pistolas_huecos`, 5). |
+| `set jodas_zombies_extra_jugador 0.2` | Zombies extra por cada jugador por encima de 4 (20 % por defecto). |
 | `set jodas_arq_nivel 1` | Elegir arquetipo en la primera subida de nivel (8 por defecto). |
 | `set jodas_bruja_minutos 1` | Hora bruja cada minuto (3 por defecto). |
 | `set jodas_arq_forzar piromano` | Ese arquetipo sale siempre en el menú (`piromano`, `electricista`, `berserker`, `francotirador`, `tanque`, `banquero`, `gatillo`, `velocista`, `domador`, `suertudo`). |
