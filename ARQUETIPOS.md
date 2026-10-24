@@ -21,13 +21,9 @@ Fórmula del juego con los valores del mod: ronda 1 = 188; cada ronda hasta la 9
 ```mermaid
 xychart-beta
     title "Vida del zombie por ronda (mod frente a de serie)"
-
     x-axis "Ronda" [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50]
-
     y-axis "Vida"
-
     line "mod" [188,318,448,578,708,838,968,1098,1228,1387,1567,1770,2000,2260,2553,2884,3258,3681,4159,4699,5309,5999,6778,7659,8654,9779,11050,12486,14109,15943,18015,20356,23002,25992,29370,33188,37502,42377,47886,54111,61145,69093,78075,88224,99693,112653,127297,143845,162544,183674]
-
     line "de serie" [150,250,350,450,550,650,750,850,950,1045,1149,1263,1389,1527,1679,1846,2030,2233,2456,2701,2971,3268,3594,3953,4348,4782,5260,5786,6364,7000,7700,8470,9317,10248,11272,12399,13638,15001,16501,18151,19966,21962,24158,26573,29230,32153,35368,38904,42794,47073]
 ```
 
@@ -35,21 +31,13 @@ xychart-beta
 
 ```mermaid
 stateDiagram-v2
-
     [*] --> Clase: al empezar (Escopetas, Automaticas, Rifles, Pistolas)
-
     Clase --> Niveles1a7: cartas generales (primera a las 15 bajas, +5 por nivel)
-
     Niveles1a7 --> Arquetipo: nivel 8 (3 de los 10 al azar)
-
     Arquetipo --> Bienvenida: 3 cartas de tu arquetipo, eliges 1
-
     Bienvenida --> Mezcla: cada hueco de la oferta 35% de arquetipo (+1% por Trebol) y el resto general
-
     Mezcla --> Build: 15 huecos (20 Pistolas) + 1 mitica aparte
-
     Mezcla --> Firma: con las 2 cartas que pide, aparece la firma del arquetipo
-
     Build --> Caida: al caer pierdes 1 tipo de carta entero (eliges entre 3)
     Caida --> Mezcla
 ```
@@ -62,21 +50,14 @@ Tal cual lo hace `jodas_danio_saliente` + `jodas_arq_mult_saliente`. Todos los p
 
 ```mermaid
 flowchart TD
-
     A["Dano base del arma<br/>(ya multiplicado por la zona: locHead del arma)"] --> B["mult = 1 + (Calibre + Gatillo loco [x2 con Double Tap comprado]) / 100"]
-
     B --> C["Clase: Escopetas 15% (35% con francotirador) de MATAR de un tiro (al jefe x3) · Automaticas +0.5% por acierto seguido hasta +20% · Pistolas +40% · Rifles +30% a zombies con menos de media vida, -10% a los enteros"]
-
     C --> D["+ Polvora si es explosion (y x1.5 con Bomberman)<br/>+ Nudillos si es cuchillo, si no + Ojo de halcon si es cabeza"]
-
     D --> E["+ Adrenalina (menos de media vida) + Punteria (apuntando) + Ultimas balas (cargador < 30%) + Cazatanques (tanque) + Combo x bajas seguidas (max 10)"]
-
     E --> F["+ Furia x golpes (max 3) + Ultimo aliento (+100%) + Pulso firme + Tambor + Plomo + Sangre fria + Madrugador + Interes + Plutocrata (6% por bebida) + Mecha corta (granada)"]
-
     F --> G{"Una bala basta: cabeza, lejos y vida baja?"}
     G -->|si| H["MATA (vida + 666)"]
     G -->|no| I["x3 Cazador de elites (cabeza a tanque o jefe) · x3 Coloso (cuchillo quieto)"]
-
     I --> J["x3 Cuerpo de cristal"] --> K["x2.5 si salta Golpe critico"] --> L["Dano final = base x mult (jefe: tope 15% de su vida)"]
 ```
 
@@ -88,215 +69,110 @@ Cada arquetipo tiene 6 cartas; la **firma** sólo aparece cuando tienes las dos 
 
 ```mermaid
 flowchart LR
-
     subgraph piromano["Piromano: Fuego que se contagia y explosivos"]
-
         explosivo["Polvora*<br/>+8% / +12% / +20% / +32% / +48%"]
-
         fosforo["Fosforo<br/>6% / 9% / 13% / 18% / 26%"]
-
         napalm["Napalm<br/>15% / 22% / 30% / 42% / 60%"]
-
         rescoldos["Rescoldos<br/>+4 / +6 / +9 / +13 / +18"]
-
         mecha["Mecha corta<br/>+20% / +30% / +45% / +65% / +90%"]
-
         pirotecnico["Pirotecnico (firma)<br/>FIRMA (una vez)"]
-
     end
-
     subgraph electricista["Electricista: Rayos que saltan de zombie en zombie"]
-
         cadena["Reaccion en cadena*<br/>3% / 5% / 7% / 10% / 16%"]
-
         pararrayos["Pararrayos<br/>8% / 12% / 17% / 24% / 34%"]
-
         sobrecarga["Sobrecarga<br/>25% / 35% / 50% / 70% / 100%"]
-
         condensador["Condensador<br/>50% / 70% / 100% / 140% / 200%"]
-
         tormenta["Tormenta<br/>12% / 16% / 22% / 30% / 42%"]
-
         tesla["Tesla (firma)<br/>FIRMA (una vez)"]
-
     end
-
     subgraph berserker["Berserker: Cuanto mas herido, mas peligroso"]
-
         vampiro["Vampiro*<br/>+2 / +3 / +4 / +6 / +10"]
-
         adrenalina["Adrenalina*<br/>+6% / +10% / +14% / +20% / +32%"]
-
         furia["Furia<br/>+5% / +8% / +11% / +15% / +22%"]
-
         sangre["Sangre caliente<br/>+2 / +3 / +4 / +6 / +9"]
-
         ultimo["Ultimo aliento<br/>3 s / 4 s / 5 s / 6 s / 8 s"]
-
         imparable["Imparable (firma)<br/>FIRMA (una vez)"]
-
     end
-
     subgraph francotirador["Francotirador: Tiros a la cabeza lentos y letales"]
-
         cabeza["Ojo de halcon*<br/>+8% / +12% / +20% / +32% / +48%"]
-
         punteria["Punteria*<br/>+4% / +6% / +10% / +14% / +20%"]
-
         cazatanques["Cazatanques*<br/>+12% / +20% / +32% / +48% / +72%"]
-
         pulso["Pulso firme<br/>+15% / +22% / +32% / +45% / +65%"]
-
         unabala["Una bala basta<br/>25% / 35% / 45% / 60% / 80%"]
-
         elites["Cazador de elites (firma)<br/>FIRMA (una vez)"]
-
     end
-
     subgraph tanque["Tanque: x2 vida con Jugg y escudo nuevo cada ronda"]
-
         melee["Nudillos de hierro*<br/>+40% / +65% / +95% / +145% / +240%"]
-
         espinas["Espinas*<br/>12% / 20% / 32% / 48% / 72%"]
-
         piedra["Piel de piedra<br/>-10% / -15% / -20% / -28% / -40%"]
-
         coraza["Coraza<br/>-5 / -8 / -12 / -18 / -25"]
-
         masa["Masa<br/>+5 / +8 / +12 / +16 / +24"]
-
         coloso["Coloso (firma)<br/>FIRMA (una vez)"]
-
     end
-
     subgraph banquero["Banquero: Los puntos son poder"]
-
         puntos["Codicia*<br/>+4 / +8 / +12 / +20 / +32"]
-
         oro["Cabezas de oro*<br/>+8 / +12 / +20 / +32 / +48"]
-
         interes["Interes compuesto<br/>10% / 15% / 20% / 25% / 35%"]
-
         mercenario["Mercenario<br/>+200 / +300 / +400 / +600 / +800"]
-
         cajaeco["Caja economica<br/>-10% / -15% / -20% / -30% / -40%"]
-
         plutocrata["Plutocrata (firma)<br/>FIRMA (una vez)"]
-
     end
-
     subgraph gatillo["Gatillo: Disparar sin parar y sin recargar"]
-
         cadencia["Gatillo loco*<br/>+2% / +4% / +6% / +10% / +14%"]
-
         ultimas["Ultimas balas*<br/>+8% / +12% / +18% / +24% / +36%"]
-
         tambor["Tambor caliente<br/>+8% / +12% / +18% / +25% / +36%"]
-
         plomo["Plomo<br/>10% / 15% / 20% / 30% / 40%"]
-
         cinta["Cinta de balas<br/>+2 / +3 / +4 / +6 / +8"]
-
         continuo["Fuego continuo (firma)<br/>FIRMA (una vez)"]
-
     end
-
     subgraph velocista["Velocista: Correr, esquivar y no parar"]
-
         escurridizo["Escurridizo*<br/>0.4 s / 0.6 s / 1.0 s / 1.3 s / 1.8 s"]
-
         sed["Sed de sangre*<br/>+4% / +6% / +10% / +13% / +18%"]
-
         resbaladizo["Resbaladizo<br/>+5% / +8% / +12% / +16% / +24%"]
-
         zancada["Zancada<br/>+4% / +6% / +9% / +12% / +18%"]
-
         estela["Estela<br/>30% / 40% / 50% / 60% / 75%"]
-
         ciclon["Ciclon (firma)<br/>FIRMA (una vez)"]
-
     end
-
     subgraph domador["Domador: Leapers que luchan por ti"]
-
         silbato["Silbato<br/>1 / 1 / 1 / 1 / 1"]
-
         correa["Correa larga<br/>+10% / +15% / +20% / +30% / +40%"]
-
         collar["Collar de puas<br/>+15% / +25% / +35% / +50% / +70%"]
-
         carne["Carne fresca<br/>+3 / +5 / +7 / +10 / +15"]
-
         manada["Manada<br/>+1 / +1 / +1 / +1 / +1"]
-
         alfa["Alfa (firma)<br/>FIRMA (una vez)"]
-
     end
-
     subgraph suertudo["Suertudo: Rerolls, dados y cartas mejores"]
-
         botin["Buscador de botin*<br/>0.4% / 0.8% / 1.2% / 2.0% / 3.2%"]
-
         conejo["Pata de conejo<br/>+1 / +2 / +2 / +3 / +4"]
-
         dados["Dados<br/>15% / 22% / 30% / 42% / 60%"]
-
         amuleto["Amuleto<br/>20% / 30% / 45% / 60% / 80%"]
-
         herradura["Herradura<br/>20% / 30% / 45% / 60% / 80%"]
-
         jackpot["Jackpot (firma)<br/>FIRMA (una vez)"]
-
     end
-
     fosforo -->|requiere| pirotecnico
-
     explosivo -->|requiere| pirotecnico
-
     pararrayos -->|requiere| tesla
-
     condensador -->|requiere| tesla
-
     adrenalina -->|requiere| imparable
-
     furia -->|requiere| imparable
-
     cabeza -->|requiere| elites
-
     pulso -->|requiere| elites
-
     espinas -->|requiere| coloso
-
     piedra -->|requiere| coloso
-
     puntos -->|requiere| plutocrata
-
     interes -->|requiere| plutocrata
-
     tambor -->|requiere| continuo
-
     plomo -->|requiere| continuo
-
     sed -->|requiere| ciclon
-
     estela -->|requiere| ciclon
-
     silbato -->|requiere| correa
-
     silbato -->|requiere| collar
-
     silbato -->|requiere| carne
-
     silbato -->|requiere| manada
-
     collar -->|requiere| alfa
-
     manada -->|requiere| alfa
-
     dados -->|requiere| jackpot
-
     conejo -->|requiere| jackpot
-
 ```
 
 ## Cada arquetipo en detalle
@@ -314,47 +190,26 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-
     explosivo["Polvora"]
-
     fosforo["Fosforo"]
-
     napalm["Napalm"]
-
     rescoldos["Rescoldos"]
-
     mecha["Mecha corta"]
-
     pirotecnico{{"Pirotecnico (firma)"}}
-
-    BALAS(["Impactos de bala (MOD_RIFLE_BULLET / MOD_PISTOL_BULLET)"])
-
-    EXPLO(["Explosiones: granadas, Mecha corta, Bomberman, Reaccion en cadena, PhD"])
-
     FUEGO(["Zombie ardiendo: pierde 4% de su vida maxima por segundo durante 6 s (cada impacto reinicia). El jefe, un cuarto. Al apagarse queda quemado: el Napalm ya no lo contagia"])
-
+    BALAS(["Impactos de bala (MOD_RIFLE_BULLET / MOD_PISTOL_BULLET)"])
+    EXPLO(["Explosiones: granadas, Mecha corta, Bomberman, Reaccion en cadena, PhD"])
     BALAS -->|"6-26% por impacto (tope 80%)"| fosforo
-
     fosforo -->|"prende (impacto directo: tambien a quemados)"| FUEGO
-
     FUEGO -->|"cada segundo, por zombie a menos de 80 u"| napalm
-
     napalm -->|"15-60% de contagiar (no a quemados)"| FUEGO
-
     FUEGO -->|"baja de un zombie ardiendo: +4-18 vida (tope 60)"| rescoldos
-
     mecha -->|"granada estalla al pararse, +20-90% (tope 300%)"| EXPLO
-
     explosivo -->|"+8-48% a todo lo explosivo (tope 400%)"| EXPLO
-
     fosforo -->|"requiere"| pirotecnico
-
     explosivo -->|"requiere"| pirotecnico
-
     EXPLO -->|"cada zombie alcanzado por una explosion tuya"| pirotecnico
-
     pirotecnico -->|"prende (impacto directo)"| FUEGO
-
 ```
 
 ### Electricista: Rayos que saltan de zombie en zombie
@@ -370,51 +225,28 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-
     cadena["Reaccion en cadena"]
-
     pararrayos["Pararrayos"]
-
     sobrecarga["Sobrecarga"]
-
     condensador["Condensador"]
-
     tormenta["Tormenta"]
-
     tesla{{"Tesla (firma)"}}
-
-    RAYO(["Rayo: dano fijo en % de la vida maxima del zombie (100% o mas = mata; al jefe 15%). No le afectan las cartas de dano. Alcance 350 u"])
-
-    BAJA(["Baja tuya (cualquier arma)"])
-
     RECARGA(["Empezar a recargar"])
-
+    RAYO(["Rayo: dano fijo en % de la vida maxima del zombie (100% o mas = mata; al jefe 15%). No le afectan las cartas de dano. Alcance 350 u"])
     DISPARO(["Siguiente impacto de bala"])
-
+    BAJA(["Baja tuya (cualquier arma)"])
     BAJA -->|"8-34% (tope 80%)"| pararrayos
-
     pararrayos -->|"1 rayo del 15% a otro zombie"| RAYO
-
     BAJA -->|"3-16% (tope 60%): explosion de 0.6x vida de ronda + 100 a 160 u"| cadena
-
     RECARGA -->|"maximo 1 por segundo"| sobrecarga
-
     sobrecarga -->|"1 rayo de 25-100% (tope 200%) al mas cercano"| RAYO
-
     BAJA -->|"10 bajas seguidas sin recibir dano lo cargan"| condensador
-
     DISPARO -->|"con carga: la gasta"| condensador
-
     condensador -->|"3 rayos de 50-200% (tope 300%)"| RAYO
-
     tormenta -->|"cada 4.5 s menos 0.03 s por punto (min 1.5 s): 12-42% (tope 90%) a todos a 160 u y 1 s al 50% de velocidad"| RAYO
-
     pararrayos -->|"requiere"| tesla
-
     condensador -->|"requiere"| tesla
-
     tesla -->|"todos los rayos (y los de Ira de Zeus) alcanzan a 2 zombies mas"| RAYO
-
 ```
 
 ### Berserker: Cuanto mas herido, mas peligroso
@@ -430,41 +262,23 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-
     vampiro["Vampiro"]
-
     adrenalina["Adrenalina"]
-
     furia["Furia"]
-
     sangre["Sangre caliente"]
-
     ultimo["Ultimo aliento"]
-
     imparable{{"Imparable (firma)"}}
-
-    VIDA(["Tu vida (100, 250 con Juggernog, 500 si eres Tanque con Juggernog)"])
-
-    BAJA(["Baja tuya (cualquier arma)"])
-
     GOLPE(["Golpe de zombie recibido"])
-
+    VIDA(["Tu vida (100, 250 con Juggernog, 500 si eres Tanque con Juggernog)"])
+    BAJA(["Baja tuya (cualquier arma)"])
     VIDA -->|"con menos de la mitad: +6-32% dano (tope 200%)"| adrenalina
-
     VIDA -->|"con menos de la mitad: +2-9 vida/s (tope 40)"| sangre
-
     GOLPE -->|"+5-22% dano 5 s, acumula hasta 3 golpes (tope 60% por golpe)"| furia
-
     VIDA -->|"al bajar del 25% o golpe mortal, 1 vez por ronda: 3-8 s (tope 12) invulnerable y +100% dano"| ultimo
-
     BAJA -->|"+2-10 vida por baja (tope 60)"| vampiro
-
     adrenalina -->|"requiere"| imparable
-
     furia -->|"requiere"| imparable
-
     VIDA -->|"con menos del 25%: +20% velocidad y los golpes hacen la mitad"| imparable
-
 ```
 
 ### Francotirador: Tiros a la cabeza lentos y letales
@@ -480,47 +294,26 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-
     cabeza["Ojo de halcon"]
-
     punteria["Punteria"]
-
     cazatanques["Cazatanques"]
-
     pulso["Pulso firme"]
-
     unabala["Una bala basta"]
-
     elites{{"Cazador de elites (firma)"}}
-
-    CABEZA(["Tiro a la cabeza (head / helmet; el arma ya multiplica por su locHead)"])
-
     MIRA(["Apuntando con la mira"])
-
-    ELITE(["Tanque (x4 vida) o jefe"])
-
-    MATA(["Muerte instantanea"])
-
     QUIETO2S(["2 s sin disparar"])
-
+    MATA(["Muerte instantanea"])
+    CABEZA(["Tiro a la cabeza (head / helmet; el arma ya multiplica por su locHead)"])
+    ELITE(["Tanque (x4 vida) o jefe"])
     CABEZA -->|"+8-48% (tope 400%)"| cabeza
-
     MIRA -->|"apuntando: +4-20% (tope 100%)"| punteria
-
     ELITE -->|"solo tanques: +12-72% (tope 400%)"| cazatanques
-
     QUIETO2S -->|"+15-65% (tope 200%)"| pulso
-
     CABEZA -->|"y a mas de 600 u, no al jefe"| unabala
-
     unabala -->|"mata si le queda menos del 25-80% de vida (tope 100%)"| MATA
-
     cabeza -->|"requiere"| elites
-
     pulso -->|"requiere"| elites
-
     ELITE -->|"cabeza a tanque o jefe: dano x3 (el jefe sigue con tope del 15% por golpe)"| elites
-
 ```
 
 ### Tanque: x2 vida con Jugg y escudo nuevo cada ronda
@@ -536,43 +329,24 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-
     melee["Nudillos de hierro"]
-
     espinas["Espinas"]
-
     piedra["Piel de piedra"]
-
     coraza["Coraza"]
-
     masa["Masa"]
-
     coloso{{"Coloso (firma)"}}
-
-    PASIVA(["Pasiva del arquetipo: vida x2 con Juggernog (500) y escudo de zombies (2250 de dano) en la espalda, nuevo o reparado cada ronda"])
-
-    CUCHILLO(["Cuchillo"])
-
-    GOLPE(["Golpe de zombie recibido (60; tanque x2; jefe x2.5)"])
-
     QUIETO(["Quieto (velocidad &lt; 10)"])
-
+    CUCHILLO(["Cuchillo"])
+    GOLPE(["Golpe de zombie recibido (60; tanque x2; jefe x2.5)"])
+    PASIVA(["Pasiva del arquetipo: vida x2 con Juggernog (500) y escudo de zombies (2250 de dano) en la espalda, nuevo o reparado cada ronda"])
     GOLPE -->|"el zombie pierde 12-72% de su vida (tope 500%)"| espinas
-
     CUCHILLO -->|"+40-240% (tope 3000%)"| melee
-
     QUIETO -->|"golpes -10-40% (tope 60%)"| piedra
-
     GOLPE -->|"cada golpe hace 5-25 menos (tope 60; minimo 1)"| coraza
-
     masa -->|"+5-24 vida maxima por cada carta de Tanque que tengas, Masa incluida (tope 60 por carta)"| PASIVA
-
     espinas -->|"requiere"| coloso
-
     piedra -->|"requiere"| coloso
-
     QUIETO -->|"quieto: Espinas pasa a 100% (el zombie que te golpea muere) y el cuchillo hace x3"| coloso
-
 ```
 
 ### Banquero: Los puntos son poder
@@ -588,47 +362,26 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-
     puntos["Codicia"]
-
     oro["Cabezas de oro"]
-
     interes["Interes compuesto"]
-
     mercenario["Mercenario"]
-
     cajaeco["Caja economica"]
-
     plutocrata{{"Plutocrata (firma)"}}
-
     PUNTOS(["Tus puntos (sin gastar)"])
-
-    CABEZA(["Baja a la cabeza"])
-
     CAJA(["Caja de cartas (2500 x1.17 por tirada)"])
-
+    CABEZA(["Baja a la cabeza"])
     PERKS(["Bebidas que llevas"])
-
     BAJA(["Baja tuya"])
-
     BAJA -->|"+4-32 puntos (tope 300)"| puntos
-
     CABEZA -->|"+8-48 puntos (tope 400)"| oro
-
     PUNTOS -->|"+1% dano por cada 1000 puntos, tope 10-35% (maximo 50%)"| interes
-
     BAJA -->|"cada 50 bajas tuyas: +200-800 puntos a todos (tope 2000)"| mercenario
-
     cajaeco -->|"-10-40% de precio (tope 60%)"| CAJA
-
     puntos -->|"requiere"| plutocrata
-
     interes -->|"requiere"| plutocrata
-
     PERKS -->|"+6% dano por bebida"| plutocrata
-
     BAJA -->|"+50 puntos por baja"| plutocrata
-
 ```
 
 ### Gatillo: Disparar sin parar y sin recargar
@@ -644,45 +397,25 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-
     cadencia["Gatillo loco"]
-
     ultimas["Ultimas balas"]
-
     tambor["Tambor caliente"]
-
     plomo["Plomo"]
-
     cinta["Cinta de balas"]
-
     continuo{{"Fuego continuo (firma)"}}
-
     DT(["Double Tap comprado"])
-
-    RAFAGA(["Disparando seguido (menos de 0.4 s entre tiros)"])
-
     BAJA(["Baja tuya (cualquier arma)"])
-
     CARGADOR(["Cargador del arma de la mano"])
-
     COMBO10(["Combo 10: 10 bajas seguidas con menos de 2 s entre ellas"])
-
+    RAFAGA(["Disparando seguido (menos de 0.4 s entre tiros)"])
     cadencia -->|"da Double Tap gratis y +2-14% dano (tope 150%); con Double Tap comprado el % se dobla"| DT
-
     CARGADOR -->|"por debajo del 30%: +8-36% (tope 200%)"| ultimas
-
     RAFAGA -->|"tras 1 s seguido: +8-36% (tope 150%); se pierde al parar 0.5 s"| tambor
-
     RAFAGA -->|"+1% por bala sin recargar ni cambiar de arma, tope 10-40% (maximo 100%)"| plomo
-
     BAJA -->|"+2-8 balas al cargador (tope 20)"| cinta
-
     tambor -->|"requiere"| continuo
-
     plomo -->|"requiere"| continuo
-
     COMBO10 -->|"mientras dura el combo 10 el cargador se rellena solo"| continuo
-
 ```
 
 ### Velocista: Correr, esquivar y no parar
@@ -698,47 +431,26 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-
     escurridizo["Escurridizo"]
-
     sed["Sed de sangre"]
-
     resbaladizo["Resbaladizo"]
-
     zancada["Zancada"]
-
     estela["Estela"]
-
     ciclon{{"Ciclon (firma)"}}
-
     CERCA3(["3 o mas zombies a menos de 150 u"])
-
-    BAJA(["Baja tuya"])
-
-    ESPRINT(["Esprintando"])
-
-    FRENO(["Zombie frenado (velocidad de animacion reducida; no al jefe ni a uno ya frenado por el Paralizador)"])
-
     GOLPE(["Golpe de zombie recibido"])
-
+    ESPRINT(["Esprintando"])
+    FRENO(["Zombie frenado (velocidad de animacion reducida; no al jefe ni a uno ya frenado por el Paralizador)"])
+    BAJA(["Baja tuya"])
     BAJA -->|"+4-18% velocidad 3 s (tope 60%)"| sed
-
     GOLPE -->|"te ignoran 0.4 s-1.8 s (tope 6.0 s)"| escurridizo
-
     CERCA3 -->|"+5-24% velocidad (tope 40%)"| resbaladizo
-
     ESPRINT -->|"Stamin-Up gratis y +4-18% velocidad esprintando (tope 30%)"| zancada
-
     ESPRINT -->|"rastro de 2 s"| estela
-
     estela -->|"zombie a menos de 60 u del rastro: 30-75% mas lento 2 s (tope 75%)"| FRENO
-
     sed -->|"requiere"| ciclon
-
     estela -->|"requiere"| ciclon
-
     ESPRINT -->|"zombie a menos de 56 u: pierde 25% de su vida cada 0.5 s"| ciclon
-
 ```
 
 ### Domador: Leapers que luchan por ti
@@ -754,39 +466,22 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-
     silbato["Silbato"]
-
     correa["Correa larga"]
-
     collar["Collar de puas"]
-
     carne["Carne fresca"]
-
     manada["Manada"]
-
     alfa{{"Alfa (firma)"}}
-
     LEAPER(["Leaper: mordisco de 1000 (o un tercio de la vida del zombie de la ronda si es mas), no se le puede matar, maximo 3 en total"])
-
     BAJA(["Baja tuya"])
-
     silbato -->|"1 leaper (sin Silbato las demas no hacen nada; si lo pierdes se van todos)"| LEAPER
-
     manada -->|"+1 leaper por carta (tope 2)"| LEAPER
-
     correa -->|"+10-40% velocidad (tope 100%)"| LEAPER
-
     collar -->|"mordisco +15-70% (tope 200%)"| LEAPER
-
     LEAPER -->|"mordisco letal: +3-15 vida para ti (tope 50)"| carne
-
     collar -->|"requiere"| alfa
-
     manada -->|"requiere"| alfa
-
     BAJA -->|"3 s: mordiscos x2 y prenden fuego (como Fosforo)"| alfa
-
 ```
 
 ### Suertudo: Rerolls, dados y cartas mejores
@@ -802,45 +497,25 @@ flowchart LR
 
 ```mermaid
 flowchart LR
-
     botin["Buscador de botin"]
-
     conejo["Pata de conejo"]
-
     dados["Dados"]
-
     amuleto["Amuleto"]
-
     herradura["Herradura"]
-
     jackpot{{"Jackpot (firma)"}}
-
-    REROLL(["Rerolls (3 por partida, Granada)"])
-
-    RONDA(["Empieza una ronda"])
-
-    BAJA(["Baja tuya"])
-
     NIVEL(["Subida de nivel (menu de 3 cartas)"])
-
+    REROLL(["Rerolls (3 por partida, Granada)"])
+    RONDA(["Empieza una ronda"])
+    BAJA(["Baja tuya"])
     BAJA -->|"0.4%-3.2% de soltar power-up (tope 15.0%)"| botin
-
     conejo -->|"+1-4 rerolls al cogerla (tope 20) y +1 cada 3 niveles"| REROLL
-
     NIVEL -->|"15-60% de que la carta cogida valga el doble (tope 80%; no a firmas ni Silbato)"| dados
-
     NIVEL -->|"20-80% de ver 4 cartas en vez de 3 (tope 100%)"| amuleto
-
     RONDA -->|"20-80% de power-up a tus pies (tope 100%)"| herradura
-
     dados -->|"requiere"| jackpot
-
     conejo -->|"requiere"| jackpot
-
     NIVEL -->|"1 vez por ronda la primera carta ofrecida es LEGENDARIA"| jackpot
-
     REROLL -->|"la mitad de los rerolls no se gastan"| jackpot
-
 ```
 
 ## Cartas generales (le salen a todos)

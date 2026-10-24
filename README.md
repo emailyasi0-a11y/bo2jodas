@@ -13,6 +13,8 @@
 
 Todos los jugadores de la partida necesitan **la misma versión**.
 
+Diagramas de los arquetipos, sus cartas, la vida de los zombies por ronda y el daño de cada carta: [ARQUETIPOS.md](ARQUETIPOS.md).
+
 ---
 
 ## Novedades de la 1.9.1
@@ -134,7 +136,7 @@ Ver [Jefes: Brutus, la Bruja y Leroy](#jefes-brutus-la-bruja-y-leroy). Resumen: 
 
 | | Antes | Ahora |
 |---|---|---|
-| **Vida de zombies** | 150 al empezar, +115 por ronda, ×1.11 desde la 10 (ronda 20: ~3400) | **188** al empezar, **+130** por ronda, **×1.13** desde la 10 (ronda 10: 1530; ronda 20: **~5200**) |
+| **Vida de zombies** | 150 al empezar, +115 por ronda, ×1.11 desde la 10 (ronda 20: 3105) | **188** al empezar, **+130** por ronda, **×1.13** desde la 10 (ronda 10: 1387; ronda 20: **4699**; ronda 30: 15 943) |
 | **Pistolas** | 10 huecos de carta | **20 huecos** (15 el resto) |
 | **Tanque** | — | Vida ×2 con Juggernog y escudo de zombies cada ronda |
 | **Pararrayos** | — | Rayo del 15 % de la vida |
@@ -447,7 +449,7 @@ Al construir el primer Bastón de fuego empieza un ritual de tres pasos. El prog
 | **Caos** | Hasta 31 zombies vivos a la vez (24 de serie), salen cada 0.5 s como mucho, rondas ×1.5. |
 | **Tanques** | Desde la ronda 3, los zombies que salen andando tienen ×4 de vida y golpe ×2 (120). Un 10 % de los rápidos se convierte en tanque. |
 | **Super sprinters** | Desde la ronda 3, un 20 % de los rápidos van en super sprint acelerado (más rápidos que tú corriendo), máximo 6 a la vez. |
-| **Vida de zombies** | Empiezan con 188 (150 de serie, +25 %), +130 por ronda hasta la 9 y ×1.13 desde la 10. Ronda 10: 1530 (de serie 1050); ronda 20: ~5200 (de serie 2720). |
+| **Vida de zombies** | Empiezan con 188 (150 de serie, +25 %), +130 por ronda hasta la 9 y ×1.13 desde la 10. Ronda 10: 1387 (de serie 1045); ronda 20: 4699 (de serie 2701); ronda 30: 15 943 (de serie 7000). Tabla completa en [ARQUETIPOS.md](ARQUETIPOS.md). |
 | **Marcador (Tab)** | La columna Headshots muestra el nivel de cartas de cada jugador. |
 
 ---
