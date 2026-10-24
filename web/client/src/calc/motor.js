@@ -270,12 +270,6 @@ function porFormula(danio, mod, enemigo, build, op, extra = {}) {
   return { bruto: danio, final: danioRecibido(r.danio, z), mult: r.mult, sumandos: r.sumandos };
 }
 
-// Rayos (jodas_rayo_danio) y fuego (jodas_fuego_arder) llevan jodas_fuego_tick:
-// no pasan por las cartas de daño; solo el tope del jefe.
-function sinFormula(danio, enemigo) {
-  return { bruto: danio, final: danioRecibido(danio, { vidaMax: enemigo.vida, jefe: enemigo.jefe }) };
-}
-
 function letal(enemigo) {
   // bo2jodas::jodas_danio_letal
   return enemigo.jefe ? trunc(enemigo.vida * 0.15) + 1 : enemigo.vida + 666;
@@ -293,22 +287,23 @@ export function efectos(ronda, enemigo, build, op) {
   if (val("fosforo") > 0 || firmaActiva(build, "pirotecnico") || firmaActiva(build, "alfa") || val("napalm") > 0) {
     const pct = enemigo.jefe ? CFG.fuego_pct / 4 : CFG.fuego_pct;
     const tic = Math.max(1, trunc((max * pct) / 100));
-    const tics = Math.round(CFG.fuego_seg) - 1;
-    add("fuego", "Fuego, por segundo", `${val("fosforo") ? `Fósforo ${val("fosforo")} % por bala` : "al prender"}`, sinFormula(tic, enemigo),
-      `${tics} tics en ${CFG.fuego_seg} s (${trunc(tic * tics)} en total) si no se vuelve a prender; cada impacto reinicia los ${CFG.fuego_seg} s`);
+    const tics = Math.round(CFG.fuego_seg); // jodas_fuego_tics: uno por segundo
+    const r = porFormula(tic, "MOD_BURNED", enemigo, build, op);
+    add("fuego", "Fuego, por segundo", `${val("fosforo") ? `Fósforo ${val("fosforo")} % por bala` : "al prender"}`, r,
+      `${tics} tics (${fmtN(r.final * tics)} en total); cada vez que se vuelve a prender vuelven a ser ${tics}. Pasa por tus cartas de daño`);
   }
   if (val("pararrayos") > 0)
-    add("pararrayos", "Pararrayos: rayo del 15 %", `${val("pararrayos")} % por baja, a ${1 + rayosExtra(build)} zombie(s)`, sinFormula(trunc(max * 0.15) + 1, enemigo), "Alcance 350 u");
+    add("pararrayos", "Pararrayos: rayo del 15 %", `${val("pararrayos")} % por baja, a ${1 + rayosExtra(build)} zombie(s)`, porFormula(trunc(max * 0.15) + 1, "MOD_UNKNOWN", enemigo, build, op), "Alcance 350 u; pasa por tus cartas de daño");
   if (val("sobrecarga") > 0)
-    add("sobrecarga", `Sobrecarga: rayo del ${val("sobrecarga")} %`, "al recargar (1 por segundo como mucho)", sinFormula(val("sobrecarga") >= 100 ? letal(enemigo) : trunc((max * val("sobrecarga")) / 100) + 1, enemigo), `A ${1 + rayosExtra(build)} zombie(s), el más cercano`);
+    add("sobrecarga", `Sobrecarga: rayo del ${val("sobrecarga")} %`, "al recargar (1 por segundo como mucho)", porFormula(val("sobrecarga") >= 100 ? letal(enemigo) : trunc((max * val("sobrecarga")) / 100) + 1, "MOD_UNKNOWN", enemigo, build, op), `A ${1 + rayosExtra(build)} zombie(s), el más cercano`);
   if (val("condensador") > 0)
-    add("condensador", `Condensador: rayos del ${val("condensador")} %`, "tras 10 bajas sin recibir daño, en el siguiente impacto", sinFormula(val("condensador") >= 100 ? letal(enemigo) : trunc((max * val("condensador")) / 100) + 1, enemigo), `${3 + rayosExtra(build)} zombies`);
+    add("condensador", `Condensador: rayos del ${val("condensador")} %`, "tras 10 bajas sin recibir daño, en el siguiente impacto", porFormula(val("condensador") >= 100 ? letal(enemigo) : trunc((max * val("condensador")) / 100) + 1, "MOD_UNKNOWN", enemigo, build, op), `${3 + rayosExtra(build)} zombies`);
   if (val("tormenta") > 0) {
     const ms = Math.max(1500, 4500 - val("tormenta") * 30);
-    add("tormenta", `Tormenta: descarga del ${val("tormenta")} %`, `cada ${(ms / 1000).toFixed(2)} s a todos a 160 u`, sinFormula(val("tormenta") >= 100 ? letal(enemigo) : trunc((max * val("tormenta")) / 100) + 1, enemigo), "Y 1 s a la mitad de velocidad");
+    add("tormenta", `Tormenta: descarga del ${val("tormenta")} %`, `cada ${(ms / 1000).toFixed(2)} s a todos a 160 u`, porFormula(val("tormenta") >= 100 ? letal(enemigo) : trunc((max * val("tormenta")) / 100) + 1, "MOD_UNKNOWN", enemigo, build, op), "Y 1 s a la mitad de velocidad");
   }
   if (build.mitica === "zeus")
-    add("zeus", "Ira de Zeus", `${CFG.zeus_pct} % por baja, ${CFG.zeus_objetivos + rayosExtra(build)} zombies a 500 u`, sinFormula(letal(enemigo), enemigo), "Mata (al jefe, el 15 %)");
+    add("zeus", "Ira de Zeus", `${CFG.zeus_pct} % por baja, ${CFG.zeus_objetivos + rayosExtra(build)} zombies a 500 u`, porFormula(letal(enemigo), "MOD_UNKNOWN", enemigo, build, op), "Mata (al jefe, el 15 %)");
   // Espinas: % de la vida del zombie que te golpea; pasa por la fórmula (MOD_UNKNOWN).
   let espinas = val("espinas");
   if (firmaActiva(build, "coloso") && build.sit.quieto) espinas = 100;
@@ -328,6 +323,8 @@ export function efectos(ronda, enemigo, build, op) {
     add("cadena", "Reacción en cadena", `${val("cadena")} % por baja, a 160 u`, porFormula(trunc(zh * 0.6) + 100, "MOD_GRENADE_SPLASH", enemigo, build, op), "0.6 x vida de ronda + 100; cuenta como explosión (Pólvora, Bomberman)");
   return filas;
 }
+
+const fmtN = (x) => Math.trunc(x).toLocaleString("es-ES");
 
 function rayosExtra(build) {
   return firmaActiva(build, "tesla") ? 2 : 0; // jodas_arq_rayos_extra

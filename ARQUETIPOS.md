@@ -61,7 +61,7 @@ flowchart TD
     I --> J["x3 Cuerpo de cristal"] --> K["x2.5 si salta Golpe critico"] --> L["Dano final = base x mult (jefe: tope 15% de su vida)"]
 ```
 
-Los rayos (Electricista), el fuego de Fósforo, los mordiscos de leaper, Ciclón y Electric Cherry **no** pasan por esta fórmula: hacen un % fijo de la vida del zombie.
+Los rayos (Electricista), el fuego, Espinas, Ciclón, los mordiscos de leaper, la Reacción en cadena, Zeus, Fénix y Electric Cherry parten de un % de la vida del zombie (o de un daño fijo) y **también** pasan por esta fórmula: Calibre, Gatillo loco, Adrenalina, Cuerpo de cristal y demás los multiplican. Las cartas que piden bala, cabeza o cuchillo no cuentan en ellos.
 
 ## Los 10 arquetipos de un vistazo
 
@@ -196,9 +196,9 @@ flowchart LR
     rescoldos["Rescoldos"]
     mecha["Mecha corta"]
     pirotecnico{{"Pirotecnico (firma)"}}
-    FUEGO(["Zombie ardiendo: pierde 4% de su vida maxima por segundo durante 6 s (cada impacto reinicia). El jefe, un cuarto. Al apagarse queda quemado: el Napalm ya no lo contagia"])
     BALAS(["Impactos de bala (MOD_RIFLE_BULLET / MOD_PISTOL_BULLET)"])
     EXPLO(["Explosiones: granadas, Mecha corta, Bomberman, Reaccion en cadena, PhD"])
+    FUEGO(["Zombie ardiendo: pierde 4% de su vida maxima por segundo durante 6 s (cada impacto reinicia). El jefe, un cuarto. Al apagarse queda quemado: el Napalm ya no lo contagia"])
     BALAS -->|"6-26% por impacto (tope 80%)"| fosforo
     fosforo -->|"prende (impacto directo: tambien a quemados)"| FUEGO
     FUEGO -->|"cada segundo, por zombie a menos de 80 u"| napalm
@@ -231,10 +231,10 @@ flowchart LR
     condensador["Condensador"]
     tormenta["Tormenta"]
     tesla{{"Tesla (firma)"}}
-    RECARGA(["Empezar a recargar"])
-    RAYO(["Rayo: dano fijo en % de la vida maxima del zombie (100% o mas = mata; al jefe 15%). No le afectan las cartas de dano. Alcance 350 u"])
-    DISPARO(["Siguiente impacto de bala"])
     BAJA(["Baja tuya (cualquier arma)"])
+    DISPARO(["Siguiente impacto de bala"])
+    RAYO(["Rayo: dano fijo en % de la vida maxima del zombie (100% o mas = mata; al jefe 15%) y luego se multiplica por tus cartas de dano. Alcance 350 u"])
+    RECARGA(["Empezar a recargar"])
     BAJA -->|"8-34% (tope 80%)"| pararrayos
     pararrayos -->|"1 rayo del 15% a otro zombie"| RAYO
     BAJA -->|"3-16% (tope 60%): explosion de 0.6x vida de ronda + 100 a 160 u"| cadena
@@ -268,9 +268,9 @@ flowchart LR
     sangre["Sangre caliente"]
     ultimo["Ultimo aliento"]
     imparable{{"Imparable (firma)"}}
+    BAJA(["Baja tuya (cualquier arma)"])
     GOLPE(["Golpe de zombie recibido"])
     VIDA(["Tu vida (100, 250 con Juggernog, 500 si eres Tanque con Juggernog)"])
-    BAJA(["Baja tuya (cualquier arma)"])
     VIDA -->|"con menos de la mitad: +6-32% dano (tope 200%)"| adrenalina
     VIDA -->|"con menos de la mitad: +2-9 vida/s (tope 40)"| sangre
     GOLPE -->|"+5-22% dano 5 s, acumula hasta 3 golpes (tope 60% por golpe)"| furia
@@ -300,11 +300,11 @@ flowchart LR
     pulso["Pulso firme"]
     unabala["Una bala basta"]
     elites{{"Cazador de elites (firma)"}}
+    CABEZA(["Tiro a la cabeza (head / helmet; el arma ya multiplica por su locHead)"])
+    ELITE(["Tanque (x4 vida) o jefe"])
     MIRA(["Apuntando con la mira"])
     QUIETO2S(["2 s sin disparar"])
     MATA(["Muerte instantanea"])
-    CABEZA(["Tiro a la cabeza (head / helmet; el arma ya multiplica por su locHead)"])
-    ELITE(["Tanque (x4 vida) o jefe"])
     CABEZA -->|"+8-48% (tope 400%)"| cabeza
     MIRA -->|"apuntando: +4-20% (tope 100%)"| punteria
     ELITE -->|"solo tanques: +12-72% (tope 400%)"| cazatanques
@@ -337,8 +337,8 @@ flowchart LR
     coloso{{"Coloso (firma)"}}
     QUIETO(["Quieto (velocidad &lt; 10)"])
     CUCHILLO(["Cuchillo"])
-    GOLPE(["Golpe de zombie recibido (60; tanque x2; jefe x2.5)"])
     PASIVA(["Pasiva del arquetipo: vida x2 con Juggernog (500) y escudo de zombies (2250 de dano) en la espalda, nuevo o reparado cada ronda"])
+    GOLPE(["Golpe de zombie recibido (60; tanque x2; jefe x2.5)"])
     GOLPE -->|"el zombie pierde 12-72% de su vida (tope 500%)"| espinas
     CUCHILLO -->|"+40-240% (tope 3000%)"| melee
     QUIETO -->|"golpes -10-40% (tope 60%)"| piedra
@@ -368,11 +368,11 @@ flowchart LR
     mercenario["Mercenario"]
     cajaeco["Caja economica"]
     plutocrata{{"Plutocrata (firma)"}}
-    PUNTOS(["Tus puntos (sin gastar)"])
-    CAJA(["Caja de cartas (2500 x1.17 por tirada)"])
     CABEZA(["Baja a la cabeza"])
     PERKS(["Bebidas que llevas"])
     BAJA(["Baja tuya"])
+    PUNTOS(["Tus puntos (sin gastar)"])
+    CAJA(["Caja de cartas (2500 x1.17 por tirada)"])
     BAJA -->|"+4-32 puntos (tope 300)"| puntos
     CABEZA -->|"+8-48 puntos (tope 400)"| oro
     PUNTOS -->|"+1% dano por cada 1000 puntos, tope 10-35% (maximo 50%)"| interes
@@ -403,11 +403,11 @@ flowchart LR
     plomo["Plomo"]
     cinta["Cinta de balas"]
     continuo{{"Fuego continuo (firma)"}}
+    RAFAGA(["Disparando seguido (menos de 0.4 s entre tiros)"])
     DT(["Double Tap comprado"])
     BAJA(["Baja tuya (cualquier arma)"])
     CARGADOR(["Cargador del arma de la mano"])
     COMBO10(["Combo 10: 10 bajas seguidas con menos de 2 s entre ellas"])
-    RAFAGA(["Disparando seguido (menos de 0.4 s entre tiros)"])
     cadencia -->|"da Double Tap gratis y +2-14% dano (tope 150%); con Double Tap comprado el % se dobla"| DT
     CARGADOR -->|"por debajo del 30%: +8-36% (tope 200%)"| ultimas
     RAFAGA -->|"tras 1 s seguido: +8-36% (tope 150%); se pierde al parar 0.5 s"| tambor
@@ -438,10 +438,10 @@ flowchart LR
     estela["Estela"]
     ciclon{{"Ciclon (firma)"}}
     CERCA3(["3 o mas zombies a menos de 150 u"])
-    GOLPE(["Golpe de zombie recibido"])
     ESPRINT(["Esprintando"])
-    FRENO(["Zombie frenado (velocidad de animacion reducida; no al jefe ni a uno ya frenado por el Paralizador)"])
     BAJA(["Baja tuya"])
+    FRENO(["Zombie frenado (velocidad de animacion reducida; no al jefe ni a uno ya frenado por el Paralizador)"])
+    GOLPE(["Golpe de zombie recibido"])
     BAJA -->|"+4-18% velocidad 3 s (tope 60%)"| sed
     GOLPE -->|"te ignoran 0.4 s-1.8 s (tope 6.0 s)"| escurridizo
     CERCA3 -->|"+5-24% velocidad (tope 40%)"| resbaladizo
@@ -503,10 +503,10 @@ flowchart LR
     amuleto["Amuleto"]
     herradura["Herradura"]
     jackpot{{"Jackpot (firma)"}}
-    NIVEL(["Subida de nivel (menu de 3 cartas)"])
-    REROLL(["Rerolls (3 por partida, Granada)"])
     RONDA(["Empieza una ronda"])
+    NIVEL(["Subida de nivel (menu de 3 cartas)"])
     BAJA(["Baja tuya"])
+    REROLL(["Rerolls (3 por partida, Granada)"])
     BAJA -->|"0.4%-3.2% de soltar power-up (tope 15.0%)"| botin
     conejo -->|"+1-4 rerolls al cogerla (tope 20) y +1 cada 3 niveles"| REROLL
     NIVEL -->|"15-60% de que la carta cogida valga el doble (tope 80%; no a firmas ni Silbato)"| dados
@@ -849,11 +849,13 @@ Cada fila es el % acumulado de **esa** carta (coges varias hasta llegar a él). 
 | Una bala basta | cabeza a más de 15 m con el zombie por debajo del 25% / 35% / 45% / 60% / 80% de vida | mata |
 | Tiro de suerte de Escopetas | 15 % por perdigón, 35 % con francotirador | mata (jefe ×3) |
 
-## Efectos que hacen un % de la vida del zombie (no usan la fórmula)
+## Efectos que parten de un % de la vida del zombie
+
+Daño base, antes de multiplicarlo por tus cartas de daño (ver la fórmula de arriba).
 
 | Efecto | % vida | Nota | r10 | r20 | r30 | r40 | r50 |
 |---|---|---|---|---|---|---|---|
-| Fósforo / Pirotécnico / Alfa: fuego, por segundo | 4 % | 6 s (total 24 %); jefe un cuarto | 55 | 187 | 637 | 2164 | 7346 |
+| Fósforo / Pirotécnico / Alfa: fuego, por segundo | 4 % | 6 tics, uno por segundo (total 24 %); cada prendida vuelve a dar 6; jefe un cuarto | 55 | 187 | 637 | 2164 | 7346 |
 | Pararrayos: rayo | 15 % | a 1 zombie (3 con Tesla) | 208 | 704 | 2391 | 8116 | 27551 |
 | Sobrecarga: rayo | 25 % | al recargar, al más cercano; 100 % o más mata | 346 | 1174 | 3985 | 13527 | 45918 |
 | Sobrecarga: rayo | 35 % | al recargar, al más cercano; 100 % o más mata | 485 | 1644 | 5580 | 18938 | 64285 |
