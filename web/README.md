@@ -89,3 +89,7 @@ Hay una partida de ejemplo en `ejemplos/`: `curl -X POST localhost:3000/api/runs
 | `GET /api/salud` | Health check: `{ok, partidas, cuentas}`. |
 
 El formato del JSON lo escribe `mod/scripts/zm/bo2jodas_stats.gsc`; los nombres de las cartas para la web salen de `tools/generar_cartas_json.py` (hay que ejecutarlo cuando cambien las cartas del mod).
+
+## Calculadora
+
+`/calculadora`: vida de cada enemigo y zombies por ronda, y un simulador de build (clase, mítica, arma, zona, distancia, situación y hasta 15 cartas, 20 con Pistolas) que calcula disparo a disparo cuánto hace cada cosa a zombies, tanques y jefes. El motor (`client/src/calc/motor.js`) copia las funciones del mod y del juego, cada una con el nombre de la original en un comentario. Los números salen de `client/src/calculadora.json`, que genera `tools/generar_calculadora.py` (repo del mod) a partir de los scripts y de los archivos de arma volcados del juego: hay que volver a generarlo cuando cambien cartas, configuración o armas.

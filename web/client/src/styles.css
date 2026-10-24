@@ -153,3 +153,31 @@ details.tarjeta .formulario { margin-top: 12px; max-width: 420px; }
 .aviso-entrar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
 .estados { list-style: none; padding: 0; margin: 10px 0; display: grid; gap: 4px; }
 .subir .pasos { margin-bottom: 14px; }
+
+/* calculadora */
+.calc-fila { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; margin: 8px 0; }
+.calc-campo { display: grid; gap: 4px; color: var(--texto2); font-size: 13px; min-width: 140px; }
+.calc-campo select, .calc-campo input, .calc-anadir { padding: 7px 8px; border-radius: 8px; border: 1px solid var(--borde); background: var(--panel2); color: var(--texto); font-size: 14px; max-width: 100%; }
+.calc-campo input[type="number"] { width: 120px; }
+.calc-check { display: flex; gap: 6px; align-items: center; font-size: 14px; }
+.calc-situaciones { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px 16px; align-items: end; }
+.calc-lista { padding-left: 18px; margin: 8px 0; display: grid; gap: 4px; font-size: 14px; }
+.calc-tabla td .nota { margin: 0; font-size: 11px; }
+.calc-tabla { margin-top: 10px; }
+.calc-cartas { list-style: none; padding: 0; margin: 8px 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 8px; }
+.calc-carta { border: 1px solid color-mix(in srgb, var(--c) 55%, transparent); border-left: 4px solid var(--c); background: color-mix(in srgb, var(--c) 8%, var(--panel2)); border-radius: 8px; padding: 8px 10px; display: grid; gap: 4px; }
+.calc-carta-cab { display: flex; gap: 8px; align-items: baseline; }
+.calc-carta-cab .carta-arq { margin-left: auto; color: var(--c); }
+.calc-x { background: none; border: none; color: var(--texto2); font-size: 18px; cursor: pointer; padding: 0 2px; }
+.calc-carta-valor { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.calc-carta-valor input { width: 80px; padding: 4px 6px; border-radius: 6px; border: 1px solid var(--borde); background: var(--panel); color: var(--texto); }
+.calc-rarezas { display: flex; gap: 4px; flex-wrap: wrap; }
+.calc-rarezas button { padding: 2px 7px; border-radius: 6px; border: 1px solid var(--borde); background: var(--panel); color: var(--texto); cursor: pointer; font-size: 12px; }
+.calc-rarezas button:hover { border-color: var(--acento); }
+.calc-anadir { margin: 6px 0 4px; min-width: 260px; }
+.calc-desglose { margin-top: 10px; }
+.calc-enemigos { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; margin: 12px 0; }
+.calc-enemigo { background: var(--panel2); border-radius: 10px; padding: 10px 12px; display: grid; gap: 4px; }
+.calc-enemigo-cab { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+.calc-enemigo .nota { margin: 0; }
+@media (max-width: 640px) { .calc-tabla { display: block; overflow-x: auto; } }

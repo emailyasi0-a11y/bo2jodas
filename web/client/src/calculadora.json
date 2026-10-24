@@ -1,0 +1,5826 @@
+{
+ "fuente": "Generado por tools/generar_calculadora.py desde los scripts del mod y los archivos de arma del juego",
+ "cfg": {
+  "max_zombies": 31.0,
+  "spawn_delay": 0.5,
+  "zombies_mult": 1.5,
+  "zombies_extra_jugador": 0.2,
+  "sprint": 0.0,
+  "tanque_ronda": 3.0,
+  "tanque_vida": 4.0,
+  "tanque_danio": 2.0,
+  "tanque_pct": 10.0,
+  "especial_pct": 8.0,
+  "mitica_pct": 5.0,
+  "cartas_base": 15.0,
+  "cartas_paso": 5.0,
+  "repeticion": 8.0,
+  "pap_bloqueado": 1.0,
+  "vida_ronda": 130.0,
+  "vida_base": 188.0,
+  "jefe_minutos": 10.0,
+  "jefe_ronda": 1.0,
+  "jefe_vida": 70.0,
+  "jefe_danio": 2.5,
+  "jefe_escoltas": 4.0,
+  "jefe_velocidad": 1.25,
+  "jefe_repite": 66.0,
+  "bruja_vida": 40.0,
+  "bruja_velocidad": 1.3,
+  "bruja_tp": 20.0,
+  "bruja_toques": 2.0,
+  "leroy_vida": 50.0,
+  "leroy_velocidad": 1.3,
+  "baston_piezas": 3.0,
+  "caja_cartas": 1.0,
+  "caja_base": 2500.0,
+  "caja_mult": 1.17,
+  "super_pct": 20.0,
+  "tab_nivel": 1.0,
+  "caida_penal": 1.0,
+  "max_cartas": 15.0,
+  "pistolas_huecos": 5.0,
+  "rerolls": 3.0,
+  "bloqueos": 1.0,
+  "atasco_seg": 15.0,
+  "bebidas_max": 0.0,
+  "arq_nivel": 8.0,
+  "arq_pct": 35.0,
+  "arq_unico": 0.0,
+  "fuego_pct": 4.0,
+  "fuego_seg": 6.0,
+  "super_max": 6.0,
+  "super_ronda": 3.0,
+  "super_velocidad": 1.2,
+  "vida_mult": 0.13,
+  "auto_racha": 0.5,
+  "auto_racha_max": 20.0,
+  "hud_zombies": 1.0,
+  "hud_cartas": 1.0,
+  "tiempo_clase": 0.0,
+  "tiempo_carta": 0.0,
+  "escopetas_oneshot": 15.0,
+  "francos_oneshot": 35.0,
+  "escopetas_velocidad": 0.9,
+  "pistolas_danio": 40.0,
+  "auto_doble": 15.0,
+  "bruja_minutos": 3.0,
+  "bruja_segundos": 10.0,
+  "jefe_rugido": 15.0,
+  "jefe_furia": 20.0,
+  "espera_clases": 30.0,
+  "pistolas_velocidad": 1.3,
+  "pistolas_resistencia": 0.5,
+  "rifles_herido": 0.3,
+  "rifles_sano": 0.1,
+  "bomberman_municion": 45.0,
+  "bomberman_explosivo": 1.5,
+  "bomberman_recibido": 2.0,
+  "cristal_danio": 3.0,
+  "cristal_recibido": 1.75,
+  "zeus_pct": 30.0,
+  "zeus_objetivos": 3.0,
+  "midas_puntos": 100.0,
+  "midas_cada": 20.0,
+  "infinito_segundos": 45.0
+ },
+ "juego": {
+  "zombie_max_ai": 24,
+  "zombie_ai_per_player": 6,
+  "vida_inicio": 150,
+  "vida_ronda": 100,
+  "vida_mult": 0.1
+ },
+ "clases": [
+  {
+   "id": "escopetas",
+   "nombre": "Escopetas",
+   "desc": "Puede matar de un tiro pero -10% velocidad",
+   "especial": "Blundergat",
+   "armas": [
+    "870mcs_zm",
+    "rottweil72_zm",
+    "saiga12_zm",
+    "srm1216_zm",
+    "ksg_zm",
+    "dsr50_zm",
+    "barretm82_zm",
+    "svu_zm",
+    "ballista_zm"
+   ],
+   "especiales": [
+    "blundergat_zm"
+   ],
+   "color": "#ff8c19"
+  },
+  {
+   "id": "automaticas",
+   "nombre": "Automaticas",
+   "desc": "+potencia por tiro seguido 15% de gastar 2 balas",
+   "especial": "Sliquifier",
+   "armas": [
+    "galil_zm",
+    "ak74u_zm",
+    "ak74u_extclip_zm",
+    "mp5k_zm",
+    "pdw57_zm",
+    "tar21_zm",
+    "an94_zm",
+    "scar_zm",
+    "hk416_zm",
+    "ak47_zm",
+    "mp44_zm",
+    "thompson_zm",
+    "mp40_zm",
+    "mp40_stalker_zm",
+    "uzi_zm",
+    "evoskorpion_zm",
+    "hamr_zm",
+    "rpd_zm",
+    "lsat_zm",
+    "mg08_zm"
+   ],
+   "especiales": [
+    "slipgun_zm"
+   ],
+   "color": "#ff3f3f"
+  },
+  {
+   "id": "rifles",
+   "nombre": "Rifles",
+   "desc": "+30% a zombies heridos -10% a zombies sanos",
+   "especial": "Paralizador",
+   "armas": [
+    "m14_zm",
+    "fnfal_zm",
+    "saritch_zm",
+    "m16_zm",
+    "type95_zm",
+    "xm8_zm",
+    "qcw05_zm"
+   ],
+   "especiales": [
+    "slowgun_zm"
+   ],
+   "color": "#4c99ff"
+  },
+  {
+   "id": "pistolas",
+   "nombre": "Pistolas",
+   "desc": "+40% dano, +30% vel, 20 cartas, resiste bombas",
+   "especial": "Ray Gun",
+   "armas": [
+    "m1911_zm",
+    "fiveseven_zm",
+    "fivesevendw_zm",
+    "beretta93r_zm",
+    "beretta93r_extclip_zm",
+    "kard_zm",
+    "python_zm",
+    "judge_zm",
+    "rnma_zm",
+    "c96_zm",
+    "knife_ballistic_zm"
+   ],
+   "especiales": [
+    "ray_gun_zm",
+    "raygun_mark2_zm"
+   ],
+   "color": "#ffd826"
+  }
+ ],
+ "arquetipos": [
+  {
+   "id": "piromano",
+   "nombre": "Piromano",
+   "desc": "Fuego que se contagia y explosivos"
+  },
+  {
+   "id": "electricista",
+   "nombre": "Electricista",
+   "desc": "Rayos que saltan de zombie en zombie"
+  },
+  {
+   "id": "berserker",
+   "nombre": "Berserker",
+   "desc": "Cuanto mas herido, mas peligroso"
+  },
+  {
+   "id": "francotirador",
+   "nombre": "Francotirador",
+   "desc": "Tiros a la cabeza lentos y letales"
+  },
+  {
+   "id": "tanque",
+   "nombre": "Tanque",
+   "desc": "x2 vida con Jugg y escudo nuevo cada ronda"
+  },
+  {
+   "id": "banquero",
+   "nombre": "Banquero",
+   "desc": "Los puntos son poder"
+  },
+  {
+   "id": "gatillo",
+   "nombre": "Gatillo",
+   "desc": "Disparar sin parar y sin recargar"
+  },
+  {
+   "id": "velocista",
+   "nombre": "Velocista",
+   "desc": "Correr, esquivar y no parar"
+  },
+  {
+   "id": "domador",
+   "nombre": "Domador",
+   "desc": "Leapers que luchan por ti"
+  },
+  {
+   "id": "suertudo",
+   "nombre": "Suertudo",
+   "desc": "Rerolls, dados y cartas mejores"
+  }
+ ],
+ "miticas": [
+  {
+   "id": "bomberman",
+   "nombre": "Bomberman",
+   "desc": "Explosivos mejorados x1.5 recibes x2 (zombies y bombas)"
+  },
+  {
+   "id": "fenix",
+   "nombre": "Fenix",
+   "desc": "Renaces y explotas 1 vez por ronda"
+  },
+  {
+   "id": "cristal",
+   "nombre": "Cuerpo de cristal",
+   "desc": "Tu potencia x3 recibes x1.75"
+  },
+  {
+   "id": "zeus",
+   "nombre": "Ira de Zeus",
+   "desc": "30% de rayo que mata a 3 zombies"
+  },
+  {
+   "id": "midas",
+   "nombre": "Rey Midas",
+   "desc": "+100 puntos por baja power-up cada 20"
+  },
+  {
+   "id": "infinito",
+   "nombre": "Gatillo infinito",
+   "desc": "Nunca gastas balas arma nueva cada 45s"
+  },
+  {
+   "id": "bruja",
+   "nombre": "Hora bruja",
+   "desc": "Cada 3 min, 10 s de zombies a camara lenta"
+  }
+ ],
+ "cartas": [
+  {
+   "id": "velocidad",
+   "nombre": "Piernas ligeras",
+   "desc": "Velocidad de movimiento",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    3,
+    5,
+    7,
+    10,
+    16
+   ],
+   "tope": 80,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "salto",
+   "nombre": "Muelles",
+   "desc": "Saltas mas alto caer no te hiere",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    50,
+    70,
+    105,
+    145,
+    210
+   ],
+   "tope": 700,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": ""
+  },
+  {
+   "id": "danio",
+   "nombre": "Calibre",
+   "desc": "Mas potencia con todas las armas",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    5,
+    7,
+    10,
+    14,
+    22
+   ],
+   "tope": 300,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "cadencia",
+   "nombre": "Gatillo loco",
+   "desc": "Double Tap gratis y mas potencia",
+   "arquetipo": "gatillo",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    2,
+    4,
+    6,
+    10,
+    14
+   ],
+   "tope": 150,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "municion",
+   "nombre": "Cargador magico",
+   "desc": "Probabilidad de no gastar bala",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    4,
+    6,
+    10,
+    14,
+    20
+   ],
+   "tope": 60,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "recarga",
+   "nombre": "Manos rapidas",
+   "desc": "Speed Cola gratis y recarga al matar",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    5,
+    30,
+    100,
+    250,
+    450
+   ],
+   "tope": 450,
+   "decimal": 2,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "reserva",
+   "nombre": "Mochila",
+   "desc": "Balas de reserva por minuto",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    5,
+    8,
+    12,
+    18,
+    30
+   ],
+   "tope": 60,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": " b/min"
+  },
+  {
+   "id": "vida",
+   "nombre": "Corazon de hierro",
+   "desc": "Vida maxima",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    8,
+    12,
+    20,
+    32,
+    48
+   ],
+   "tope": 400,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": ""
+  },
+  {
+   "id": "regen",
+   "nombre": "Regeneracion",
+   "desc": "Vida por segundo",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    1,
+    1,
+    2,
+    3,
+    5
+   ],
+   "tope": 25,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": ""
+  },
+  {
+   "id": "vampiro",
+   "nombre": "Vampiro",
+   "desc": "Vida por baja",
+   "arquetipo": "berserker",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    2,
+    3,
+    4,
+    6,
+    10
+   ],
+   "tope": 60,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": ""
+  },
+  {
+   "id": "blindaje",
+   "nombre": "Blindaje",
+   "desc": "Golpes de zombie hacen menos",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    3,
+    5,
+    7,
+    10,
+    14
+   ],
+   "tope": 60,
+   "decimal": 0,
+   "prefijo": "-",
+   "sufijo": "%"
+  },
+  {
+   "id": "explosivo",
+   "nombre": "Polvora",
+   "desc": "Potencia de los explosivos",
+   "arquetipo": "piromano",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    8,
+    12,
+    20,
+    32,
+    48
+   ],
+   "tope": 400,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "cabeza",
+   "nombre": "Ojo de halcon",
+   "desc": "Potencia en tiros a la cabeza",
+   "arquetipo": "francotirador",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    8,
+    12,
+    20,
+    32,
+    48
+   ],
+   "tope": 400,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "critico",
+   "nombre": "Golpe critico",
+   "desc": "Probabilidad de golpe x2.5",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    2,
+    4,
+    6,
+    10,
+    14
+   ],
+   "tope": 60,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "melee",
+   "nombre": "Nudillos de hierro",
+   "desc": "Potencia cuerpo a cuerpo",
+   "arquetipo": "tanque",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    40,
+    65,
+    95,
+    145,
+    240
+   ],
+   "tope": 3000,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "puntos",
+   "nombre": "Codicia",
+   "desc": "Puntos extra por baja",
+   "arquetipo": "banquero",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    4,
+    8,
+    12,
+    20,
+    32
+   ],
+   "tope": 300,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": ""
+  },
+  {
+   "id": "cadena",
+   "nombre": "Reaccion en cadena",
+   "desc": "Probabilidad de que el zombie explote",
+   "arquetipo": "electricista",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    3,
+    5,
+    7,
+    10,
+    16
+   ],
+   "tope": 60,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "iman",
+   "nombre": "Iman",
+   "desc": "Atrae power-ups en este radio",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    250,
+    360,
+    520,
+    720,
+    1040
+   ],
+   "tope": 5000,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": ""
+  },
+  {
+   "id": "botin",
+   "nombre": "Buscador de botin",
+   "desc": "Probabilidad de power-up por baja",
+   "arquetipo": "suertudo",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    4,
+    8,
+    12,
+    20,
+    32
+   ],
+   "tope": 150,
+   "decimal": 1,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "aliento",
+   "nombre": "Segundo aliento",
+   "desc": "Probabilidad de evitar caer",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    8,
+    12,
+    18,
+    24,
+    36
+   ],
+   "tope": 90,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "escurridizo",
+   "nombre": "Escurridizo",
+   "desc": "Te ignoran tras recibir un golpe",
+   "arquetipo": "velocista",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    4,
+    6,
+    10,
+    13,
+    18
+   ],
+   "tope": 60,
+   "decimal": 1,
+   "prefijo": "",
+   "sufijo": " s"
+  },
+  {
+   "id": "pap",
+   "nombre": "Suerte del Pack",
+   "desc": "Arma de ronda mejorada",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    4,
+    6,
+    10,
+    14,
+    20
+   ],
+   "tope": 100,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "granada",
+   "nombre": "Granadero",
+   "desc": "Recuperar granada al matar",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    2,
+    4,
+    6,
+    10,
+    14
+   ],
+   "tope": 60,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "espinas",
+   "nombre": "Espinas",
+   "desc": "Quien te golpea pierde % de su vida",
+   "arquetipo": "tanque",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    12,
+    20,
+    32,
+    48,
+    72
+   ],
+   "tope": 500,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "especial",
+   "nombre": "Afortunado",
+   "desc": "Arma especial de tu clase",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    2,
+    4,
+    6,
+    10,
+    14
+   ],
+   "tope": 70,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "suerte",
+   "nombre": "Trebol",
+   "desc": "Las cartas salen de mas rareza",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    2,
+    4,
+    6,
+    10,
+    14
+   ],
+   "tope": 60,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "sed",
+   "nombre": "Sed de sangre",
+   "desc": "+% velocidad 3 s tras cada baja",
+   "arquetipo": "velocista",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    4,
+    6,
+    10,
+    13,
+    18
+   ],
+   "tope": 60,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "adrenalina",
+   "nombre": "Adrenalina",
+   "desc": "+% potencia con menos de media vida",
+   "arquetipo": "berserker",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    6,
+    10,
+    14,
+    20,
+    32
+   ],
+   "tope": 200,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "punteria",
+   "nombre": "Punteria",
+   "desc": "+% potencia apuntando con la mira",
+   "arquetipo": "francotirador",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    4,
+    6,
+    10,
+    14,
+    20
+   ],
+   "tope": 100,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "ultimas",
+   "nombre": "Ultimas balas",
+   "desc": "+% potencia con el cargador casi vacio",
+   "arquetipo": "gatillo",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    8,
+    12,
+    18,
+    24,
+    36
+   ],
+   "tope": 200,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "cazatanques",
+   "nombre": "Cazatanques",
+   "desc": "+% potencia contra tanques",
+   "arquetipo": "francotirador",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    12,
+    20,
+    32,
+    48,
+    72
+   ],
+   "tope": 400,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "experiencia",
+   "nombre": "Experiencia",
+   "desc": "Cada baja cuenta +% para las cartas",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    10,
+    15,
+    22,
+    30,
+    45
+   ],
+   "tope": 150,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "combo",
+   "nombre": "Combo",
+   "desc": "+% potencia por baja seguida (max 10)",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    1,
+    2,
+    2,
+    3,
+    5
+   ],
+   "tope": 20,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "oro",
+   "nombre": "Cabezas de oro",
+   "desc": "Puntos extra por baja a la cabeza",
+   "arquetipo": "banquero",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    8,
+    12,
+    20,
+    32,
+    48
+   ],
+   "tope": 400,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": ""
+  },
+  {
+   "id": "monos",
+   "nombre": "Monos",
+   "desc": "equipo cymbal_monkey_zm",
+   "arquetipo": "",
+   "tipo": "equipo",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "tope": 3,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "/ronda"
+  },
+  {
+   "id": "claymores",
+   "nombre": "Claymores",
+   "desc": "equipo claymore_zm",
+   "arquetipo": "",
+   "tipo": "equipo",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "tope": 3,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "/ronda"
+  },
+  {
+   "id": "semtex",
+   "nombre": "Semtex",
+   "desc": "equipo sticky_grenade_zm",
+   "arquetipo": "",
+   "tipo": "equipo",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "tope": 3,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "/ronda"
+  },
+  {
+   "id": "emp",
+   "nombre": "Granadas EMP",
+   "desc": "equipo emp_grenade_zm",
+   "arquetipo": "",
+   "tipo": "equipo",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "tope": 3,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "/ronda"
+  },
+  {
+   "id": "mejora",
+   "nombre": "Pack-a-Punch",
+   "desc": "Mejora el arma que llevas en la mano",
+   "arquetipo": "",
+   "tipo": "instantanea",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "tope": 1,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": ""
+  },
+  {
+   "id": "pu_ammo",
+   "nombre": "Municion maxima",
+   "desc": "power-up full_ammo",
+   "arquetipo": "",
+   "tipo": "powerup",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "tope": 1,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": ""
+  },
+  {
+   "id": "pu_insta",
+   "nombre": "Instakill",
+   "desc": "power-up insta_kill",
+   "arquetipo": "",
+   "tipo": "powerup",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "tope": 1,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": ""
+  },
+  {
+   "id": "pu_doble",
+   "nombre": "Doble puntos",
+   "desc": "power-up double_points",
+   "arquetipo": "",
+   "tipo": "powerup",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "tope": 1,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": ""
+  },
+  {
+   "id": "pu_carpintero",
+   "nombre": "Carpintero",
+   "desc": "power-up carpenter",
+   "arquetipo": "",
+   "tipo": "powerup",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "tope": 1,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": ""
+  },
+  {
+   "id": "pu_nuke",
+   "nombre": "Nuke",
+   "desc": "power-up nuke",
+   "arquetipo": "",
+   "tipo": "powerup",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "tope": 1,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": ""
+  },
+  {
+   "id": "fosforo",
+   "nombre": "Fosforo",
+   "desc": "Probabilidad de que tus balas incendien",
+   "arquetipo": "piromano",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    6,
+    9,
+    13,
+    18,
+    26
+   ],
+   "tope": 80,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "napalm",
+   "nombre": "Napalm",
+   "desc": "Un zombie ardiendo contagia: % por s",
+   "arquetipo": "piromano",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    15,
+    22,
+    30,
+    42,
+    60
+   ],
+   "tope": 100,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "rescoldos",
+   "nombre": "Rescoldos",
+   "desc": "Vida al matar a un zombie ardiendo",
+   "arquetipo": "piromano",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    4,
+    6,
+    9,
+    13,
+    18
+   ],
+   "tope": 60,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": ""
+  },
+  {
+   "id": "mecha",
+   "nombre": "Mecha corta",
+   "desc": "Granadas: estallan al caer y hacen +%",
+   "arquetipo": "piromano",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    20,
+    30,
+    45,
+    65,
+    90
+   ],
+   "tope": 300,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "pirotecnico",
+   "nombre": "Pirotecnico",
+   "desc": "FIRMA: tus explosiones incendian a todos",
+   "arquetipo": "piromano",
+   "tipo": "normal",
+   "firma": true,
+   "requiere": [
+    "fosforo",
+    "explosivo"
+   ],
+   "valores": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "tope": 1,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": ""
+  },
+  {
+   "id": "pararrayos",
+   "nombre": "Pararrayos",
+   "desc": "% de rayo al matar: 15% vida a otro",
+   "arquetipo": "electricista",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    8,
+    12,
+    17,
+    24,
+    34
+   ],
+   "tope": 80,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "sobrecarga",
+   "nombre": "Sobrecarga",
+   "desc": "Al recargar, rayo al mas cercano: % vida",
+   "arquetipo": "electricista",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    25,
+    35,
+    50,
+    70,
+    100
+   ],
+   "tope": 200,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "condensador",
+   "nombre": "Condensador",
+   "desc": "10 bajas sin dano: 3 rayos de % vida",
+   "arquetipo": "electricista",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    50,
+    70,
+    100,
+    140,
+    200
+   ],
+   "tope": 300,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "tormenta",
+   "nombre": "Tormenta",
+   "desc": "Descarga alrededor: % vida, y mas seguido",
+   "arquetipo": "electricista",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    12,
+    16,
+    22,
+    30,
+    42
+   ],
+   "tope": 90,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "tesla",
+   "nombre": "Tesla",
+   "desc": "FIRMA: todos tus rayos alcanzan a 2 mas",
+   "arquetipo": "electricista",
+   "tipo": "normal",
+   "firma": true,
+   "requiere": [
+    "pararrayos",
+    "condensador"
+   ],
+   "valores": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "tope": 1,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": ""
+  },
+  {
+   "id": "furia",
+   "nombre": "Furia",
+   "desc": "+% potencia 5 s por golpe recibido (x3)",
+   "arquetipo": "berserker",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    5,
+    8,
+    11,
+    15,
+    22
+   ],
+   "tope": 60,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "sangre",
+   "nombre": "Sangre caliente",
+   "desc": "Vida por segundo con menos de media vida",
+   "arquetipo": "berserker",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    2,
+    3,
+    4,
+    6,
+    9
+   ],
+   "tope": 40,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": ""
+  },
+  {
+   "id": "ultimo",
+   "nombre": "Ultimo aliento",
+   "desc": "Bajo 25% vida: s de invulnerable, 1/ronda",
+   "arquetipo": "berserker",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    3,
+    4,
+    5,
+    6,
+    8
+   ],
+   "tope": 12,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": " s"
+  },
+  {
+   "id": "imparable",
+   "nombre": "Imparable",
+   "desc": "FIRMA: bajo 25% vida +20% vel, golpes -50%",
+   "arquetipo": "berserker",
+   "tipo": "normal",
+   "firma": true,
+   "requiere": [
+    "adrenalina",
+    "furia"
+   ],
+   "valores": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "tope": 1,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": ""
+  },
+  {
+   "id": "pulso",
+   "nombre": "Pulso firme",
+   "desc": "+% potencia tras 2 s sin disparar",
+   "arquetipo": "francotirador",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    15,
+    22,
+    32,
+    45,
+    65
+   ],
+   "tope": 200,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "unabala",
+   "nombre": "Una bala basta",
+   "desc": "Cabeza lejos mata si al zombie le queda <%",
+   "arquetipo": "francotirador",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    25,
+    35,
+    45,
+    60,
+    80
+   ],
+   "tope": 100,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "elites",
+   "nombre": "Cazador de elites",
+   "desc": "FIRMA: cabeza a tanque o jefe hace x3",
+   "arquetipo": "francotirador",
+   "tipo": "normal",
+   "firma": true,
+   "requiere": [
+    "cabeza",
+    "pulso"
+   ],
+   "valores": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "tope": 1,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": ""
+  },
+  {
+   "id": "piedra",
+   "nombre": "Piel de piedra",
+   "desc": "-% dano recibido estando quieto",
+   "arquetipo": "tanque",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    10,
+    15,
+    20,
+    28,
+    40
+   ],
+   "tope": 60,
+   "decimal": 0,
+   "prefijo": "-",
+   "sufijo": "%"
+  },
+  {
+   "id": "coraza",
+   "nombre": "Coraza",
+   "desc": "Cada golpe de zombie hace esto menos",
+   "arquetipo": "tanque",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    5,
+    8,
+    12,
+    18,
+    25
+   ],
+   "tope": 60,
+   "decimal": 0,
+   "prefijo": "-",
+   "sufijo": ""
+  },
+  {
+   "id": "masa",
+   "nombre": "Masa",
+   "desc": "+vida maxima por cada carta de Tanque",
+   "arquetipo": "tanque",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    5,
+    8,
+    12,
+    16,
+    24
+   ],
+   "tope": 60,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": ""
+  },
+  {
+   "id": "coloso",
+   "nombre": "Coloso",
+   "desc": "FIRMA: quieto reflejas todo; cuchillo x3",
+   "arquetipo": "tanque",
+   "tipo": "normal",
+   "firma": true,
+   "requiere": [
+    "espinas",
+    "piedra"
+   ],
+   "valores": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "tope": 1,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": ""
+  },
+  {
+   "id": "interes",
+   "nombre": "Interes compuesto",
+   "desc": "+1% potencia por cada 1000 puntos (tope %)",
+   "arquetipo": "banquero",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    10,
+    15,
+    20,
+    25,
+    35
+   ],
+   "tope": 50,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "mercenario",
+   "nombre": "Mercenario",
+   "desc": "Cada 50 bajas tuyas +puntos a todos",
+   "arquetipo": "banquero",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    200,
+    300,
+    400,
+    600,
+    800
+   ],
+   "tope": 2000,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": ""
+  },
+  {
+   "id": "cajaeco",
+   "nombre": "Caja economica",
+   "desc": "La caja te cuesta menos",
+   "arquetipo": "banquero",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    10,
+    15,
+    20,
+    30,
+    40
+   ],
+   "tope": 60,
+   "decimal": 0,
+   "prefijo": "-",
+   "sufijo": "%"
+  },
+  {
+   "id": "plutocrata",
+   "nombre": "Plutocrata",
+   "desc": "FIRMA: +6% potencia por perk, +50 puntos",
+   "arquetipo": "banquero",
+   "tipo": "normal",
+   "firma": true,
+   "requiere": [
+    "puntos",
+    "interes"
+   ],
+   "valores": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "tope": 1,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": ""
+  },
+  {
+   "id": "tambor",
+   "nombre": "Tambor caliente",
+   "desc": "+% potencia tras 1 s disparando seguido",
+   "arquetipo": "gatillo",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    8,
+    12,
+    18,
+    25,
+    36
+   ],
+   "tope": 150,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "plomo",
+   "nombre": "Plomo",
+   "desc": "+1% potencia por bala seguida (tope %)",
+   "arquetipo": "gatillo",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    10,
+    15,
+    20,
+    30,
+    40
+   ],
+   "tope": 100,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "cinta",
+   "nombre": "Cinta de balas",
+   "desc": "Balas al cargador por baja",
+   "arquetipo": "gatillo",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    2,
+    3,
+    4,
+    6,
+    8
+   ],
+   "tope": 20,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": ""
+  },
+  {
+   "id": "continuo",
+   "nombre": "Fuego continuo",
+   "desc": "FIRMA: con combo 10 el cargador no baja",
+   "arquetipo": "gatillo",
+   "tipo": "normal",
+   "firma": true,
+   "requiere": [
+    "tambor",
+    "plomo"
+   ],
+   "valores": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "tope": 1,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": ""
+  },
+  {
+   "id": "resbaladizo",
+   "nombre": "Resbaladizo",
+   "desc": "+% velocidad con 3+ zombies encima",
+   "arquetipo": "velocista",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    5,
+    8,
+    12,
+    16,
+    24
+   ],
+   "tope": 40,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "zancada",
+   "nombre": "Zancada",
+   "desc": "Stamin-Up gratis y +% vel. esprintando",
+   "arquetipo": "velocista",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    4,
+    6,
+    9,
+    12,
+    18
+   ],
+   "tope": 30,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "estela",
+   "nombre": "Estela",
+   "desc": "Esprintando dejas un rastro que frena %",
+   "arquetipo": "velocista",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    30,
+    40,
+    50,
+    60,
+    75
+   ],
+   "tope": 75,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "ciclon",
+   "nombre": "Ciclon",
+   "desc": "FIRMA: esprintando danas lo que tocas",
+   "arquetipo": "velocista",
+   "tipo": "normal",
+   "firma": true,
+   "requiere": [
+    "sed",
+    "estela"
+   ],
+   "valores": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "tope": 1,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": ""
+  },
+  {
+   "id": "silbato",
+   "nombre": "Silbato",
+   "desc": "Un leaper cachorro te sigue y muerde",
+   "arquetipo": "domador",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "tope": 1,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": ""
+  },
+  {
+   "id": "correa",
+   "nombre": "Correa larga",
+   "desc": "Tus leapers van +% mas rapido",
+   "arquetipo": "domador",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [
+    "silbato"
+   ],
+   "valores": [
+    10,
+    15,
+    20,
+    30,
+    40
+   ],
+   "tope": 100,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "collar",
+   "nombre": "Collar de puas",
+   "desc": "Mordiscos de tus leapers +%",
+   "arquetipo": "domador",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [
+    "silbato"
+   ],
+   "valores": [
+    15,
+    25,
+    35,
+    50,
+    70
+   ],
+   "tope": 200,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "carne",
+   "nombre": "Carne fresca",
+   "desc": "Vida por mordisco letal de tus leapers",
+   "arquetipo": "domador",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [
+    "silbato"
+   ],
+   "valores": [
+    3,
+    5,
+    7,
+    10,
+    15
+   ],
+   "tope": 50,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": ""
+  },
+  {
+   "id": "manada",
+   "nombre": "Manada",
+   "desc": "+1 leaper (maximo 3)",
+   "arquetipo": "domador",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [
+    "silbato"
+   ],
+   "valores": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "tope": 2,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": ""
+  },
+  {
+   "id": "alfa",
+   "nombre": "Alfa",
+   "desc": "FIRMA: al matar, tus leapers x2 e incendian",
+   "arquetipo": "domador",
+   "tipo": "normal",
+   "firma": true,
+   "requiere": [
+    "collar",
+    "manada"
+   ],
+   "valores": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "tope": 1,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": ""
+  },
+  {
+   "id": "conejo",
+   "nombre": "Pata de conejo",
+   "desc": "+rerolls ahora y +1 cada 3 niveles",
+   "arquetipo": "suertudo",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    1,
+    2,
+    2,
+    3,
+    4
+   ],
+   "tope": 20,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": ""
+  },
+  {
+   "id": "dados",
+   "nombre": "Dados",
+   "desc": "% de que la carta que cojas valga el doble",
+   "arquetipo": "suertudo",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    15,
+    22,
+    30,
+    42,
+    60
+   ],
+   "tope": 80,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "amuleto",
+   "nombre": "Amuleto",
+   "desc": "% de ver 4 cartas en vez de 3",
+   "arquetipo": "suertudo",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    20,
+    30,
+    45,
+    60,
+    80
+   ],
+   "tope": 100,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "herradura",
+   "nombre": "Herradura",
+   "desc": "% de power-up a tus pies al empezar ronda",
+   "arquetipo": "suertudo",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    20,
+    30,
+    45,
+    60,
+    80
+   ],
+   "tope": 100,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "jackpot",
+   "nombre": "Jackpot",
+   "desc": "FIRMA: 1 legendaria por ronda y rerolls al 50%",
+   "arquetipo": "suertudo",
+   "tipo": "normal",
+   "firma": true,
+   "requiere": [
+    "dados",
+    "conejo"
+   ],
+   "valores": [
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "tope": 1,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": ""
+  },
+  {
+   "id": "armadura",
+   "nombre": "Armadura",
+   "desc": "Golpes que absorbes del todo cada ronda",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    1,
+    1,
+    2,
+    2,
+    3
+   ],
+   "tope": 6,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": ""
+  },
+  {
+   "id": "sangrefria",
+   "nombre": "Sangre fria",
+   "desc": "+% dano sin zombies a menos de 4 m",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    6,
+    10,
+    14,
+    20,
+    30
+   ],
+   "tope": 100,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "medico",
+   "nombre": "Medico",
+   "desc": "Al reanimar, vida para los dos y os ignoran 2 s",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    20,
+    30,
+    45,
+    65,
+    100
+   ],
+   "tope": 250,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": ""
+  },
+  {
+   "id": "madrugador",
+   "nombre": "Madrugador",
+   "desc": "+% dano los primeros 30 s de cada ronda",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    8,
+    12,
+    18,
+    25,
+    36
+   ],
+   "tope": 100,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "cordones",
+   "nombre": "Cordones nuevos",
+   "desc": "Velocidad de movimiento",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    1,
+    1,
+    2,
+    2,
+    3
+   ],
+   "tope": 10,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": "%"
+  },
+  {
+   "id": "cantimplora",
+   "nombre": "Cantimplora",
+   "desc": "Vida maxima",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    2,
+    3,
+    4,
+    6,
+    8
+   ],
+   "tope": 30,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": ""
+  },
+  {
+   "id": "calderilla",
+   "nombre": "Calderilla",
+   "desc": "Puntos extra por baja",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    5,
+    8,
+    10,
+    15,
+    20
+   ],
+   "tope": 100,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": ""
+  },
+  {
+   "id": "pulsera",
+   "nombre": "Pulsera de la suerte",
+   "desc": "Las cartas salen de mas rareza",
+   "arquetipo": "",
+   "tipo": "normal",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    1,
+    1,
+    2,
+    2,
+    3
+   ],
+   "tope": 10,
+   "decimal": 0,
+   "prefijo": "",
+   "sufijo": "%"
+  },
+  {
+   "id": "medalla",
+   "nombre": "Medalla",
+   "desc": "Subes de nivel ahora mismo",
+   "arquetipo": "",
+   "tipo": "instantanea",
+   "firma": false,
+   "requiere": [],
+   "valores": [
+    1,
+    1,
+    1,
+    2,
+    3
+   ],
+   "tope": 99,
+   "decimal": 0,
+   "prefijo": "+",
+   "sufijo": " niveles"
+  }
+ ],
+ "armas": [
+  {
+   "nombre": "Escopetas y francotiradores",
+   "armas": [
+    {
+     "id": "870mcs_zm",
+     "nombre": "Remington 870 MCS",
+     "archivo": "zm_transit",
+     "tipo": "bullet",
+     "disparo": "Single Shot",
+     "danio": 310,
+     "danio_min": 15,
+     "alcance_max": 400,
+     "alcance_min": 900,
+     "cuchillo": 25,
+     "perdigones": 4,
+     "cargador": 6,
+     "cadencia": 0.192,
+     "zonas": {
+      "cabeza": 1.0,
+      "casco": 1.0,
+      "cuello": 1.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "870mcs_upgraded_zm",
+      "nombre": "Refitted-870 Mechanical Cranium Sequencer",
+      "archivo": "zm_transit",
+      "tipo": "bullet",
+      "disparo": "Single Shot",
+      "danio": 600,
+      "danio_min": 30,
+      "alcance_max": 400,
+      "alcance_min": 1000,
+      "cuchillo": 25,
+      "perdigones": 4,
+      "cargador": 10,
+      "cadencia": 0.192,
+      "zonas": {
+       "cabeza": 1.0,
+       "casco": 1.0,
+       "cuello": 1.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 1500
+    },
+    {
+     "id": "rottweil72_zm",
+     "nombre": "Olympia",
+     "archivo": "zm_transit",
+     "tipo": "bullet",
+     "disparo": "Single Shot",
+     "danio": 150,
+     "danio_min": 29,
+     "alcance_max": 300,
+     "alcance_min": 900,
+     "cuchillo": 25,
+     "perdigones": 4,
+     "cargador": 2,
+     "cadencia": 0.283,
+     "zonas": {
+      "cabeza": 1.0,
+      "casco": 1.0,
+      "cuello": 1.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "rottweil72_upgraded_zm",
+      "nombre": "Hades",
+      "archivo": "zm_transit",
+      "tipo": "bullet",
+      "disparo": "Single Shot",
+      "danio": 600,
+      "danio_min": 135,
+      "alcance_max": 1000,
+      "alcance_min": 2500,
+      "cuchillo": 25,
+      "perdigones": 4,
+      "cargador": 2,
+      "cadencia": 0.283,
+      "zonas": {
+       "cabeza": 1.0,
+       "casco": 1.0,
+       "cuello": 1.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 500
+    },
+    {
+     "id": "saiga12_zm",
+     "nombre": "S12",
+     "archivo": "zm_transit",
+     "tipo": "bullet",
+     "disparo": "Single Shot",
+     "danio": 270,
+     "danio_min": 23,
+     "alcance_max": 300,
+     "alcance_min": 700,
+     "cuchillo": 25,
+     "perdigones": 4,
+     "cargador": 10,
+     "cadencia": 0.128,
+     "zonas": {
+      "cabeza": 1.0,
+      "casco": 1.0,
+      "cuello": 1.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "saiga12_upgraded_zm",
+      "nombre": "Synthetic Dozen",
+      "archivo": "zm_transit",
+      "tipo": "bullet",
+      "disparo": "Single Shot",
+      "danio": 560,
+      "danio_min": 48,
+      "alcance_max": 400,
+      "alcance_min": 1200,
+      "cuchillo": 25,
+      "perdigones": 4,
+      "cargador": 10,
+      "cadencia": 0.128,
+      "zonas": {
+       "cabeza": 1.0,
+       "casco": 1.0,
+       "cuello": 1.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "srm1216_zm",
+     "nombre": "M1216",
+     "archivo": "zm_transit",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 280,
+     "danio_min": 35,
+     "alcance_max": 200,
+     "alcance_min": 800,
+     "cuchillo": 25,
+     "perdigones": 4,
+     "cargador": 16,
+     "cadencia": 0.128,
+     "zonas": {
+      "cabeza": 1.0,
+      "casco": 1.0,
+      "cuello": 1.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "srm1216_upgraded_zm",
+      "nombre": "Mesmerizer",
+      "archivo": "zm_transit",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 975,
+      "danio_min": 72,
+      "alcance_max": 300,
+      "alcance_min": 1300,
+      "cuchillo": 25,
+      "perdigones": 4,
+      "cargador": 24,
+      "cadencia": 0.128,
+      "zonas": {
+       "cabeza": 1.0,
+       "casco": 1.0,
+       "cuello": 1.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "ksg_zm",
+     "nombre": "KSG",
+     "archivo": "zm_tomb",
+     "tipo": "bullet",
+     "disparo": "Single Shot",
+     "danio": 800,
+     "danio_min": 100,
+     "alcance_max": 550,
+     "alcance_min": 1251,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 14,
+     "cadencia": 0.224,
+     "zonas": {
+      "cabeza": 2.0,
+      "casco": 2.0,
+      "cuello": 2.0,
+      "pecho": 1.5,
+      "tripa": 1.5,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "ksg_upgraded_zm",
+      "nombre": "Mist Maker",
+      "archivo": "zm_tomb",
+      "tipo": "bullet",
+      "disparo": "Single Shot",
+      "danio": 1000,
+      "danio_min": 200,
+      "alcance_max": 550,
+      "alcance_min": 1251,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 28,
+      "cadencia": 0.224,
+      "zonas": {
+       "cabeza": 4.0,
+       "casco": 4.0,
+       "cuello": 4.0,
+       "pecho": 2.0,
+       "tripa": 2.0,
+       "brazo": 1.5,
+       "pierna": 1.5
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 1100
+    },
+    {
+     "id": "dsr50_zm",
+     "nombre": "DSR 50",
+     "archivo": "zm_transit_patch",
+     "tipo": "bullet",
+     "disparo": "Single Shot",
+     "danio": 800,
+     "danio_min": 550,
+     "alcance_max": 4000,
+     "alcance_min": 5000,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 4,
+     "cadencia": 0.2,
+     "zonas": {
+      "cabeza": 10.0,
+      "casco": 3.0,
+      "cuello": 5.0,
+      "pecho": 1.5,
+      "tripa": 1.5,
+      "brazo": 1.5,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "dsr50_upgraded_zm",
+      "nombre": "Dead Specimen Reactor 5000",
+      "archivo": "zm_transit_patch",
+      "tipo": "bullet",
+      "disparo": "Single Shot",
+      "danio": 1000,
+      "danio_min": 1000,
+      "alcance_max": 4000,
+      "alcance_min": 5000,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 8,
+      "cadencia": 0.2,
+      "zonas": {
+       "cabeza": 10.0,
+       "casco": 8.0,
+       "cuello": 8.0,
+       "pecho": 5.0,
+       "tripa": 3.0,
+       "brazo": 2.5,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "barretm82_zm",
+     "nombre": "Barrett M82A1",
+     "archivo": "zm_transit_patch",
+     "tipo": "bullet",
+     "disparo": "Single Shot",
+     "danio": 600,
+     "danio_min": 500,
+     "alcance_max": 4000,
+     "alcance_min": 5000,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 5,
+     "cadencia": 0.144,
+     "zonas": {
+      "cabeza": 10.0,
+      "casco": 3.0,
+      "cuello": 5.0,
+      "pecho": 1.5,
+      "tripa": 1.1,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "barretm82_upgraded_zm",
+      "nombre": "Macro Annihilator",
+      "archivo": "zm_transit_patch",
+      "tipo": "bullet",
+      "disparo": "Single Shot",
+      "danio": 900,
+      "danio_min": 900,
+      "alcance_max": 4000,
+      "alcance_min": 5000,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 7,
+      "cadencia": 0.144,
+      "zonas": {
+       "cabeza": 10.0,
+       "casco": 8.0,
+       "cuello": 8.0,
+       "pecho": 3.0,
+       "tripa": 3.0,
+       "brazo": 2.5,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "svu_zm",
+     "nombre": "SVU-AS",
+     "archivo": "zm_highrise_patch",
+     "tipo": "bullet",
+     "disparo": "Single Shot",
+     "danio": 550,
+     "danio_min": 550,
+     "alcance_max": 3500,
+     "alcance_min": 3000,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 12,
+     "cadencia": 0.144,
+     "zonas": {
+      "cabeza": 7.0,
+      "casco": 2.5,
+      "cuello": 4.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.5,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "svu_upgraded_zm",
+      "nombre": "Shadowy Veil Utilizer",
+      "archivo": "zm_highrise",
+      "tipo": "bullet",
+      "disparo": "Single Shot",
+      "danio": 900,
+      "danio_min": 900,
+      "alcance_max": 4000,
+      "alcance_min": 4000,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 12,
+      "cadencia": 0.144,
+      "zonas": {
+       "cabeza": 9.0,
+       "casco": 7.0,
+       "cuello": 6.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 2.5,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 1000
+    },
+    {
+     "id": "ballista_zm",
+     "nombre": "Ballista",
+     "archivo": "zm_tomb",
+     "tipo": "bullet",
+     "disparo": "Single Shot",
+     "danio": 150,
+     "danio_min": 150,
+     "alcance_max": 3000,
+     "alcance_min": 3001,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 8,
+     "cadencia": 0.2,
+     "zonas": {
+      "cabeza": 4.0,
+      "casco": 4.0,
+      "cuello": 4.0,
+      "pecho": 1.8,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "ballista_upgraded_zm",
+      "nombre": "Infused Arbalest",
+      "archivo": "zm_tomb",
+      "tipo": "bullet",
+      "disparo": "Single Shot",
+      "danio": 400,
+      "danio_min": 200,
+      "alcance_max": 4000,
+      "alcance_min": 4000,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 10,
+      "cadencia": 0.2,
+      "zonas": {
+       "cabeza": 10.0,
+       "casco": 10.0,
+       "cuello": 10.0,
+       "pecho": 6.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 500
+    },
+    {
+     "id": "blundergat_zm",
+     "nombre": "Blundergat",
+     "archivo": "zm_prison",
+     "tipo": "bullet",
+     "disparo": "Single Shot",
+     "danio": 500,
+     "danio_min": 300,
+     "alcance_max": 500,
+     "alcance_min": 900,
+     "cuchillo": 25,
+     "perdigones": 7,
+     "cargador": 1,
+     "cadencia": 0.192,
+     "zonas": {
+      "cabeza": 4.0,
+      "casco": 4.0,
+      "cuello": 4.0,
+      "pecho": 1.5,
+      "tripa": 1.5,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "blundergat_upgraded_zm",
+      "nombre": "The Sweeper",
+      "archivo": "zm_prison",
+      "tipo": "bullet",
+      "disparo": "Single Shot",
+      "danio": 1000,
+      "danio_min": 500,
+      "alcance_max": 1000,
+      "alcance_min": 900,
+      "cuchillo": 25,
+      "perdigones": 7,
+      "cargador": 2,
+      "cadencia": 0.192,
+      "zonas": {
+       "cabeza": 4.0,
+       "casco": 4.0,
+       "cuello": 4.0,
+       "pecho": 1.5,
+       "tripa": 1.5,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 500
+    }
+   ]
+  },
+  {
+   "nombre": "Fusiles, subfusiles y ametralladoras automaticas",
+   "armas": [
+    {
+     "id": "galil_zm",
+     "nombre": "Galil",
+     "archivo": "zm_transit",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 150,
+     "danio_min": 100,
+     "alcance_max": 1600,
+     "alcance_min": 3000,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 35,
+     "cadencia": 0.08,
+     "zonas": {
+      "cabeza": 4.0,
+      "casco": 4.0,
+      "cuello": 4.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "galil_upgraded_zm",
+      "nombre": "Lamentation",
+      "archivo": "zm_transit",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 220,
+      "danio_min": 150,
+      "alcance_max": 1600,
+      "alcance_min": 3000,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 35,
+      "cadencia": 0.08,
+      "zonas": {
+       "cabeza": 5.0,
+       "casco": 5.0,
+       "cuello": 5.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "ak74u_zm",
+     "nombre": "AK74u",
+     "archivo": "zm_transit",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 120,
+     "danio_min": 80,
+     "alcance_max": 800,
+     "alcance_min": 1800,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 20,
+     "cadencia": 0.08,
+     "zonas": {
+      "cabeza": 4.0,
+      "casco": 4.0,
+      "cuello": 4.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "ak74u_upgraded_zm",
+      "nombre": "AK74fu2",
+      "archivo": "zm_transit",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 190,
+      "danio_min": 140,
+      "alcance_max": 800,
+      "alcance_min": 1800,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 40,
+      "cadencia": 0.08,
+      "zonas": {
+       "cabeza": 5.0,
+       "casco": 5.0,
+       "cuello": 5.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 1200
+    },
+    {
+     "id": "ak74u_extclip_zm",
+     "nombre": "AK74u (cargador ampliado)",
+     "archivo": "zm_tomb",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 120,
+     "danio_min": 80,
+     "alcance_max": 800,
+     "alcance_min": 1800,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 30,
+     "cadencia": 0.08,
+     "zonas": {
+      "cabeza": 4.0,
+      "casco": 4.0,
+      "cuello": 4.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "ak74u_extclip_upgraded_zm",
+      "nombre": "AK74fu2",
+      "archivo": "zm_tomb",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 190,
+      "danio_min": 140,
+      "alcance_max": 800,
+      "alcance_min": 1800,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 50,
+      "cadencia": 0.08,
+      "zonas": {
+       "cabeza": 5.0,
+       "casco": 5.0,
+       "cuello": 5.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 1200
+    },
+    {
+     "id": "mp5k_zm",
+     "nombre": "MP5K",
+     "archivo": "zm_transit",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 100,
+     "danio_min": 50,
+     "alcance_max": 800,
+     "alcance_min": 1800,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 30,
+     "cadencia": 0.08,
+     "zonas": {
+      "cabeza": 4.0,
+      "casco": 4.0,
+      "cuello": 4.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "mp5k_upgraded_zm",
+      "nombre": "MP115 Kollider",
+      "archivo": "zm_transit",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 140,
+      "danio_min": 80,
+      "alcance_max": 800,
+      "alcance_min": 1800,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 40,
+      "cadencia": 0.08,
+      "zonas": {
+       "cabeza": 5.0,
+       "casco": 5.0,
+       "cuello": 5.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 1000
+    },
+    {
+     "id": "pdw57_zm",
+     "nombre": "PDW-57",
+     "archivo": "zm_highrise",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 90,
+     "danio_min": 90,
+     "alcance_max": 425,
+     "alcance_min": 1351,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 50,
+     "cadencia": 0.08,
+     "zonas": {
+      "cabeza": 4.0,
+      "casco": 4.0,
+      "cuello": 4.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "pdw57_upgraded_zm",
+      "nombre": "Predictive Death Wish 57000",
+      "archivo": "zm_highrise",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 175,
+      "danio_min": 100,
+      "alcance_max": 425,
+      "alcance_min": 1351,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 50,
+      "cadencia": 0.08,
+      "zonas": {
+       "cabeza": 5.0,
+       "casco": 5.0,
+       "cuello": 5.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 1000
+    },
+    {
+     "id": "tar21_zm",
+     "nombre": "MTAR",
+     "archivo": "zm_transit_patch",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 140,
+     "danio_min": 100,
+     "alcance_max": 1600,
+     "alcance_min": 2500,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 30,
+     "cadencia": 0.08,
+     "zonas": {
+      "cabeza": 4.0,
+      "casco": 4.0,
+      "cuello": 4.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "tar21_upgraded_zm",
+      "nombre": "Malevolent Taxonomic Anodized Redeemer",
+      "archivo": "zm_transit_patch",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 195,
+      "danio_min": 150,
+      "alcance_max": 1600,
+      "alcance_min": 2500,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 30,
+      "cadencia": 0.08,
+      "zonas": {
+       "cabeza": 5.0,
+       "casco": 5.0,
+       "cuello": 5.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "an94_zm",
+     "nombre": "AN-94",
+     "archivo": "zm_highrise",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 120,
+     "danio_min": 75,
+     "alcance_max": 1300,
+     "alcance_min": 2251,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 30,
+     "cadencia": 0.096,
+     "zonas": {
+      "cabeza": 3.0,
+      "casco": 3.0,
+      "cuello": 3.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "an94_upgraded_zm",
+      "nombre": "Actuated Neutralizer 94000",
+      "archivo": "zm_highrise",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 200,
+      "danio_min": 160,
+      "alcance_max": 1300,
+      "alcance_min": 2251,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 50,
+      "cadencia": 0.096,
+      "zonas": {
+       "cabeza": 5.0,
+       "casco": 5.0,
+       "cuello": 4.0,
+       "pecho": 3.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 1200
+    },
+    {
+     "id": "scar_zm",
+     "nombre": "SCAR-H",
+     "archivo": "zm_tomb",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 210,
+     "danio_min": 100,
+     "alcance_max": 2250,
+     "alcance_min": 3000,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 30,
+     "cadencia": 0.096,
+     "zonas": {
+      "cabeza": 3.5,
+      "casco": 3.5,
+      "cuello": 3.5,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "scar_upgraded_zm",
+      "nombre": "Agarthan Reaper",
+      "archivo": "zm_tomb",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 300,
+      "danio_min": 150,
+      "alcance_max": 2250,
+      "alcance_min": 3000,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 40,
+      "cadencia": 0.096,
+      "zonas": {
+       "cabeza": 4.0,
+       "casco": 4.0,
+       "cuello": 4.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "hk416_zm",
+     "nombre": "M27",
+     "archivo": "zm_nuked",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 150,
+     "danio_min": 100,
+     "alcance_max": 500,
+     "alcance_min": 3000,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 30,
+     "cadencia": 0.08,
+     "zonas": {
+      "cabeza": 4.0,
+      "casco": 4.0,
+      "cuello": 4.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "hk416_upgraded_zm",
+      "nombre": "Mystifier",
+      "archivo": "zm_nuked",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 220,
+      "danio_min": 150,
+      "alcance_max": 1600,
+      "alcance_min": 3000,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 30,
+      "cadencia": 0.08,
+      "zonas": {
+       "cabeza": 5.0,
+       "casco": 5.0,
+       "cuello": 5.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 100
+    },
+    {
+     "id": "ak47_zm",
+     "nombre": "AK-47",
+     "archivo": "zm_prison",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 150,
+     "danio_min": 100,
+     "alcance_max": 1500,
+     "alcance_min": 2000,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 30,
+     "cadencia": 0.08,
+     "zonas": {
+      "cabeza": 3.0,
+      "casco": 3.0,
+      "cuello": 1.5,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "ak47_upgraded_zm",
+      "nombre": "Reznov's Revenge",
+      "archivo": "zm_prison",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 250,
+      "danio_min": 200,
+      "alcance_max": 1500,
+      "alcance_min": 2000,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 30,
+      "cadencia": 0.08,
+      "zonas": {
+       "cabeza": 5.0,
+       "casco": 5.0,
+       "cuello": 3.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 500
+    },
+    {
+     "id": "mp44_zm",
+     "nombre": "STG-44",
+     "archivo": "zm_tomb",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 120,
+     "danio_min": 70,
+     "alcance_max": 1300,
+     "alcance_min": 3000,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 30,
+     "cadencia": 0.08,
+     "zonas": {
+      "cabeza": 4.5,
+      "casco": 4.5,
+      "cuello": 4.5,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "mp44_upgraded_zm",
+      "nombre": "Spatz-447 +",
+      "archivo": "zm_tomb",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 200,
+      "danio_min": 140,
+      "alcance_max": 1300,
+      "alcance_min": 3000,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 60,
+      "cadencia": 0.08,
+      "zonas": {
+       "cabeza": 5.0,
+       "casco": 5.0,
+       "cuello": 4.5,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 1400
+    },
+    {
+     "id": "thompson_zm",
+     "nombre": "Thompson",
+     "archivo": "zm_prison_patch",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 90,
+     "danio_min": 60,
+     "alcance_max": 400,
+     "alcance_min": 851,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 50,
+     "cadencia": 0.064,
+     "zonas": {
+      "cabeza": 3.0,
+      "casco": 3.0,
+      "cuello": 3.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "thompson_upgraded_zm",
+      "nombre": "Speakeasy",
+      "archivo": "zm_prison_patch",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 180,
+      "danio_min": 100,
+      "alcance_max": 400,
+      "alcance_min": 851,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 50,
+      "cadencia": 0.064,
+      "zonas": {
+       "cabeza": 3.0,
+       "casco": 3.0,
+       "cuello": 3.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 1500
+    },
+    {
+     "id": "mp40_zm",
+     "nombre": "MP40",
+     "archivo": "zm_tomb",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 110,
+     "danio_min": 60,
+     "alcance_max": 800,
+     "alcance_min": 1800,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 32,
+     "cadencia": 0.112,
+     "zonas": {
+      "cabeza": 4.0,
+      "casco": 4.0,
+      "cuello": 4.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "mp40_upgraded_zm",
+      "nombre": "The Afterburner",
+      "archivo": "zm_tomb",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 200,
+      "danio_min": 120,
+      "alcance_max": 800,
+      "alcance_min": 1800,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 64,
+      "cadencia": 0.112,
+      "zonas": {
+       "cabeza": 5.0,
+       "casco": 5.0,
+       "cuello": 5.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 1300
+    },
+    {
+     "id": "mp40_stalker_zm",
+     "nombre": "MP40 Stalker",
+     "archivo": "zm_tomb",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 110,
+     "danio_min": 60,
+     "alcance_max": 800,
+     "alcance_min": 1800,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 32,
+     "cadencia": 0.112,
+     "zonas": {
+      "cabeza": 4.0,
+      "casco": 4.0,
+      "cuello": 4.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "mp40_stalker_upgraded_zm",
+      "nombre": "The Afterburner",
+      "archivo": "zm_tomb",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 200,
+      "danio_min": 120,
+      "alcance_max": 800,
+      "alcance_min": 1800,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 64,
+      "cadencia": 0.112,
+      "zonas": {
+       "cabeza": 5.0,
+       "casco": 5.0,
+       "cuello": 5.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 1300
+    },
+    {
+     "id": "uzi_zm",
+     "nombre": "Uzi",
+     "archivo": "zm_prison_patch",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 100,
+     "danio_min": 60,
+     "alcance_max": 750,
+     "alcance_min": 1000,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 25,
+     "cadencia": 0.064,
+     "zonas": {
+      "cabeza": 4.0,
+      "casco": 4.0,
+      "cuello": 1.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "uzi_upgraded_zm",
+      "nombre": "Uncle Gal",
+      "archivo": "zm_prison",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 230,
+      "danio_min": 80,
+      "alcance_max": 300,
+      "alcance_min": 1250,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 25,
+      "cadencia": 0.064,
+      "zonas": {
+       "cabeza": 4.0,
+       "casco": 4.0,
+       "cuello": 1.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 1500
+    },
+    {
+     "id": "evoskorpion_zm",
+     "nombre": "Skorpion EVO",
+     "archivo": "zm_tomb",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 110,
+     "danio_min": 40,
+     "alcance_max": 400,
+     "alcance_min": 851,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 32,
+     "cadencia": 0.048,
+     "zonas": {
+      "cabeza": 4.0,
+      "casco": 4.0,
+      "cuello": 4.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "evoskorpion_upgraded_zm",
+      "nombre": "Evolved Death Stalker",
+      "archivo": "zm_tomb",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 210,
+      "danio_min": 60,
+      "alcance_max": 400,
+      "alcance_min": 851,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 40,
+      "cadencia": 0.048,
+      "zonas": {
+       "cabeza": 5.0,
+       "casco": 5.0,
+       "cuello": 5.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "hamr_zm",
+     "nombre": "HAMR",
+     "archivo": "zm_transit_patch",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 190,
+     "danio_min": 120,
+     "alcance_max": 500,
+     "alcance_min": 1800,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 125,
+     "cadencia": 0.096,
+     "zonas": {
+      "cabeza": 3.0,
+      "casco": 3.0,
+      "cuello": 2.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "hamr_upgraded_zm",
+      "nombre": "SLDG HAMR",
+      "archivo": "zm_transit_patch",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 250,
+      "danio_min": 190,
+      "alcance_max": 1500,
+      "alcance_min": 3000,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 125,
+      "cadencia": 0.096,
+      "zonas": {
+       "cabeza": 4.0,
+       "casco": 3.0,
+       "cuello": 3.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "rpd_zm",
+     "nombre": "RPD",
+     "archivo": "zm_transit_patch",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 140,
+     "danio_min": 100,
+     "alcance_max": 750,
+     "alcance_min": 1800,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 100,
+     "cadencia": 0.08,
+     "zonas": {
+      "cabeza": 3.0,
+      "casco": 3.0,
+      "cuello": 2.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "rpd_upgraded_zm",
+      "nombre": "Relativistic Punishment Device",
+      "archivo": "zm_transit_patch",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 180,
+      "danio_min": 140,
+      "alcance_max": 750,
+      "alcance_min": 1800,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 125,
+      "cadencia": 0.08,
+      "zonas": {
+       "cabeza": 3.0,
+       "casco": 3.0,
+       "cuello": 3.0,
+       "pecho": 2.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "lsat_zm",
+     "nombre": "LSAT",
+     "archivo": "zm_nuked",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 195,
+     "danio_min": 90,
+     "alcance_max": 1250,
+     "alcance_min": 3000,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 100,
+     "cadencia": 0.08,
+     "zonas": {
+      "cabeza": 3.0,
+      "casco": 3.0,
+      "cuello": 2.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "lsat_upgraded_zm",
+      "nombre": "FSIRT",
+      "archivo": "zm_nuked",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 225,
+      "danio_min": 120,
+      "alcance_max": 1250,
+      "alcance_min": 3000,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 100,
+      "cadencia": 0.08,
+      "zonas": {
+       "cabeza": 4.0,
+       "casco": 4.0,
+       "cuello": 3.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 100
+    },
+    {
+     "id": "mg08_zm",
+     "nombre": "MG08/15",
+     "archivo": "zm_tomb",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 200,
+     "danio_min": 110,
+     "alcance_max": 700,
+     "alcance_min": 1300,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 100,
+     "cadencia": 0.08,
+     "zonas": {
+      "cabeza": 3.0,
+      "casco": 3.0,
+      "cuello": 3.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "mg08_upgraded_zm",
+      "nombre": "Magna Collider",
+      "archivo": "zm_tomb",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 250,
+      "danio_min": 140,
+      "alcance_max": 700,
+      "alcance_min": 1300,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 100,
+      "cadencia": 0.08,
+      "zonas": {
+       "cabeza": 5.0,
+       "casco": 5.0,
+       "cuello": 5.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "slipgun_zm",
+     "nombre": "Sliquifier",
+     "archivo": "zm_highrise",
+     "tipo": "projectile",
+     "disparo": "Full Auto",
+     "danio": 100,
+     "danio_min": 0,
+     "alcance_max": 999999,
+     "alcance_min": 999999,
+     "cuchillo": 25,
+     "perdigones": 0,
+     "cargador": 10,
+     "cadencia": 0.35,
+     "zonas": {
+      "cabeza": 4.0,
+      "casco": 4.0,
+      "cuello": 5.0,
+      "pecho": 1.0,
+      "tripa": 0.9,
+      "brazo": 0.8,
+      "pierna": 0.8
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 1
+     },
+     "mejorada": {
+      "id": "slipgun_upgraded_zm",
+      "nombre": "Sl1qu1f13r",
+      "archivo": "zm_highrise",
+      "tipo": "projectile",
+      "disparo": "Full Auto",
+      "danio": 100,
+      "danio_min": 0,
+      "alcance_max": 999999,
+      "alcance_min": 999999,
+      "cuchillo": 25,
+      "perdigones": 0,
+      "cargador": 10,
+      "cadencia": 0.35,
+      "zonas": {
+       "cabeza": 4.0,
+       "casco": 4.0,
+       "cuello": 5.0,
+       "pecho": 1.0,
+       "tripa": 0.9,
+       "brazo": 0.8,
+       "pierna": 0.8
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 1
+      }
+     },
+     "coste": 10
+    }
+   ]
+  },
+  {
+   "nombre": "Rifles semiautomaticos y de rafaga",
+   "armas": [
+    {
+     "id": "m14_zm",
+     "nombre": "M14",
+     "archivo": "zm_transit",
+     "tipo": "bullet",
+     "disparo": "Single Shot",
+     "danio": 105,
+     "danio_min": 80,
+     "alcance_max": 1400,
+     "alcance_min": 2500,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 8,
+     "cadencia": 0.096,
+     "zonas": {
+      "cabeza": 3.0,
+      "casco": 3.0,
+      "cuello": 3.0,
+      "pecho": 1.25,
+      "tripa": 1.25,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "m14_upgraded_zm",
+      "nombre": "Mnesia",
+      "archivo": "zm_transit",
+      "tipo": "bullet",
+      "disparo": "Single Shot",
+      "danio": 200,
+      "danio_min": 150,
+      "alcance_max": 1400,
+      "alcance_min": 2500,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 16,
+      "cadencia": 0.096,
+      "zonas": {
+       "cabeza": 6.0,
+       "casco": 6.0,
+       "cuello": 6.0,
+       "pecho": 2.0,
+       "tripa": 2.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 500
+    },
+    {
+     "id": "fnfal_zm",
+     "nombre": "FAL",
+     "archivo": "zm_transit",
+     "tipo": "bullet",
+     "disparo": "Single Shot",
+     "danio": 160,
+     "danio_min": 130,
+     "alcance_max": 1600,
+     "alcance_min": 3000,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 20,
+     "cadencia": 0.112,
+     "zonas": {
+      "cabeza": 4.0,
+      "casco": 4.0,
+      "cuello": 4.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "fnfal_upgraded_zm",
+      "nombre": "WN",
+      "archivo": "zm_transit",
+      "tipo": "bullet",
+      "disparo": "3-Round Burst",
+      "danio": 240,
+      "danio_min": 180,
+      "alcance_max": 1600,
+      "alcance_min": 3000,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 30,
+      "cadencia": 0.112,
+      "zonas": {
+       "cabeza": 5.0,
+       "casco": 5.0,
+       "cuello": 5.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "saritch_zm",
+     "nombre": "SMR",
+     "archivo": "zm_transit",
+     "tipo": "bullet",
+     "disparo": "Single Shot",
+     "danio": 80,
+     "danio_min": 60,
+     "alcance_max": 1000,
+     "alcance_min": 2250,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 20,
+     "cadencia": 0.112,
+     "zonas": {
+      "cabeza": 3.0,
+      "casco": 3.0,
+      "cuello": 3.0,
+      "pecho": 1.2,
+      "tripa": 1.2,
+      "brazo": 1.2,
+      "pierna": 1.2
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "saritch_upgraded_zm",
+      "nombre": "SM1L3R",
+      "archivo": "zm_transit",
+      "tipo": "bullet",
+      "disparo": "Single Shot",
+      "danio": 120,
+      "danio_min": 110,
+      "alcance_max": 1250,
+      "alcance_min": 2500,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 30,
+      "cadencia": 0.112,
+      "zonas": {
+       "cabeza": 4.0,
+       "casco": 4.0,
+       "cuello": 4.0,
+       "pecho": 1.2,
+       "tripa": 1.2,
+       "brazo": 1.2,
+       "pierna": 1.2
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "m16_zm",
+     "nombre": "M16",
+     "archivo": "zm_transit",
+     "tipo": "bullet",
+     "disparo": "3-Round Burst",
+     "danio": 100,
+     "danio_min": 70,
+     "alcance_max": 1600,
+     "alcance_min": 3000,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 30,
+     "cadencia": 0.08,
+     "zonas": {
+      "cabeza": 4.0,
+      "casco": 4.0,
+      "cuello": 4.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "m16_gl_upgraded_zm",
+      "nombre": "Skullcrusher",
+      "archivo": "zm_transit",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 150,
+      "danio_min": 100,
+      "alcance_max": 1600,
+      "alcance_min": 3000,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 30,
+      "cadencia": 0.08,
+      "zonas": {
+       "cabeza": 5.0,
+       "casco": 5.0,
+       "cuello": 5.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 1200
+    },
+    {
+     "id": "type95_zm",
+     "nombre": "Type 25",
+     "archivo": "zm_transit_patch",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 110,
+     "danio_min": 70,
+     "alcance_max": 1200,
+     "alcance_min": 2750,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 30,
+     "cadencia": 0.064,
+     "zonas": {
+      "cabeza": 4.0,
+      "casco": 4.0,
+      "cuello": 4.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "type95_upgraded_zm",
+      "nombre": "Strain 25",
+      "archivo": "zm_transit_patch",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 160,
+      "danio_min": 110,
+      "alcance_max": 1200,
+      "alcance_min": 2750,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 30,
+      "cadencia": 0.064,
+      "zonas": {
+       "cabeza": 5.0,
+       "casco": 5.0,
+       "cuello": 5.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "xm8_zm",
+     "nombre": "M8A1",
+     "archivo": "zm_transit_patch",
+     "tipo": "bullet",
+     "disparo": "4-Round Burst",
+     "danio": 100,
+     "danio_min": 80,
+     "alcance_max": 1600,
+     "alcance_min": 3000,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 32,
+     "cadencia": 0.048,
+     "zonas": {
+      "cabeza": 4.0,
+      "casco": 4.0,
+      "cuello": 4.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "xm8_upgraded_zm",
+      "nombre": "Micro Aerator",
+      "archivo": "zm_transit_patch",
+      "tipo": "bullet",
+      "disparo": "4-Round Burst",
+      "danio": 150,
+      "danio_min": 110,
+      "alcance_max": 1600,
+      "alcance_min": 3000,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 42,
+      "cadencia": 0.048,
+      "zonas": {
+       "cabeza": 5.0,
+       "casco": 5.0,
+       "cuello": 5.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "qcw05_zm",
+     "nombre": "Chicom CQB",
+     "archivo": "zm_transit",
+     "tipo": "bullet",
+     "disparo": "3-Round Burst",
+     "danio": 100,
+     "danio_min": 60,
+     "alcance_max": 600,
+     "alcance_min": 1400,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 40,
+     "cadencia": 0.048,
+     "zonas": {
+      "cabeza": 4.0,
+      "casco": 4.0,
+      "cuello": 4.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "qcw05_upgraded_zm",
+      "nombre": "Chicom Cataclysmic Quadruple Burst",
+      "archivo": "zm_transit",
+      "tipo": "bullet",
+      "disparo": "4-Round Burst",
+      "danio": 160,
+      "danio_min": 120,
+      "alcance_max": 600,
+      "alcance_min": 1400,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 40,
+      "cadencia": 0.048,
+      "zonas": {
+       "cabeza": 5.0,
+       "casco": 5.0,
+       "cuello": 5.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "slowgun_zm",
+     "nombre": "Paralizador",
+     "archivo": "zm_buried",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 0,
+     "danio_min": 0,
+     "alcance_max": 1500,
+     "alcance_min": 2500,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 1,
+     "cadencia": 0.1,
+     "zonas": {
+      "cabeza": 2.0,
+      "casco": 2.0,
+      "cuello": 1.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "slowgun_upgraded_zm",
+      "nombre": "Petrifier",
+      "archivo": "zm_buried",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 0,
+      "danio_min": 0,
+      "alcance_max": 1500,
+      "alcance_min": 2500,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 1,
+      "cadencia": 0.1,
+      "zonas": {
+       "cabeza": 2.0,
+       "casco": 2.0,
+       "cuello": 1.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 10
+    }
+   ]
+  },
+  {
+   "nombre": "Pistolas",
+   "armas": [
+    {
+     "id": "m1911_zm",
+     "nombre": "M1911",
+     "archivo": "zm_transit",
+     "tipo": "bullet",
+     "disparo": "Single Shot",
+     "danio": 20,
+     "danio_min": 20,
+     "alcance_max": 500,
+     "alcance_min": 1300,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 8,
+     "cadencia": 0.096,
+     "zonas": {
+      "cabeza": 3.5,
+      "casco": 3.5,
+      "cuello": 3.5,
+      "pecho": 1.25,
+      "tripa": 1.1,
+      "brazo": 0.85,
+      "pierna": 0.85
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "m1911_upgraded_zm",
+      "nombre": "Mustang & Sally",
+      "archivo": "zm_transit_patch",
+      "tipo": "projectile",
+      "disparo": "Single Shot",
+      "danio": 1000,
+      "danio_min": 0,
+      "alcance_max": 999999,
+      "alcance_min": 999999,
+      "cuchillo": 25,
+      "perdigones": 0,
+      "cargador": 6,
+      "cadencia": 0.2,
+      "zonas": {
+       "cabeza": 4.0,
+       "casco": 4.0,
+       "cuello": 5.0,
+       "pecho": 1.0,
+       "tripa": 0.9,
+       "brazo": 0.8,
+       "pierna": 0.8
+      },
+      "explosion": {
+       "centro": 1200,
+       "borde": 75,
+       "radio": 200,
+       "al_impacto": 1
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "fiveseven_zm",
+     "nombre": "Five-seven",
+     "archivo": "zm_transit_patch",
+     "tipo": "bullet",
+     "disparo": "Single Shot",
+     "danio": 160,
+     "danio_min": 90,
+     "alcance_max": 800,
+     "alcance_min": 1800,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 20,
+     "cadencia": 0.08,
+     "zonas": {
+      "cabeza": 3.5,
+      "casco": 3.5,
+      "cuello": 3.5,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "fiveseven_upgraded_zm",
+      "nombre": "Ultra",
+      "archivo": "zm_transit_patch",
+      "tipo": "bullet",
+      "disparo": "Single Shot",
+      "danio": 300,
+      "danio_min": 180,
+      "alcance_max": 800,
+      "alcance_min": 1800,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 20,
+      "cadencia": 0.08,
+      "zonas": {
+       "cabeza": 3.5,
+       "casco": 3.5,
+       "cuello": 3.5,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "fivesevendw_zm",
+     "nombre": "Five-seven dual",
+     "archivo": "zm_transit",
+     "tipo": "bullet",
+     "disparo": "Single Shot",
+     "danio": 160,
+     "danio_min": 90,
+     "alcance_max": 800,
+     "alcance_min": 1800,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 15,
+     "cadencia": 0.096,
+     "zonas": {
+      "cabeza": 3.5,
+      "casco": 3.5,
+      "cuello": 3.5,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "fivesevendw_upgraded_zm",
+      "nombre": "Ultra & Violet",
+      "archivo": "zm_transit",
+      "tipo": "bullet",
+      "disparo": "Single Shot",
+      "danio": 300,
+      "danio_min": 180,
+      "alcance_max": 800,
+      "alcance_min": 1800,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 20,
+      "cadencia": 0.096,
+      "zonas": {
+       "cabeza": 3.5,
+       "casco": 3.5,
+       "cuello": 3.5,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "beretta93r_zm",
+     "nombre": "B23R",
+     "archivo": "zm_transit",
+     "tipo": "bullet",
+     "disparo": "3-Round Burst",
+     "danio": 160,
+     "danio_min": 100,
+     "alcance_max": 500,
+     "alcance_min": 1800,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 15,
+     "cadencia": 0.064,
+     "zonas": {
+      "cabeza": 2.0,
+      "casco": 2.0,
+      "cuello": 2.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "beretta93r_upgraded_zm",
+      "nombre": "B34R",
+      "archivo": "zm_transit",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 200,
+      "danio_min": 150,
+      "alcance_max": 500,
+      "alcance_min": 1800,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 20,
+      "cadencia": 0.064,
+      "zonas": {
+       "cabeza": 2.0,
+       "casco": 2.0,
+       "cuello": 2.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 1000
+    },
+    {
+     "id": "beretta93r_extclip_zm",
+     "nombre": "B23R (cargador ampliado)",
+     "archivo": "zm_tomb",
+     "tipo": "bullet",
+     "disparo": "3-Round Burst",
+     "danio": 160,
+     "danio_min": 100,
+     "alcance_max": 500,
+     "alcance_min": 1800,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 24,
+     "cadencia": 0.064,
+     "zonas": {
+      "cabeza": 2.0,
+      "casco": 2.0,
+      "cuello": 2.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "beretta93r_extclip_upgraded_zm",
+      "nombre": "B34R",
+      "archivo": "zm_tomb",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 200,
+      "danio_min": 150,
+      "alcance_max": 500,
+      "alcance_min": 1800,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 30,
+      "cadencia": 0.064,
+      "zonas": {
+       "cabeza": 2.0,
+       "casco": 2.0,
+       "cuello": 2.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 1000
+    },
+    {
+     "id": "kard_zm",
+     "nombre": "KAP-45",
+     "archivo": "zm_transit",
+     "tipo": "bullet",
+     "disparo": "Full Auto",
+     "danio": 150,
+     "danio_min": 100,
+     "alcance_max": 700,
+     "alcance_min": 1800,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 12,
+     "cadencia": 0.064,
+     "zonas": {
+      "cabeza": 2.5,
+      "casco": 2.5,
+      "cuello": 2.5,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "kard_upgraded_zm",
+      "nombre": "Karmic Atom Perforator-4000",
+      "archivo": "zm_transit",
+      "tipo": "bullet",
+      "disparo": "Full Auto",
+      "danio": 200,
+      "danio_min": 140,
+      "alcance_max": 700,
+      "alcance_min": 1800,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 15,
+      "cadencia": 0.064,
+      "zonas": {
+       "cabeza": 2.5,
+       "casco": 2.5,
+       "cuello": 2.5,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "python_zm",
+     "nombre": "Python",
+     "archivo": "zm_transit",
+     "tipo": "bullet",
+     "disparo": "Single Shot",
+     "danio": 1000,
+     "danio_min": 300,
+     "alcance_max": 384,
+     "alcance_min": 1200,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 6,
+     "cadencia": 0.096,
+     "zonas": {
+      "cabeza": 1.5,
+      "casco": 1.5,
+      "cuello": 1.5,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "python_upgraded_zm",
+      "nombre": "Cobra",
+      "archivo": "zm_transit",
+      "tipo": "bullet",
+      "disparo": "Single Shot",
+      "danio": 1000,
+      "danio_min": 600,
+      "alcance_max": 384,
+      "alcance_min": 1200,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 12,
+      "cadencia": 0.096,
+      "zonas": {
+       "cabeza": 3.0,
+       "casco": 3.0,
+       "cuello": 3.0,
+       "pecho": 1.5,
+       "tripa": 1.5,
+       "brazo": 1.25,
+       "pierna": 1.25
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "judge_zm",
+     "nombre": "Executioner",
+     "archivo": "zm_transit",
+     "tipo": "bullet",
+     "disparo": "Single Shot",
+     "danio": 130,
+     "danio_min": 15,
+     "alcance_max": 450,
+     "alcance_min": 1000,
+     "cuchillo": 25,
+     "perdigones": 8,
+     "cargador": 5,
+     "cadencia": 0.128,
+     "zonas": {
+      "cabeza": 1.0,
+      "casco": 1.0,
+      "cuello": 1.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "judge_upgraded_zm",
+      "nombre": "Voice of Justice",
+      "archivo": "zm_transit",
+      "tipo": "bullet",
+      "disparo": "Single Shot",
+      "danio": 350,
+      "danio_min": 45,
+      "alcance_max": 800,
+      "alcance_min": 1500,
+      "cuchillo": 25,
+      "perdigones": 12,
+      "cargador": 5,
+      "cadencia": 0.128,
+      "zonas": {
+       "cabeza": 1.0,
+       "casco": 1.0,
+       "cuello": 1.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "rnma_zm",
+     "nombre": "Remington New Model Army",
+     "archivo": "zm_buried",
+     "tipo": "bullet",
+     "disparo": "Single Shot",
+     "danio": 1000,
+     "danio_min": 300,
+     "alcance_max": 384,
+     "alcance_min": 1200,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 6,
+     "cadencia": 0.096,
+     "zonas": {
+      "cabeza": 1.5,
+      "casco": 1.5,
+      "cuello": 1.5,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "rnma_upgraded_zm",
+      "nombre": "Sassafras",
+      "archivo": "zm_buried",
+      "tipo": "bullet",
+      "disparo": "Single Shot",
+      "danio": 1000,
+      "danio_min": 600,
+      "alcance_max": 384,
+      "alcance_min": 1200,
+      "cuchillo": 25,
+      "perdigones": 1,
+      "cargador": 12,
+      "cadencia": 0.096,
+      "zonas": {
+       "cabeza": 3.0,
+       "casco": 3.0,
+       "cuello": 3.0,
+       "pecho": 1.5,
+       "tripa": 1.5,
+       "brazo": 1.25,
+       "pierna": 1.25
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "c96_zm",
+     "nombre": "Mauser C96",
+     "archivo": "zm_tomb",
+     "tipo": "bullet",
+     "disparo": "Single Shot",
+     "danio": 20,
+     "danio_min": 20,
+     "alcance_max": 500,
+     "alcance_min": 1300,
+     "cuchillo": 25,
+     "perdigones": 1,
+     "cargador": 8,
+     "cadencia": 0.096,
+     "zonas": {
+      "cabeza": 3.5,
+      "casco": 3.5,
+      "cuello": 3.5,
+      "pecho": 1.25,
+      "tripa": 1.1,
+      "brazo": 0.85,
+      "pierna": 0.85
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "c96_upgraded_zm",
+      "nombre": "BoomHilda",
+      "archivo": "zm_tomb",
+      "tipo": "projectile",
+      "disparo": "Single Shot",
+      "danio": 1000,
+      "danio_min": 0,
+      "alcance_max": 999999,
+      "alcance_min": 999999,
+      "cuchillo": 25,
+      "perdigones": 0,
+      "cargador": 50,
+      "cadencia": 0.1,
+      "zonas": {
+       "cabeza": 4.0,
+       "casco": 4.0,
+       "cuello": 5.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 1000,
+       "borde": 500,
+       "radio": 32,
+       "al_impacto": 0
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "knife_ballistic_zm",
+     "nombre": "Cuchillo balistico",
+     "archivo": "zm_transit",
+     "tipo": "projectile",
+     "disparo": "Single Shot",
+     "danio": 500,
+     "danio_min": 0,
+     "alcance_max": 999999,
+     "alcance_min": 999999,
+     "cuchillo": 500,
+     "perdigones": 0,
+     "cargador": 1,
+     "cadencia": 0.7,
+     "zonas": {
+      "cabeza": 1.5,
+      "casco": 1.5,
+      "cuello": 1.5,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "knife_ballistic_upgraded_zm",
+      "nombre": "The Krauss Refibrillator",
+      "archivo": "zm_transit",
+      "tipo": "projectile",
+      "disparo": "Single Shot",
+      "danio": 1000,
+      "danio_min": 0,
+      "alcance_max": 999999,
+      "alcance_min": 999999,
+      "cuchillo": 1000,
+      "perdigones": 0,
+      "cargador": 1,
+      "cadencia": 0.7,
+      "zonas": {
+       "cabeza": 3.0,
+       "casco": 3.0,
+       "cuello": 3.0,
+       "pecho": 1.5,
+       "tripa": 1.5,
+       "brazo": 1.25,
+       "pierna": 1.25
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 10
+    },
+    {
+     "id": "ray_gun_zm",
+     "nombre": "Ray Gun",
+     "archivo": "zm_transit",
+     "tipo": "projectile",
+     "disparo": "Full Auto",
+     "danio": 1000,
+     "danio_min": 0,
+     "alcance_max": 999999,
+     "alcance_min": 999999,
+     "cuchillo": 25,
+     "perdigones": 0,
+     "cargador": 20,
+     "cadencia": 0.33,
+     "zonas": {
+      "cabeza": 4.0,
+      "casco": 4.0,
+      "cuello": 5.0,
+      "pecho": 1.0,
+      "tripa": 0.9,
+      "brazo": 0.8,
+      "pierna": 0.8
+     },
+     "explosion": {
+      "centro": 1500,
+      "borde": 300,
+      "radio": 64,
+      "al_impacto": 1
+     },
+     "mejorada": {
+      "id": "ray_gun_upgraded_zm",
+      "nombre": "Porter's X2 Ray Gun",
+      "archivo": "zm_transit",
+      "tipo": "projectile",
+      "disparo": "Full Auto",
+      "danio": 1000,
+      "danio_min": 0,
+      "alcance_max": 999999,
+      "alcance_min": 999999,
+      "cuchillo": 25,
+      "perdigones": 0,
+      "cargador": 40,
+      "cadencia": 0.33,
+      "zonas": {
+       "cabeza": 4.0,
+       "casco": 4.0,
+       "cuello": 5.0,
+       "pecho": 1.0,
+       "tripa": 0.9,
+       "brazo": 0.8,
+       "pierna": 0.8
+      },
+      "explosion": {
+       "centro": 2000,
+       "borde": 300,
+       "radio": 64,
+       "al_impacto": 1
+      }
+     },
+     "coste": 10000
+    },
+    {
+     "id": "raygun_mark2_zm",
+     "nombre": "Ray Gun Mark II",
+     "archivo": "zm_transit_patch",
+     "tipo": "projectile",
+     "disparo": "3-Round Burst",
+     "danio": 2000,
+     "danio_min": 0,
+     "alcance_max": 999999,
+     "alcance_min": 999999,
+     "cuchillo": 25,
+     "perdigones": 0,
+     "cargador": 21,
+     "cadencia": 0.12,
+     "zonas": {
+      "cabeza": 4.0,
+      "casco": 4.0,
+      "cuello": 5.0,
+      "pecho": 1.0,
+      "tripa": 0.9,
+      "brazo": 0.8,
+      "pierna": 0.8
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "raygun_mark2_upgraded_zm",
+      "nombre": "Porter's Mark II Ray Gun",
+      "archivo": "zm_transit_patch",
+      "tipo": "projectile",
+      "disparo": "3-Round Burst",
+      "danio": 3500,
+      "danio_min": 0,
+      "alcance_max": 999999,
+      "alcance_min": 999999,
+      "cuchillo": 25,
+      "perdigones": 0,
+      "cargador": 42,
+      "cadencia": 0.12,
+      "zonas": {
+       "cabeza": 4.0,
+       "casco": 4.0,
+       "cuello": 5.0,
+       "pecho": 1.0,
+       "tripa": 0.9,
+       "brazo": 0.8,
+       "pierna": 0.8
+      },
+      "explosion": {
+       "centro": 0,
+       "borde": 0,
+       "radio": 0,
+       "al_impacto": 0
+      }
+     },
+     "coste": 10000
+    }
+   ]
+  },
+  {
+   "nombre": "Explosivos",
+   "armas": [
+    {
+     "id": "usrpg_zm",
+     "nombre": "RPG",
+     "archivo": "zm_transit",
+     "tipo": "projectile",
+     "disparo": "Full Auto",
+     "danio": 600,
+     "danio_min": 0,
+     "alcance_max": 999999,
+     "alcance_min": 999999,
+     "cuchillo": 25,
+     "perdigones": 0,
+     "cargador": 1,
+     "cadencia": 0.32,
+     "zonas": {
+      "cabeza": 1.0,
+      "casco": 1.0,
+      "cuello": 1.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 320,
+      "borde": 100,
+      "radio": 225,
+      "al_impacto": 1
+     },
+     "mejorada": {
+      "id": "usrpg_upgraded_zm",
+      "nombre": "Rocket Propelled Grievance",
+      "archivo": "zm_transit",
+      "tipo": "projectile",
+      "disparo": "Full Auto",
+      "danio": 1200,
+      "danio_min": 0,
+      "alcance_max": 999999,
+      "alcance_min": 999999,
+      "cuchillo": 25,
+      "perdigones": 0,
+      "cargador": 8,
+      "cadencia": 0.32,
+      "zonas": {
+       "cabeza": 1.0,
+       "casco": 1.0,
+       "cuello": 1.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 600,
+       "borde": 100,
+       "radio": 225,
+       "al_impacto": 1
+      }
+     },
+     "coste": 50
+    },
+    {
+     "id": "m32_zm",
+     "nombre": "War Machine",
+     "archivo": "zm_transit",
+     "tipo": "projectile",
+     "disparo": "Single Shot",
+     "danio": 200,
+     "danio_min": 0,
+     "alcance_max": 999999,
+     "alcance_min": 999999,
+     "cuchillo": 25,
+     "perdigones": 0,
+     "cargador": 6,
+     "cadencia": 0.25,
+     "zonas": {
+      "cabeza": 1.0,
+      "casco": 1.0,
+      "cuello": 1.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 450,
+      "borde": 125,
+      "radio": 200,
+      "al_impacto": 0
+     },
+     "mejorada": {
+      "id": "m32_upgraded_zm",
+      "nombre": "Dystopic Demolisher",
+      "archivo": "zm_transit",
+      "tipo": "projectile",
+      "disparo": "Single Shot",
+      "danio": 600,
+      "danio_min": 0,
+      "alcance_max": 999999,
+      "alcance_min": 999999,
+      "cuchillo": 25,
+      "perdigones": 0,
+      "cargador": 6,
+      "cadencia": 0.25,
+      "zonas": {
+       "cabeza": 1.0,
+       "casco": 1.0,
+       "cuello": 1.0,
+       "pecho": 1.0,
+       "tripa": 1.0,
+       "brazo": 1.0,
+       "pierna": 1.0
+      },
+      "explosion": {
+       "centro": 900,
+       "borde": 125,
+       "radio": 200,
+       "al_impacto": 1
+      }
+     },
+     "coste": 50
+    }
+   ]
+  },
+  {
+   "nombre": "Baston de fuego",
+   "armas": [
+    {
+     "id": "staff_fire_zm",
+     "nombre": "Baston de fuego",
+     "archivo": "zm_tomb",
+     "tipo": "projectile",
+     "disparo": "Full Auto",
+     "danio": 1,
+     "danio_min": 0,
+     "alcance_max": 999999,
+     "alcance_min": 999999,
+     "cuchillo": 25,
+     "perdigones": 0,
+     "cargador": 9,
+     "cadencia": 0.75,
+     "zonas": {
+      "cabeza": 3.0,
+      "casco": 3.0,
+      "cuello": 3.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 11,
+      "borde": 1,
+      "radio": 100,
+      "al_impacto": 1
+     },
+     "mejorada": null,
+     "coste": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Baston mejorado",
+   "armas": [
+    {
+     "id": "staff_fire_upgraded_zm",
+     "nombre": "Baston de fuego mejorado",
+     "archivo": "zm_tomb",
+     "tipo": "projectile",
+     "disparo": "Charge Shot",
+     "danio": 11,
+     "danio_min": 0,
+     "alcance_max": 999999,
+     "alcance_min": 999999,
+     "cuchillo": 1700,
+     "perdigones": 0,
+     "cargador": 12,
+     "cadencia": 0.75,
+     "zonas": {
+      "cabeza": 4.0,
+      "casco": 4.0,
+      "cuello": 5.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 11,
+      "borde": 1,
+      "radio": 120,
+      "al_impacto": 1
+     },
+     "mejorada": null,
+     "coste": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Cuerpo a cuerpo",
+   "armas": [
+    {
+     "id": "knife_zm",
+     "nombre": "Cuchillo",
+     "archivo": "zm_transit",
+     "tipo": "melee",
+     "disparo": "Full Auto",
+     "danio": 0,
+     "danio_min": 0,
+     "alcance_max": 999999,
+     "alcance_min": 999999,
+     "cuchillo": 150,
+     "perdigones": 0,
+     "cargador": 0,
+     "cadencia": 0.0,
+     "zonas": {
+      "cabeza": 0.0,
+      "casco": 0.0,
+      "cuello": 0.0,
+      "pecho": 0.0,
+      "tripa": 0.0,
+      "brazo": 0.0,
+      "pierna": 0.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": null,
+     "coste": 0
+    },
+    {
+     "id": "bowie_knife_zm",
+     "nombre": "Bowie Knife",
+     "archivo": "zm_transit_patch",
+     "tipo": "melee",
+     "disparo": "Full Auto",
+     "danio": 0,
+     "danio_min": 0,
+     "alcance_max": 999999,
+     "alcance_min": 999999,
+     "cuchillo": 1000,
+     "perdigones": 0,
+     "cargador": 0,
+     "cadencia": 0.0,
+     "zonas": {
+      "cabeza": 0.0,
+      "casco": 0.0,
+      "cuello": 0.0,
+      "pecho": 0.0,
+      "tripa": 0.0,
+      "brazo": 0.0,
+      "pierna": 0.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": null,
+     "coste": 0
+    },
+    {
+     "id": "tazer_knuckles_zm",
+     "nombre": "Galvaknuckles",
+     "archivo": "zm_transit",
+     "tipo": "melee",
+     "disparo": "Full Auto",
+     "danio": 0,
+     "danio_min": 0,
+     "alcance_max": 999999,
+     "alcance_min": 999999,
+     "cuchillo": 1500,
+     "perdigones": 0,
+     "cargador": 0,
+     "cadencia": 0.0,
+     "zonas": {
+      "cabeza": 0.0,
+      "casco": 0.0,
+      "cuello": 0.0,
+      "pecho": 0.0,
+      "tripa": 0.0,
+      "brazo": 0.0,
+      "pierna": 0.0
+     },
+     "explosion": {
+      "centro": 0,
+      "borde": 0,
+      "radio": 0,
+      "al_impacto": 0
+     },
+     "mejorada": null,
+     "coste": 0
+    }
+   ]
+  },
+  {
+   "nombre": "Granadas",
+   "armas": [
+    {
+     "id": "frag_grenade_zm",
+     "nombre": "Granada (frag)",
+     "archivo": "zm_transit",
+     "tipo": "grenade",
+     "disparo": "Full Auto",
+     "danio": 15,
+     "danio_min": 0,
+     "alcance_max": 999999,
+     "alcance_min": 999999,
+     "cuchillo": 0,
+     "perdigones": 0,
+     "cargador": 4,
+     "cadencia": 0.365,
+     "zonas": {
+      "cabeza": 1.0,
+      "casco": 1.0,
+      "cuello": 1.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 300,
+      "borde": 75,
+      "radio": 256,
+      "al_impacto": 0
+     },
+     "mejorada": null,
+     "coste": 0
+    },
+    {
+     "id": "sticky_grenade_zm",
+     "nombre": "Semtex",
+     "archivo": "zm_transit",
+     "tipo": "grenade",
+     "disparo": "Full Auto",
+     "danio": 15,
+     "danio_min": 0,
+     "alcance_max": 999999,
+     "alcance_min": 999999,
+     "cuchillo": 0,
+     "perdigones": 0,
+     "cargador": 4,
+     "cadencia": 0.36,
+     "zonas": {
+      "cabeza": 1.0,
+      "casco": 1.0,
+      "cuello": 1.0,
+      "pecho": 1.0,
+      "tripa": 1.0,
+      "brazo": 1.0,
+      "pierna": 1.0
+     },
+     "explosion": {
+      "centro": 300,
+      "borde": 55,
+      "radio": 256,
+      "al_impacto": 0
+     },
+     "mejorada": null,
+     "coste": 0
+    }
+   ]
+  }
+ ]
+}

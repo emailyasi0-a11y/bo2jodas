@@ -6,6 +6,7 @@ import Subir from "./paginas/Subir.jsx";
 import Jugadores from "./paginas/Jugadores.jsx";
 import Entrar from "./paginas/Entrar.jsx";
 import Perfil from "./paginas/Perfil.jsx";
+import Calculadora from "./paginas/Calculadora.jsx";
 import { ProveedorSesion, useSesion } from "./sesion.jsx";
 
 function Cabecera() {
@@ -20,6 +21,7 @@ function Cabecera() {
         <NavLink to="/" end>Partidas</NavLink>
         <NavLink to="/leaderboards">Leaderboards</NavLink>
         <NavLink to="/jugadores">Jugadores</NavLink>
+        <NavLink to="/calculadora">Calculadora</NavLink>
         <NavLink to="/subir">Subir JSON</NavLink>
         {yo ? (
           <NavLink to="/perfil" className="nav-usuario">
@@ -50,6 +52,7 @@ export default function App() {
             <Route path="/entrar" element={<Entrar />} />
             <Route path="/registro" element={<Entrar registro />} />
             <Route path="/perfil" element={<Perfil />} />
+            <Route path="/calculadora" element={<Calculadora />} />
           </Routes>
         </main>
         <footer>Los datos los escribe el mod al acabar cada partida (bo2jodas_stats.gsc) y los sube el anfitrión.</footer>
