@@ -6,9 +6,9 @@ services:
     build: .
     restart: unless-stopped
     environment:
-      - UPLOAD_TOKEN=${UPLOAD_TOKEN:-}
+      - UPLOAD_TOKENS=${UPLOAD_TOKENS:-}
     volumes:
-      - ./data:/data
+      - ./data:/data        # partidas (data/runs) y tokens (data/tokens.json)
     expose:
       - "3000"
 

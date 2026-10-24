@@ -26,6 +26,8 @@ docker compose up -d --build
 
 Abre `https://<tu ip>.sslip.io`. Los puertos 80 y 443 tienen que estar abiertos en el firewall del servidor. Las partidas quedan en `web/data/runs/` (haz copia de esa carpeta y no pierdes nada).
 
+**Tokens**: sólo se acepta una partida si llega con uno de los tokens de `web/data/tokens.json` (`{"token": "nombre de quien lo usa"}`; el nombre sirve para saber quién subió cada partida). Ese archivo no va al repositorio: cada amigo recibe su token en mano y lo pone en `subir_partidas.cfg`. Sin tokens configurados no se puede subir nada (`UPLOAD_OPEN=1` abre la subida sólo para desarrollo).
+
 Sin Docker: `cd client && npm install && npm run build`, luego `cd ../server && npm install && UPLOAD_TOKEN=... node src/index.js` (puerto 3000) y pon Caddy delante con el `Caddyfile`.
 
 ## Subir las partidas solas (PC del anfitrión)
@@ -45,13 +47,13 @@ cd ../server && npm install && node src/index.js
 
 Abre `http://localhost:3000`. Para desarrollo del cliente con recarga: `npm run dev` en `client/` (proxy a `localhost:3000`).
 
-Hay una partida de ejemplo en `ejemplos/`: `curl -X POST localhost:3000/api/runs -H "content-type: application/json" --data @ejemplos/partida_ejemplo.json`.
+Hay una partida de ejemplo en `ejemplos/`: `curl -X POST localhost:3000/api/runs -H "content-type: application/json" -H "x-token: <un token>" --data @ejemplos/partida_ejemplo.json`. En local, `UPLOAD_OPEN=1 node src/index.js` acepta subidas sin token.
 
 ## API
 
 | Método y ruta | Qué hace |
 |---|---|
-| `POST /api/runs` | Sube una partida (JSON del mod). Cabecera `x-token` si hay `UPLOAD_TOKEN`. Devuelve `{ok, id, repetida}`. |
+| `POST /api/runs` | Sube una partida (JSON del mod). Cabecera `x-token` con uno de los tokens. Devuelve `{ok, id, repetida}`. |
 | `GET /api/runs?limit=100` | Resúmenes, las más recientes primero. |
 | `GET /api/runs/:id` | La partida completa. |
 | `GET /api/leaderboards` | Mejor ronda por jugador, por clase y por arquetipo; récords; historia del récord. |

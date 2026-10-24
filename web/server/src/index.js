@@ -16,15 +16,16 @@ import { mkdirSync, readdirSync, readFileSync, writeFileSync, existsSync } from 
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { resumen, leaderboards, totales, validar } from "./partidas.js";
+import { cargarTokens, comprobarToken } from "./tokens.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const PORT = Number(process.env.PORT || 3000);
 const DATA_DIR = process.env.DATA_DIR || join(__dirname, "..", "data");
 const RUNS_DIR = join(DATA_DIR, "runs");
-const UPLOAD_TOKEN = process.env.UPLOAD_TOKEN || "";
 const CLIENT_DIR = process.env.CLIENT_DIR || join(__dirname, "..", "..", "client", "dist");
 
 mkdirSync(RUNS_DIR, { recursive: true });
+const TOKENS = cargarTokens(DATA_DIR);
 
 // ---------------------------------------------------------------- almacen
 const partidas = new Map();
@@ -59,9 +60,8 @@ app.disable("x-powered-by");
 app.use(express.json({ limit: "4mb" }));
 
 app.post("/api/runs", (req, res) => {
-  if (UPLOAD_TOKEN && req.get("x-token") !== UPLOAD_TOKEN) {
-    return res.status(401).json({ error: "token incorrecto" });
-  }
+  const auth = comprobarToken(TOKENS, req.get("x-token"));
+  if (!auth.ok) return res.status(401).json({ error: "token incorrecto: pide uno al administrador" });
   const p = req.body;
   const error = validar(p);
   if (error) return res.status(400).json({ error });
@@ -69,8 +69,9 @@ app.post("/api/runs", (req, res) => {
   if (partidas.has(p.id)) return res.json({ ok: true, id: p.id, repetida: true });
   p.recibido = new Date().toISOString();
   if (!p.fecha) p.fecha = p.recibido;
-  // El anfitrion puede mandar el nombre del que subio (uploader) para saber quien hospedo.
-  if (typeof p.subido_por !== "string") delete p.subido_por;
+  // Quien la subio: el nombre del token, o el que mande el subidor.
+  if (typeof p.subido_por !== "string" || !p.subido_por.trim()) p.subido_por = auth.nombre || undefined;
+  if (!p.subido_por) delete p.subido_por;
   guardar(p);
   console.log(`partida ${p.id}: ronda ${p.ronda}, ${p.jugadores.length} jugadores, ${p.mapa}`);
   res.status(201).json({ ok: true, id: p.id });
@@ -108,4 +109,4 @@ if (existsSync(CLIENT_DIR)) {
 }
 
 cargar();
-app.listen(PORT, () => console.log(`bo2jodas web en http://localhost:${PORT} (token de subida: ${UPLOAD_TOKEN ? "si" : "no"})`));
+app.listen(PORT, () => console.log(`bo2jodas web en http://localhost:${PORT} (${TOKENS.size} tokens de subida${process.env.UPLOAD_OPEN === "1" ? ", subida abierta" : ""})`));

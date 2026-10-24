@@ -1,4 +1,5 @@
 node_modules/
 client/dist/
 data/
+tokens_amigos.txt
 .env
