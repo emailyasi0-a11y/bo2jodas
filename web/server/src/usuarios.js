@@ -1,48 +1,41 @@
 // Usuarios: registro y login con usuario:contrasena, y un token de subida de 32
-// caracteres por cuenta (el que va en subir_partidas.cfg).
+// caracteres por cuenta (para el script opcional de subida automatica).
 //
-// Se guardan en DATA_DIR/usuarios.json:
-//   { "pepe": { "nombre": "Pepe", "hash": "...", "sal": "...", "token": "32 hex", "creado": "ISO" } }
-// La clave es el usuario en minusculas (no distingue mayusculas al entrar).
+// Cada cuenta se guarda en el almacen (tipo "usuario", clave = usuario en
+// minusculas, no distingue mayusculas al entrar):
+//   { "nombre": "Pepe", "hash": "...", "sal": "...", "token": "32 hex", "creado": "ISO" }
 //
-// La sesion es una cookie firmada con HMAC (secreto en DATA_DIR/secreto.txt,
-// generado la primera vez): "usuario.caducidad.firma". Sin dependencias.
+// La sesion es una cookie firmada con HMAC: "usuario.caducidad.firma". El
+// secreto sale de SESSION_SECRET o se genera una vez y se guarda en el almacen
+// (tipo "config"), asi las sesiones sobreviven a los reinicios.
 import { createHmac, randomBytes, scryptSync, timingSafeEqual } from "node:crypto";
-import { existsSync, readFileSync, writeFileSync, renameSync } from "node:fs";
-import { join } from "node:path";
 
 const COOKIE = "bo2jodas_sesion";
 const DIAS_SESION = 90;
 const USUARIO_RE = /^[a-zA-Z0-9_]{3,20}$/;
 
 export class Usuarios {
-  constructor(dataDir) {
-    this.ruta = join(dataDir, "usuarios.json");
+  constructor(almacen) {
+    this.almacen = almacen;
     this.porUsuario = new Map(); // clave minusculas -> registro
     this.porToken = new Map(); // token -> clave
     this.intentos = new Map(); // ip -> { n, hasta }
-    this.secreto = cargarSecreto(join(dataDir, "secreto.txt"));
-    this.cargar();
+    this.secreto = null;
   }
 
-  cargar() {
-    if (!existsSync(this.ruta)) return;
-    try {
-      const obj = JSON.parse(readFileSync(this.ruta, "utf8"));
-      for (const [clave, u] of Object.entries(obj)) {
-        this.porUsuario.set(clave, u);
-        if (u.token) this.porToken.set(u.token, clave);
-      }
-    } catch (e) {
-      console.warn(`usuarios.json ilegible: ${e.message}`);
+  static async crear(almacen) {
+    const u = new Usuarios(almacen);
+    for (const [clave, reg] of await almacen.todos("usuario")) {
+      if (!reg || !reg.hash) continue;
+      u.porUsuario.set(clave, reg);
+      if (reg.token) u.porToken.set(reg.token, clave);
     }
+    u.secreto = await cargarSecreto(almacen);
+    return u;
   }
 
-  guardar() {
-    const obj = Object.fromEntries(this.porUsuario);
-    const tmp = this.ruta + ".tmp";
-    writeFileSync(tmp, JSON.stringify(obj, null, 1));
-    renameSync(tmp, this.ruta);
+  guardar(clave) {
+    return this.almacen.guardar("usuario", clave, this.porUsuario.get(clave));
   }
 
   get total() {
@@ -60,7 +53,7 @@ export class Usuarios {
     return null;
   }
 
-  registrar(usuario, contrasena) {
+  async registrar(usuario, contrasena) {
     const error = this.validarCredenciales(usuario, contrasena);
     if (error) return { error };
     const clave = usuario.toLowerCase();
@@ -75,7 +68,13 @@ export class Usuarios {
     };
     this.porUsuario.set(clave, u);
     this.porToken.set(u.token, clave);
-    this.guardar();
+    try {
+      await this.guardar(clave);
+    } catch (e) {
+      this.porUsuario.delete(clave);
+      this.porToken.delete(u.token);
+      throw e;
+    }
     return { usuario: u };
   }
 
@@ -83,14 +82,14 @@ export class Usuarios {
     if (typeof usuario !== "string" || typeof contrasena !== "string") return { error: "faltan datos" };
     const clave = usuario.toLowerCase();
     const u = this.porUsuario.get(clave);
-    // Se compara siempre algo para no delatar por tiempo si el usuario existe.
+    // Se calcula siempre el hash para no delatar por tiempo si el usuario existe.
     const hashDado = hashContrasena(contrasena, u ? u.sal : "0".repeat(32));
     const ok = u && iguales(hashDado, u.hash);
     if (!ok) return { error: "usuario o contrasena incorrectos" };
     return { usuario: u };
   }
 
-  cambiarContrasena(clave, actual, nueva) {
+  async cambiarContrasena(clave, actual, nueva) {
     const u = this.porUsuario.get(clave);
     if (!u) return { error: "no existe" };
     if (!iguales(hashContrasena(String(actual), u.sal), u.hash)) return { error: "la contrasena actual no es correcta" };
@@ -98,17 +97,17 @@ export class Usuarios {
     if (error) return { error };
     u.sal = randomBytes(16).toString("hex");
     u.hash = hashContrasena(nueva, u.sal);
-    this.guardar();
+    await this.guardar(clave);
     return { ok: true };
   }
 
-  regenerarToken(clave) {
+  async regenerarToken(clave) {
     const u = this.porUsuario.get(clave);
     if (!u) return null;
     this.porToken.delete(u.token);
     u.token = this.tokenNuevo();
     this.porToken.set(u.token, clave);
-    this.guardar();
+    await this.guardar(clave);
     return u.token;
   }
 
@@ -208,13 +207,13 @@ function leerCookie(cabecera, nombre) {
   return null;
 }
 
-function cargarSecreto(ruta) {
-  if (process.env.SESSION_SECRET) return process.env.SESSION_SECRET;
-  if (existsSync(ruta)) {
-    const s = readFileSync(ruta, "utf8").trim();
-    if (s.length >= 32) return s;
-  }
-  const s = randomBytes(32).toString("hex");
-  writeFileSync(ruta, s + "\n");
-  return s;
+async function cargarSecreto(almacen) {
+  const env = process.env.SESSION_SECRET;
+  if (env && env.length >= 16) return env;
+  const guardado = (await almacen.todos("config")).find(([clave]) => clave === "sesion");
+  const viejo = guardado && guardado[1] && guardado[1].secreto;
+  if (typeof viejo === "string" && viejo.length >= 32) return viejo;
+  const secreto = randomBytes(32).toString("hex");
+  await almacen.guardar("config", "sesion", { secreto });
+  return secreto;
 }

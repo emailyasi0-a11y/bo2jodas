@@ -7,8 +7,10 @@ services:
     restart: unless-stopped
     environment:
       - UPLOAD_TOKENS=${UPLOAD_TOKENS:-}
+      - DATABASE_URL=${DATABASE_URL:-}
+      - SESSION_SECRET=${SESSION_SECRET:-}
     volumes:
-      - ./data:/data        # partidas (data/runs), cuentas (usuarios.json) y secreto de sesion
+      - ./data:/data        # sin DATABASE_URL: partidas, cuentas y secreto de sesion
     expose:
       - "3000"
 
