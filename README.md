@@ -1,6 +1,6 @@
 # bo2jodas
 
-**Versión actual: 1.9.0** · Black Ops II Zombies · Plutonium T6 · Pueblo (funciona en el resto de mapas)
+**Versión actual: 1.9.1** · Black Ops II Zombies · Plutonium T6 · Pueblo (funciona en el resto de mapas)
 
 ---
 
@@ -15,7 +15,22 @@ Todos los jugadores de la partida necesitan **la misma versión**.
 
 ---
 
-## Novedades de la 1.9.0
+## Novedades de la 1.9.1
+
+| | |
+|---|---|
+| **Goo de la Sliquifier** | Las bajas de leapers, fuego, rayos, Espinas, Fénix y Reacción en cadena ya no cuentan como disparos de la Sliquifier (ni del Bastón) cuando la llevas en la mano: el goo solo se contagia con las bajas de la propia Sliquifier. |
+| **Cartas a la vista** | Mientras eliges carta, tu lista de cartas se ve abajo de la pantalla. |
+| **Suertudo** | Buscador de botín ×2 (0.4 a 3.2 %). Pata de conejo da 1 / 2 / 2 / 3 / 4 rerolls y +1 cada 3 niveles. Dados 15 a 60 %. **Amuleto** nuevo: % de ver **4 cartas** en vez de 3. Herradura 20 a 80 %. Jackpot además no gasta la mitad de los rerolls. |
+| **Zombies atascados** | Un zombie quieto 15 s sin nadie cerca (típico detrás de una ventana) reaparece detrás de un jugador. |
+| **Contador** | Arriba pone los zombies que quedan de la ronda, no los vivos. |
+| **Bloqueo** | Solo **1 bloqueo** por partida (`jodas_bloqueos`). |
+| **No coger carta** | Ahora con **Cuchillo**; se elige solo con Usar (F / X). |
+| **Bruja** | Sus bebidas no cuentan para el límite de 4 de las máquinas: puedes llegar a tenerlas todas (como con el fantasma de Buried). Solo te da carta cuando ya tienes sus cinco. `jodas_bebidas_max` pone tope si quieres. |
+
+<details>
+<summary><b>Novedades de la 1.9.0</b></summary>
+
 
 La versión de las **builds**: hasta ahora cogías cartas sueltas; ahora eliges un **arquetipo** y montas algo con sentido. Además, tres jefes distintos, bebidas que no se pueden comprar, menús nuevos y zombies más duros.
 
@@ -103,11 +118,11 @@ Cada arquetipo tiene **6 cartas**: 5 normales y una **firma** (en negrita), siem
 | Domador | Carne fresca | +vida cada vez que un leaper tuyo mata | 3 / 5 / 7 / 10 / 15 | 50 |
 | Domador | Manada | +1 leaper, hasta 3 en total | — | 2 |
 | Domador | **Alfa** (firma) | Requiere Collar de púas + Manada. Durante 3 s tras cada baja tuya, tus leapers hacen ×2 y sus mordiscos incendian | — | — |
-| Suertudo | Pata de conejo | +rerolls al cogerla y +1 reroll cada 5 niveles | 1 / 1 / 2 / 2 / 3 | 10 |
-| Suertudo | Dados | % de que la carta que cojas valga el doble | 10 / 15 / 20 / 30 / 40 % | 60 % |
-| Suertudo | Amuleto | % de no gastar el reroll al usarlo | 15 / 25 / 35 / 50 / 70 % | 90 % |
-| Suertudo | Herradura | % de que al empezar cada ronda aparezca un power-up a tus pies | 15 / 25 / 35 / 50 / 70 % | 100 % |
-| Suertudo | **Jackpot** (firma) | Requiere Dados + Pata de conejo. Una vez por ronda, la primera carta que te ofrecen es LEGENDARIA | — | — |
+| Suertudo | Pata de conejo | +rerolls al cogerla y +1 reroll cada 3 niveles | 1 / 2 / 2 / 3 / 4 | 20 |
+| Suertudo | Dados | % de que la carta que cojas valga el doble | 15 / 22 / 30 / 42 / 60 % | 80 % |
+| Suertudo | Amuleto | % de que cada subida de nivel te ofrezca 4 cartas en vez de 3 | 20 / 30 / 45 / 60 / 80 % | 100 % |
+| Suertudo | Herradura | % de que al empezar cada ronda aparezca un power-up a tus pies | 20 / 30 / 45 / 60 / 80 % | 100 % |
+| Suertudo | **Jackpot** (firma) | Requiere Dados + Pata de conejo. Una vez por ronda, la primera carta que te ofrecen es LEGENDARIA, y la mitad de los rerolls no se gastan | — | — |
 
 </details>
 
@@ -132,6 +147,8 @@ Ver [Jefes: Brutus, la Bruja y Leroy](#jefes-brutus-la-bruja-y-leroy). Resumen: 
 - Cada carta lleva un **marco del color de su rareza** (gris, verde, azul, morado, dorado; rojo las míticas) con el nombre de la rareza en la banda de arriba, y el fondo lleva el **color de tu arquetipo** (o de la clase en el menú de clase).
 - La carta marcada **crece y se ilumina**; las cartas aparecen en fundido escalonado y el título se descifra letra a letra.
 - La barra de vida del jefe lleva su nombre.
+
+</details>
 
 ### Cartas generales nuevas
 
@@ -260,7 +277,7 @@ Subes de nivel matando: el primer nivel a las **15 bajas** y cada nivel cuesta 5
 - Cada carta del menú tira su rareza por separado. Las cartas se **acumulan** hasta su tope.
 - Cada vez que coges una carta, su probabilidad de volver a salir sube un 8 %. **Trébol** sube la rareza de las que te salen.
 - **15 huecos** (20 con Pistolas): cartas distintas que puedes tener (Calibre ×3 ocupa uno). Las de equipo, los power-ups, Pack-a-Punch y Medalla no ocupan hueco. Con los huecos llenos solo salen las que ya tienes y las que no ocupan hueco.
-- **3 rerolls** por partida (**Granada** en el menú), **bloqueo** ilimitado (**Táctica**: la carta no vuelve a salirte, pero gastas esa subida) y **Saltar** (**Espacio / A**: gastas la subida sin coger nada).
+- **3 rerolls** por partida (**Granada** en el menú), **1 bloqueo** por partida (**Táctica**: la carta no vuelve a salirte, pero gastas esa subida) y **no coger nada** (**Cuchillo**: gastas la subida). Mientras eliges, tu lista de cartas se ve abajo.
 
 ### Cartas generales
 
@@ -286,7 +303,7 @@ Valores por rareza: común / poco común / rara / épica / legendaria. Las marca
 | Codicia (A: Banquero) | +puntos por baja | 4 / 8 / 12 / 20 / 32 | 300 |
 | Reacción en cadena (A: Electricista) | % de que el zombie explote al morir | 3 / 5 / 7 / 10 / 16 % | 60 % |
 | Imán | Atrae power-ups en este radio | 250 / 360 / 520 / 720 / 1040 | 5000 |
-| Buscador de botín (A: Suertudo) | % de power-up por baja | 0.2 / 0.4 / 0.6 / 1.0 / 1.6 % | 10 % |
+| Buscador de botín (A: Suertudo) | % de power-up por baja | 0.4 / 0.8 / 1.2 / 2.0 / 3.2 % | 15 % |
 | Segundo aliento | % de evitar un golpe mortal (quedas a media vida) | 8 / 12 / 18 / 24 / 36 % | 90 % |
 | Escurridizo (A: Velocista) | Segundos que te ignoran tras un golpe | 0.4 / 0.6 / 1.0 / 1.3 / 1.8 s | 6 s |
 | Suerte del Pack | % de que el arma de ronda venga mejorada | 4 / 6 / 10 / 14 / 20 % | 100 % |
@@ -357,7 +374,7 @@ Cada **10 minutos** (el primero en el minuto 10) el siguiente zombie que sale es
 | Jefe | Vida (× zombie de la ronda) | Cómo es | Al morir |
 |---|---|---|---|
 | **Brutus** | 70 | El de siempre: rugido, pisotón, fases, furia y 4 tanques de escolta | 2 power-ups, carta gratis para todos y **pieza del Bastón de fuego** (solo él) |
-| **Bruja** | 40 | Aparece **a dos metros detrás de un jugador** al azar y cada 20 s se desvanece y reaparece detrás de otro. No se la puede frenar. Cada vez que **toca** a alguien (se le pega) ese jugador pierde el 10 % de sus puntos; al **segundo toque** (a cualquiera) queda *saciada* | Saciada: 2 power-ups. **Con menos de dos toques**: Munición máxima para todos y a cada jugador **una bebida al azar** de las que no se pueden comprar; quien no tenga hueco de bebida elige una **carta entre 3** |
+| **Bruja** | 40 | Aparece **a dos metros detrás de un jugador** al azar y cada 20 s se desvanece y reaparece detrás de otro. No se la puede frenar. Cada vez que **toca** a alguien (se le pega) ese jugador pierde el 10 % de sus puntos; al **segundo toque** (a cualquiera) queda *saciada* | Saciada: 2 power-ups. **Con menos de dos toques**: Munición máxima para todos y a cada jugador **una bebida al azar** de las que no se pueden comprar (sin contar para el límite de 4 de las máquinas); quien ya tenga las cinco elige una **carta entre 3** |
 | **Leroy** | 50 | Viene borracho: super sprint con arreones (acelera y frena cada segundo). Cada golpe te **roba una carta entera** (un tipo con todos sus stacks, como la penalización al caer), como mucho una cada 3 s | Deja en el suelo un **cuenco de caramelos** por cada carta robada: su dueño tiene **30 s** para recogerlo y la carta vuelve **mejorada** (×1.4 de valor). Si no robó nada, 2 power-ups |
 
 **Bebidas que regala la Bruja** (solo las que no están en las máquinas de Pueblo): **Mule Kick**, **Deadshot Daiquiri**, **PhD Flopper** (explosión al tirarse en plancha y resistencia a explosivos), **Electric Cherry** (descarga al recargar, más fuerte cuanto más vacío el cargador) y **Tombstone**. Con icono en la barra como las demás. Se pierden al caer, como todas. Who's Who no entra (necesita el clon y los filtros de Die Rise). En mapas con máquina de alguna de ellas, la da el propio juego.
